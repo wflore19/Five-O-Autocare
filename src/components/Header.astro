@@ -1,0 +1,34 @@
+---
+---
+
+<header class="grid">
+	<div class="logo">Mechanic Rockville</div>
+	<nav>
+		<a href="home">Hello</a>
+		<a href="world">World</a>
+		<a href="/computer">Computer</a>
+		<a href="technology">Technology</a>
+	</nav>
+	<a href="tel:0000000000" class="tel">000-000-0000</a>
+</header>
+
+<style>
+	header {
+		align-items: center;
+		height: 3.75rem;
+	}
+	nav {
+		grid-column: 5 / span 4;
+		justify-self: center;
+	}
+	nav a {
+		padding: 0 6px;
+	}
+	.logo {
+		grid-column: 2 / span 2;
+	}
+	.tel {
+		grid-column: 10 / span 2;
+		justify-self: end;
+	}
+</style>

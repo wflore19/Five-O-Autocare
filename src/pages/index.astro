@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="grid">
+		<div class="hero">
+			<div class="heading">
+				<h1>Mechanic Rockvillle</h1>
+				<p>The best mechanic in Rockville, MD.</p>
+				<a href="tel:0000000000">0000000000</a>
+			</div>
+		</div>
+		<div class="hero-image"></div>
+		<div class="about">
+			<h2>About Mechanic Rockville</h2>
+			<p>
+				At our Mechanic Shop, we understand how frustrating it can be when your
+				car breaks down. Whether it's unexpected or simply due to wear and tear,
+				it can put a real damper on your day. But we're here to help. Our team
+				of technicians has years of experience fixing cars, and they know
+				exactly what it takes to get you back on the road. We believe that car
+				repair should be a stress-free experience, which is why we work hard to
+				make sure that you're always treated with respect and that your car is
+				fixed right the first time. We know that you have places to go and
+				things to do, and we don't want you to waste any more time than you have
+				to. So come on by, and let us take care of everything for you. Our team
+				will diagnose your car, provide a fair and transparent estimate, and get
+				to work fixing your car so you can get back to your day. With our expert
+				technicians and commitment to quality workmanship, you can relax and
+				trust that your car is in good hands.
+			</p>
+			<br />
+			<p>
+				Welcome to our Mechanic Shop! We are a team of highly skilled and
+				experienced technicians dedicated to providing top-notch automotive
+				repair services to our customers. With years of experience under our
+				belts and a passion for keeping cars running smoothly, we've earned a
+				reputation for delivering quality workmanship and exceptional customer
+				service. Whether you need routine maintenance or extensive repairs, our
+				shop has the tools and expertise to get you back on the road in no time.
+				From oil changes to engine rebuilds, we do it all. So come on by, and
+				let us help you keep your vehicle running smoothly for years to come.
+			</p>
+		</div>
+		<div class="sidebar-service">
+			<h2>Services</h2>
+			<ul>
+				<li>Wheel Alignment</li>
+				<li>Oil Change</li>
+				<li>Engine Repair</li>
+				<li>Tune Ups</li>
+			</ul>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		gap: 0 !important;
+		grid-column: 3 / span 9;
+	}
+	.hero {
+		grid-column: 1 / 6;
+		background-color: aqua;
+		padding: 100px 0;
+	}
+	.heading {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.heading > h1,
+	p,
+	a {
+		grid-column: 2 / 7;
+	}
+	.heading > a {
+		background-color: orange;
+		width: fit-content;
+		padding: 4px 8px;
+		outline: 1px solid black;
+	}
+	.hero-image {
+		padding: 100px 20px;
+		grid-column: 6 / 13;
+		background-color: blueviolet;
+	}
+	.about {
+		margin: 20px 0;
+		grid-column: 2 / 9;
+	}
+	.sidebar-service {
+		background-color: rgb(212, 212, 212);
+		padding: 25px 50px;
+		margin: 20px 0;
+		grid-column: 9 / 12;
+		justify-self: end;
+		height: fit-content;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+</style>
