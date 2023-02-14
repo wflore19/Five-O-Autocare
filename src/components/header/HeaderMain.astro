@@ -1,0 +1,26 @@
+---
+import SubMenu from "./SubMenu.astro";
+---
+
+<div class="header-main grid">
+	<div class="logo">Mechanic Rockville</div>
+	<nav>
+		<ul>
+			<li>
+				<a href="home">Hello</a>
+				<SubMenu />
+			</li>
+			<li>
+				<a href="world">World</a>
+			</li>
+			<li class="menu-item-has-children">
+				<a href="/computer">Computer</a>
+				<SubMenu />
+			</li>
+			<li>
+				<a href="technology">Technology</a>
+			</li>
+		</ul>
+	</nav>
+	<a href="tel:0000000000" class="tel">000-000-0000</a>
+</div>

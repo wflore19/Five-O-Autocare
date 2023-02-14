@@ -1,0 +1,54 @@
+.header-main
+  display: grid
+  grid-column: 1 / 13
+  background-color: blue
+  color: white
+  padding: 1rem 0
+
+  .logo
+    grid-column: 2 / span 2
+
+  nav
+    grid-column: 5 / span 4
+    justify-self: center
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      display: flex
+      gap: 0 15px
+      li
+        position: relative
+        &:hover .sub-menu
+          opacity: 1
+          visibility: visible
+          top: 168%
+      li
+        &:hover
+          a
+            &::before
+              width: 90%
+
+        a
+          text-decoration: none
+          padding: 0 6px
+          color: inherit
+          position: relative
+          &::before
+            position: absolute
+            content: ''
+            width: 0
+            height: 1px
+            background-color: #ffffff
+            left: 4px
+            bottom: -4px
+            -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+            -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+            transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+  .tel
+    grid-column: 10 / span 2
+    justify-self: end
+    color: inherit
+    text-decoration: none

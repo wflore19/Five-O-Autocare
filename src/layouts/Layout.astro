@@ -1,5 +1,5 @@
 ---
-import "../base.css";
+import "../sass/_base.sass";
 import Header from "../components/Header.astro";
 
 export interface Props {
@@ -18,28 +18,8 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<div>
-		<Header />
-		<slot />
-	</div>
-
-	<style is:global>
-		:root {
-			--accent: 124, 58, 237;
-			--accent-gradient: linear-gradient(
-				45deg,
-				rgb(var(--accent)),
-				#da62c4 30%,
-				white 60%
-			);
-		}
-		.grid {
-			display: grid;
-			grid-template-columns: repeat(12, 1fr);
-			gap: 12px;
-			/* padding: 0 20px; */
-		}
-	</style>
+	<Header />
+	<slot />
 
 
 </html>
