@@ -1,0 +1,29 @@
+
+.services
+  position: relative
+  .services-image
+    grid-column: 1 / -1
+    background-color: blue
+    height: 300px
+    width: 100%
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+
+  .services-hero
+    grid-column: 2 / -2
+    z-index: 1
+    .services-heading
+      margin-top: 1.5rem
+      grid-column: 2 / -1
+
+      .breadcrumbs
+        grid-column: 1 / -1
+        display: flex
+        gap: .55rem
+        a
+          color: black
+          text-decoration: none
+          &:hover
+            text-decoration: underline
