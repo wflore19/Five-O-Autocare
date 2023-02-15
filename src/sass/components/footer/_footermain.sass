@@ -1,0 +1,76 @@
+
+.footer
+  grid-column: 1 / -1
+  margin-top: 10rem
+  background-color: CornflowerBlue
+  color: white
+  .footer-items
+    grid-column: 2 / -2
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    @media #{$laptop}
+      grid-template-columns: 1fr 1fr 1fr 1fr
+    @media #{$tablet}
+      grid-template-columns: 1fr 1fr 1fr
+    @media #{$ipadmini}
+      grid-template-columns: 1fr 1fr
+    @media #{$mobile}
+      grid-template-columns: 1fr
+    .single-footer
+      padding: 8rem 0
+      &:nth-child(3)
+        width: 10rem
+      h4
+        font-size: 1.1rem
+      ul
+        list-style: none
+        margin-top: 2rem
+        padding: 0
+        li
+          margin-top: 16px
+          font-weight: 300
+      .hour-items
+        .single-hour
+          display: flex
+          justify-content: space-between
+          margin-top: 16px
+          font-weight: 300
+          padding-right: 3rem
+          @media #{$laptop}
+            padding-right: 1rem
+          @media #{$ipadmini}
+            padding-right: 0
+          .day
+            font-weight: 500
+          .hour
+            font-weight: 500
+      .quick-links
+        li
+          a
+            &:hover
+              color: white
+              text-decoration: underline
+              cursor: pointer
+      .information
+        li
+          a
+            &:hover
+              color: white
+              text-decoration: underline
+              cursor: pointer
+      .profile
+        li
+          p
+            padding-right: 6rem
+    @media #{$laptop}
+      grid-column: 1 / -1
+      padding: 0 3.344rem
+
+  .footer-main
+    grid-column: 1 / -1
+    background-color: black
+    p
+      text-align: center
+      padding: 2rem 0
+      color: white
+      font-size: 0.8rem

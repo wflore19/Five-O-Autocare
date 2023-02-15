@@ -29,9 +29,31 @@ $accent-gradient: linear-gradient( 45deg rgb($accent) #da62c4 30% white 60%)
 // Responsive Variables
 $extraBig-device: 'only screen and (min-width: 1500px)'
 $laptop: 'only screen and (max-width: 1440px)'
-$tablet: 'only screen and (max-width: 768px)'
-$iphone: 'only screen and (max-width: 375px)'
+$tablet: 'only screen and (max-width: 1024px)'
+$ipadmini: 'only screen and (max-width: 768px)'
+$mobile: 'only screen and (max-width: 550px)'
 
 $large-device: 'only screen and (max-width: 1024x)'
 $medium-device: 'only screen and (max-width: 768px)'
 $small-device: 'only screen and (max-width: 575px)'
+
+// Breakpoints
+@mixin for-phone-only
+  @media (max-width: 599px)
+    @content
+
+@mixin for-tablet-portrait-up
+  @media (min-width: 600px)
+    @content
+
+@mixin laptop
+  @media (max-width: 1440px)
+    @content
+
+@mixin for-desktop-up
+  @media (min-width: 1200px)
+    @content
+
+@mixin for-big-desktop-up
+  @media (min-width: 1800px)
+    @content

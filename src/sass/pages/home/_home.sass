@@ -1,0 +1,484 @@
+main
+  gap: 0 !important
+  grid-column: 3 / span 9
+
+  .hero
+    grid-column: 1 / 7
+    padding: 100px 0
+    @media #{$tablet}
+      grid-column: 1 / -1
+    .heading
+      display: grid
+      grid-template-columns: repeat(6, 1fr)
+      > h1,
+      p,
+      a
+        grid-column: 2 / 6
+        @media #{$tablet}
+          grid-column: 1 / 7
+          padding: 0 20px
+
+  .hero-image
+    padding: 100px 20px
+    grid-column: 7 / 13
+    background-color: blue
+    position: relative
+    @media #{$tablet}
+      grid-column: 8 / 13
+      padding: 100px 0
+    @media #{$ipadmini}
+      display: none
+      visibility: hidden
+
+  .sidebar-service
+    background-color: rgb(212, 212, 212)
+    padding: 20px
+
+    grid-column: 9 / 12
+    justify-self: end
+    height: fit-content
+
+  ul
+    list-style: none
+    padding: 0
+
+  .hero-heading
+    margin-top: 1rem
+    margin-left: -7px
+    font-size: 80px
+    line-height: .9
+
+  .hero-sub-title
+    grid-column: 2 / span 3
+    position: relative
+    padding-left: 10px
+    margin-left: 20px
+
+    &::before
+      position: absolute
+      content: ''
+      width: 2px
+      height: 15px
+      background-color: #ee0f39
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      transform: translateY(-50%)
+      left: 0
+    @media #{$ipadmini}
+      grid-column: 1 / 7
+      padding-left: 20px
+
+  .hero-subheading
+    margin-top: 24px
+    padding-right: 9rem
+
+  .overlay
+    position: relative
+    grid-column: 2 / 7
+    margin-top: 32px
+    height: 210px
+    .hero-image-1
+      position: absolute
+      top: -20px
+      left: -10%
+      grid-column: 1/ span 4
+      background-color: pink
+      height: 300px
+      width: 600px
+      -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+      -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+      transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s
+      animation: fade 1.5s ease 1.3s
+    .contact-button
+      position: absolute
+      z-index: 1
+      top: -10px
+      background-color: #ee0f39
+      width: fit-content
+      padding: 12px 20px
+      margin-top: 24px
+      text-decoration: none
+      color: white
+      border-radius: 8px
+      &:active
+        color: inherit
+
+  .about
+    grid-column: 2 / 12
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    margin-top: 100px
+    .about-image
+      background-color: blue
+      grid-column: 1 / 8
+      grid-row: 1 / 6
+      @media #{$laptop}
+        padding: 4rem
+        grid-column: 1 / 7
+      @media #{$tablet}
+        padding: 0rem
+      @media #{$ipadmini}
+        grid-column: 1 / 13
+        grid-row: 2 / 3
+
+    .about-sub-title
+      grid-column: 8 / 11
+      grid-row: 1 / span 1
+      position: relative
+      padding-left: 10px
+      text-transform: uppercase
+      @media #{$laptop}
+        grid-column: 7 / 13
+      @media #{$ipadmini}
+        grid-column: 1 / 13
+
+      .red
+        color: red
+      &::before
+        position: absolute
+        content: ''
+        width: 2px
+        height: 15px
+        background-color: #ee0f39
+        top: 50%
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        transform: translateY(-50%)
+        left: 0
+    .about-title
+      grid-column: 8 / 11
+      grid-row: 2 / span 1
+      color: blue
+      font-size: 40px
+      line-height: 1.1
+      margin-top: 40px
+      @media #{$laptop}
+        grid-column: 7 / 13
+      @media #{$ipadmini}
+        grid-column: 1 / 13
+    .about-description
+      position: relative
+      margin-top: 40px
+      padding-bottom: 60px
+      grid-column: 8 / 11
+      grid-row: 3 / span 3
+      @media #{$laptop}
+        grid-column: 7 / 13
+      @media #{$ipadmini}
+        grid-column: 1 / 13
+      .about-button
+        position: relative
+        top: 40px
+        background-color: #ee0f39
+        width: fit-content
+        padding: 12px 20px
+        text-decoration: none
+        color: white
+        border-radius: 8px
+        &:active
+          color: inherit
+      .about-image-2
+        grid-column: 11 /13
+        position: absolute
+        bottom: -120px
+        right: -100px
+        background-color: blue
+        height: 200px
+        width: 200px
+        @media #{$laptop}
+          right: 0
+        @media #{$tablet}
+          height: 150px
+          width: 150px
+          right: -30px
+        @media #{$ipadmini}
+          height: 120px
+          width: 120px
+          right: -30px
+
+    .sidebar-service
+      grid-column: 9 / 13
+      grid-row: 1 / span 3
+      @media #{$laptop}
+        display: none
+        visibility: hidden
+
+  .service
+    grid-column: 2 / 12
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    margin-top: 100px
+    .service-subtitle
+      grid-column: 1 / 13
+      grid-row: 1 / span 1
+      position: relative
+      font-size: 20px
+      padding-left: 10px
+      text-transform: uppercase
+      justify-self: center
+      &::before
+        position: absolute
+        content: ''
+        width: 2px
+        height: 15px
+        background-color: #ee0f39
+        top: 45%
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        transform: translateY(-50%)
+        left: 0
+    .service-title
+      grid-column: 1 / 13
+      text-align: center
+      font-size: 40px
+      color: blue
+      margin-top: 20px
+
+    .service-items
+      grid-column: 1 / 13
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 32px
+      padding: 0 12rem
+      margin-top: 48px
+      @media #{$laptop}
+        padding: 0 3rem
+        gap: 32px
+      @media #{$tablet}
+        padding: 0rem
+        grid-template-columns: 1fr 1fr
+        padding: 0 3rem
+      @media #{$ipadmini}
+        padding: 0rem
+        grid-template-columns: 1fr
+        padding: 0 4rem
+      @media #{$mobile}
+        padding: 0 1.5rem
+      .single-service
+        height: 250px
+        overflow: hidden
+        padding: 38px 22px
+        background-color: blue
+        position: relative
+        border-radius: 10px
+        @media #{$laptop}
+          padding: 34px 8px
+        &:nth-child(2)
+          top: 20px
+          @media #{$tablet}
+            top: 0px
+        &:nth-child(5)
+          top: 20px
+          @media #{$tablet}
+            top: 0px
+        .title
+          font-size: 28px
+          line-height: 1.2
+          padding-bottom: 14px
+          position: relative
+          &::before
+            position: absolute
+            content: ''
+            width: 30px
+            height: 2px
+            background-color: #ee0f39
+            bottom: 0
+            left: 0
+        .service-image
+          justify-self: end
+          position: absolute
+          right: 15px
+          height: 100px
+          width: 100px
+          background: pink
+
+  .call-to-action
+    margin-top: 250px
+    grid-column: 1 / 13
+    .card
+      grid-column: 3 / 11
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-auto-rows: 1fr
+      color: white
+      @media #{$laptop}
+        grid-column: 2 / 12
+      @media #{$tablet}
+        grid-column: 2 / -2
+      .left
+        padding: 40px 74px 100px
+        grid-column: 1
+        background-color: blue
+        border-radius: 24px 0 0 24px
+        @media #{$laptop}
+          padding: 40px 50px 100px
+        @media #{$tablet}
+          padding: 20px 30px 60px
+        @media #{$ipadmini}
+          grid-column: 1 / 13
+          border-radius: 24px 24px 0 0
+
+        h4
+          font-size: 20px
+          font-weight: 400
+          position: relative
+          padding-left: 10px
+          text-transform: uppercase
+          &::before
+            position: absolute
+            content: ""
+            width: 2px
+            height: 15px
+            background-color: white
+            top: 45%
+            -webkit-transform: translateY(-50%)
+            -ms-transform: translateY(-50%)
+            transform: translateY(-50%)
+            left: 0
+        h2
+          margin-top: 20px
+          font-size: 40px
+          @media #{$tablet}
+            margin-top: 0
+        p
+          margin-top: 20px
+          font-size: 20px
+          @media #{$tablet}
+            margin-top: 0
+        .button
+          position: relative
+          top: 50px
+          background-color: white
+          color: blue
+          padding: 12px 20px
+          text-decoration: none
+          border-radius: 8px
+          font-size: 20px
+          @media #{$tablet}
+            top: 20px
+          &:hover
+            background-color: #ee0f39
+            color: white
+          &:active
+            color: inherit
+      .right
+        border-radius: 0 24px 24px 0px
+        grid-column: 2
+        background-color: red
+        @media #{$ipadmini}
+          grid-column: 1 / 13
+          border-radius: 0 0 24px 24px
+
+  .process
+    grid-column: 2 / 12
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    margin-top: 100px
+    .process-subtitle
+      grid-column: 1 / 13
+      grid-row: 1 / span 1
+      position: relative
+      font-size: 20px
+      padding-left: 10px
+      text-transform: uppercase
+      justify-self: center
+      &::before
+        position: absolute
+        content: ''
+        width: 2px
+        height: 15px
+        background-color: #ee0f39
+        top: 45%
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        transform: translateY(-50%)
+        left: 0
+    .process-title
+      grid-column: 1 / 13
+      text-align: center
+      font-size: 40px
+      color: blue
+      margin-top: 20px
+    .process-description
+      grid-column: 1 / 13
+      grid-row: 3 / span 1
+      text-align: center
+      font-size: 16px
+      margin-top: 20px
+    .process-items
+      grid-column: 1 / 13
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 48px
+      padding: 0 0rem
+      margin-top: 48px
+      @media #{$tablet}
+        grid-template-columns: repeat(2, 1fr)
+      @media #{$mobile}
+        grid-template-columns: repeat(1, 1fr)
+      .single-process
+        height: 250px
+        overflow: hidden
+        padding: 40px 36px
+        position: relative
+        border-radius: 10px
+        -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+        -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+        @media #{$laptop}
+          padding: 40px 20px
+        @media #{$tablet}
+          padding: 40px 16px
+        &::before
+          position: absolute
+          content: ''
+          width: 100%
+          height: 8px
+          background-color: #ee0f39
+          bottom: 0
+          left: 0
+          -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+          -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+          transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+          -webkit-transform: translateY(100%)
+          -ms-transform: translateY(100%)
+          transform: translateY(100%)
+        &:hover
+          box-shadow: 0px 11px 18px 0px rgb(0 0 0 / 29%)
+          background-color: #e4f3ff
+          &::before
+            -webkit-transform: translateY(0)
+            -ms-transform: translateY(0)
+            transform: translateY(0)
+          .service-image
+            .number
+              -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+              -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+              transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+              color: #0059ff
+        .title
+          font-size: 16px
+          position: relative
+          z-index: 1
+        .service-image
+          display: block
+          justify-self: end
+          height: 100%
+          width: 100%
+          background: blue
+          .number
+            position: absolute
+            font-size: 40px
+            left: 18px
+            top: 27px
+            color: #0059ff30
+            font-weight: 700
+
+@keyframes fade
+  0%
+    opacity: 0
+    transform: translateX(-4rem)
+  100%
+    opacity: 1
+    transform: translateX(0)
