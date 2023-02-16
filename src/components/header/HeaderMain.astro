@@ -1,11 +1,12 @@
 ---
+import MobileMenu from "./MobileMenu.svelte";
 import SubMenu from "./SubMenu.astro";
 import Menu from "/assets/icons/menu.svg";
 ---
 
 <div class="header-main grid">
 	<div class="logo">Mechanic Rockville</div>
-	<nav>
+	<nav class="desktop-menu">
 		<ul>
 			<li>
 				<a href="/">Hello</a>
@@ -23,7 +24,5 @@ import Menu from "/assets/icons/menu.svg";
 		</ul>
 	</nav>
 	<a href="tel:0000000000" class="tel">000-000-0000</a>
-	<div class="mobile-menu">
-		<img src="/assets/icons/menu.svg" alt="menu" />
-	</div>
+	<MobileMenu client:load />
 </div>

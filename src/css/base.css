@@ -89,17 +89,17 @@ p {
     font-size: 0.7rem;
   }
 }
-.header-main nav {
+.header-main .desktop-menu {
   grid-column: 5/span 5;
   justify-self: center;
 }
 @media only screen and (max-width: 1024px) {
-  .header-main nav {
+  .header-main .desktop-menu {
     display: none;
     visibility: hidden;
   }
 }
-.header-main nav ul {
+.header-main .desktop-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -107,33 +107,33 @@ p {
   gap: 0 15px;
 }
 @media only screen and (max-width: 1440px) {
-  .header-main nav ul {
+  .header-main .desktop-menu ul {
     gap: 0 5px;
   }
 }
 @media only screen and (max-width: 1024px) {
-  .header-main nav ul {
+  .header-main .desktop-menu ul {
     gap: 0;
   }
 }
-.header-main nav ul li {
+.header-main .desktop-menu ul li {
   position: relative;
 }
-.header-main nav ul li:hover .sub-menu {
+.header-main .desktop-menu ul li:hover .sub-menu {
   opacity: 1;
   visibility: visible;
   top: 168%;
 }
-.header-main nav ul li:hover a::before {
+.header-main .desktop-menu ul li:hover a::before {
   width: 90%;
 }
-.header-main nav ul li a {
+.header-main .desktop-menu ul li a {
   text-decoration: none;
   padding: 0 6px;
   color: inherit;
   position: relative;
 }
-.header-main nav ul li a::before {
+.header-main .desktop-menu ul li a::before {
   position: absolute;
   content: "";
   width: 0;
@@ -171,6 +171,7 @@ p {
 .header-main .mobile-menu {
   display: none;
   visibility: hidden;
+  color: black;
 }
 @media only screen and (max-width: 1024px) {
   .header-main .mobile-menu {
