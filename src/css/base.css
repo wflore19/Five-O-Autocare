@@ -1072,7 +1072,7 @@ main .process .process-items .single-process .service-image .number {
 .services .services-image {
   grid-column: 1/-1;
   background-color: blue;
-  height: 300px;
+  height: 400px;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -1082,6 +1082,8 @@ main .process .process-items .single-process .service-image .number {
 .services .services-hero {
   grid-column: 2/-2;
   z-index: 1;
+  color: white;
+  margin-top: 6rem;
 }
 .services .services-hero .services-heading {
   margin-top: 1.5rem;
@@ -1093,7 +1095,7 @@ main .process .process-items .single-process .service-image .number {
   gap: 0.55rem;
 }
 .services .services-hero .services-heading .breadcrumbs a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .services .services-hero .services-heading .breadcrumbs a:hover {
@@ -1821,7 +1823,7 @@ main .process .process-items .single-process .service-image .number {
 .services .services-image {
   grid-column: 1/-1;
   background-color: blue;
-  height: 300px;
+  height: 400px;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -1831,6 +1833,8 @@ main .process .process-items .single-process .service-image .number {
 .services .services-hero {
   grid-column: 2/-2;
   z-index: 1;
+  color: white;
+  margin-top: 6rem;
 }
 .services .services-hero .services-heading {
   margin-top: 1.5rem;
@@ -1842,7 +1846,7 @@ main .process .process-items .single-process .service-image .number {
   gap: 0.55rem;
 }
 .services .services-hero .services-heading .breadcrumbs a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .services .services-hero .services-heading .breadcrumbs a:hover {
