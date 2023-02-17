@@ -251,12 +251,17 @@ p {
   color: white;
 }
 .footer .footer-items {
+  list-style: none;
+  padding: 8rem 0;
+  padding-left: 0;
   grid-column: 2/-2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 @media only screen and (max-width: 1440px) {
   .footer .footer-items {
+    grid-column: 1/-1;
+    padding: 8rem 2rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -275,8 +280,10 @@ p {
     grid-template-columns: 1fr;
   }
 }
-.footer .footer-items .single-footer {
-  padding: 8rem 0;
+@media only screen and (max-width: 768px) {
+  .footer .footer-items .single-footer {
+    padding: 1rem 0;
+  }
 }
 .footer .footer-items .single-footer:nth-child(3) {
   width: 10rem;
@@ -329,12 +336,6 @@ p {
 .footer .footer-items .single-footer .profile li p {
   padding-right: 6rem;
 }
-@media only screen and (max-width: 1440px) {
-  .footer .footer-items {
-    grid-column: 1/-1;
-    padding: 0 3.344rem;
-  }
-}
 .footer .footer-main {
   grid-column: 1/-1;
   background-color: black;
@@ -382,20 +383,18 @@ main .hero .heading a {
     padding: 0 20px;
   }
 }
-main .hero-image {
-  padding: 100px 20px;
+main .hero-image-container {
   grid-column: 7/13;
-  background-color: blue;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, transparent 100%);
+}
+main .hero-image-container .hero-image {
+  background-image: linear-gradient(to bottom, transparent, rgba(96, 101, 131, 0.6705882353)), url("../assets/images/hero-image-1.webp");
+  background-size: cover;
+  height: 100%;
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
-  main .hero-image {
-    grid-column: 8/13;
-    padding: 100px 0;
-  }
-}
-@media only screen and (max-width: 768px) {
-  main .hero-image {
+  main .hero-image-container {
     display: none;
     visibility: hidden;
   }
@@ -459,6 +458,9 @@ main .overlay .hero-image-1 {
   background-color: pink;
   height: 300px;
   width: 600px;
+  opacity: 0.5;
+  background-image: linear-gradient(to bottom, transparent, rgba(96, 101, 131, 0.6705882353)), url("../assets/images/hero-image-2.webp");
+  background-size: cover;
   -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s;
@@ -485,7 +487,16 @@ main .about {
   grid-template-columns: repeat(12, 1fr);
   margin-top: 100px;
 }
+@media only screen and (max-width: 768px) {
+  main .about {
+    grid-column: 1/-1;
+    color: white;
+  }
+}
 main .about .about-image {
+  background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
+  background-size: cover;
+  margin-right: 4rem;
   background-color: blue;
   grid-column: 1/8;
   grid-row: 1/6;
@@ -498,13 +509,15 @@ main .about .about-image {
 }
 @media only screen and (max-width: 1024px) {
   main .about .about-image {
+    margin-right: 0;
     padding: 0rem;
   }
 }
 @media only screen and (max-width: 768px) {
   main .about .about-image {
+    filter: grayscale(100%) opacity(90%);
     grid-column: 1/13;
-    grid-row: 2/3;
+    padding-left: 1rem;
   }
 }
 main .about .about-sub-title {
@@ -522,6 +535,9 @@ main .about .about-sub-title {
 @media only screen and (max-width: 768px) {
   main .about .about-sub-title {
     grid-column: 1/13;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    text-shadow: 1px 1px 1px #000000;
   }
 }
 main .about .about-sub-title .red {
@@ -542,7 +558,7 @@ main .about .about-sub-title::before {
 main .about .about-title {
   grid-column: 8/11;
   grid-row: 2/span 1;
-  color: blue;
+  z-index: 1;
   font-size: 40px;
   line-height: 1.1;
   margin-top: 40px;
@@ -555,9 +571,12 @@ main .about .about-title {
 @media only screen and (max-width: 768px) {
   main .about .about-title {
     grid-column: 1/13;
+    padding-left: 1rem;
+    text-shadow: 1px 1px 1px #000000;
   }
 }
 main .about .about-description {
+  font-weight: 500;
   position: relative;
   margin-top: 40px;
   padding-bottom: 60px;
@@ -572,6 +591,8 @@ main .about .about-description {
 @media only screen and (max-width: 768px) {
   main .about .about-description {
     grid-column: 1/13;
+    padding-left: 1rem;
+    text-shadow: 1px 1px 5px #000000;
   }
 }
 main .about .about-description .about-button {
@@ -583,17 +604,20 @@ main .about .about-description .about-button {
   text-decoration: none;
   color: white;
   border-radius: 8px;
+  text-shadow: 1px 1px 1px #000000;
 }
 main .about .about-description .about-button:active {
   color: inherit;
 }
 main .about .about-description .about-image-2 {
+  background-image: url("../assets/images/mechanic-rockville-md-nearby.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
   grid-column: 11/13;
   position: absolute;
   bottom: -120px;
   right: -100px;
-  background-color: blue;
-  height: 200px;
+  height: 150px;
   width: 200px;
 }
 @media only screen and (max-width: 1440px) {
@@ -610,9 +634,8 @@ main .about .about-description .about-image-2 {
 }
 @media only screen and (max-width: 768px) {
   main .about .about-description .about-image-2 {
-    height: 120px;
-    width: 120px;
-    right: -30px;
+    display: none;
+    visibility: hidden;
   }
 }
 main .about .sidebar-service {
@@ -696,9 +719,17 @@ main .service .service-items .single-service {
   height: 250px;
   overflow: hidden;
   padding: 38px 22px;
-  background-color: blue;
   position: relative;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(228, 243, 255, 0.6509803922);
+}
+main .service .service-items .single-service:hover {
+  box-shadow: 0px 11px 18px 0px rgba(0, 0, 0, 0.29);
+  background-color: #e4f3ff;
+}
+main .service .service-items .single-service:hover svg {
+  fill: #ee0f39;
 }
 @media only screen and (max-width: 1440px) {
   main .service .service-items .single-service {
@@ -736,13 +767,26 @@ main .service .service-items .single-service .title::before {
   bottom: 0;
   left: 0;
 }
+main .service .service-items .single-service a {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  position: relative;
+  top: 15px;
+  padding: 10px 20px;
+}
+main .service .service-items .single-service a:hover {
+  text-decoration: underline;
+}
 main .service .service-items .single-service .service-image {
   justify-self: end;
   position: absolute;
-  right: 15px;
-  height: 100px;
-  width: 100px;
-  background: pink;
+  right: 0px;
+  height: 200px;
+  width: 200px;
+}
+main .service .service-items .single-service .service-image svg {
+  transition: all 0.5s ease-in-out;
 }
 main .call-to-action {
   margin-top: 250px;
@@ -1073,7 +1117,7 @@ main .process .process-items .single-process .service-image .number {
 .services .services-image {
   grid-column: 1/-1;
   background-color: blue;
-  height: 400px;
+  height: 450px;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -1101,6 +1145,231 @@ main .process .process-items .single-process .service-image .number {
 }
 .services .services-hero .services-heading .breadcrumbs a:hover {
   text-decoration: underline;
+}
+.services .services-services {
+  grid-column: 2/-2;
+  margin-top: 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services {
+    grid-column: 1/-1;
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .services .services-services {
+    padding: 0 1rem;
+  }
+}
+.services .services-services .services-content {
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services .services-content {
+    grid-column: 1/-1;
+  }
+}
+.services .services-services .services-content img {
+  height: 350px;
+  border-radius: 16px;
+}
+.services .services-services .services-content .services-tiles .services-content-heading {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.services .services-services .services-content .services-tiles .services-items {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services .services-content .services-tiles .services-items {
+    grid-template-columns: 1fr;
+  }
+}
+.services .services-services .services-content .services-tiles .services-items .services-item {
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item .services-item-heading {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  z-index: 2;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item a {
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 3;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item a:hover {
+  text-decoration: underline;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item .services-item-content {
+  border-radius: 0px;
+  height: 200px;
+  width: 70%;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: -45px;
+  right: 0;
+  fill: rgba(0, 0, 0, 0.0745098039);
+}
+.services .services-services .services-content .services-tiles .services-items .services-item:hover .services-item-content {
+  fill: rgba(0, 0, 0, 0.1490196078);
+}
+.services .services-services .services-interwebs {
+  grid-column: 2/3;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services .services-interwebs {
+    display: none;
+    visibility: hidden;
+  }
+}
+.services .services-services .services-interwebs ul li {
+  padding: 1rem 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  text-align: center;
+}
+.services .services-services .services-interwebs ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.services .services-services .services-interwebs ul li:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.231372549);
+}
+.services .services-services .services-interwebs ul li a {
+  padding: 1rem 2rem;
+  font-weight: 600;
+}
+.services .services-services .services-interwebs img {
+  margin-top: 1.5rem;
+  height: 350px;
+  border-radius: 16px;
+  background-color: red;
+}
+
+.details {
+  position: relative;
+}
+.details .details-image {
+  grid-column: 1/-1;
+  background-color: blue;
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.details .details-hero {
+  grid-column: 2/-2;
+  z-index: 1;
+  color: white;
+  margin-top: 6rem;
+}
+.details .details-hero .details-heading {
+  margin-top: 1.5rem;
+  grid-column: 2/-1;
+}
+.details .details-hero .details-heading .breadcrumbs {
+  grid-column: 1/-1;
+  display: flex;
+  gap: 0.55rem;
+}
+.details .details-hero .details-heading .breadcrumbs a {
+  color: white;
+  text-decoration: none;
+}
+.details .details-hero .details-heading .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.details .details-details {
+  grid-column: 2/-2;
+  margin-top: 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+  .details .details-details {
+    grid-column: 1/-1;
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .details .details-details {
+    padding: 0 1rem;
+  }
+}
+.details .details-details .details-content {
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 768px) {
+  .details .details-details .details-content {
+    grid-column: 1/-1;
+  }
+}
+.details .details-details .details-content img {
+  background-color: red;
+  height: 350px;
+  border-radius: 16px;
+}
+.details .details-details .details-content h2 {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.details .details-details .details-content p {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.details .details-details .details-interwebs {
+  grid-column: 2/3;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .details .details-details .details-interwebs {
+    display: none;
+    visibility: hidden;
+  }
+}
+.details .details-details .details-interwebs ul li {
+  padding: 1rem 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  text-align: center;
+}
+.details .details-details .details-interwebs ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.details .details-details .details-interwebs ul li:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.231372549);
+}
+.details .details-details .details-interwebs ul li a {
+  padding: 1rem 2rem;
+  font-weight: 600;
+}
+.details .details-details .details-interwebs img {
+  margin-top: 1.5rem;
+  height: 350px;
+  border-radius: 16px;
+  background-color: red;
 }
 
 main {
@@ -1133,20 +1402,18 @@ main .hero .heading a {
     padding: 0 20px;
   }
 }
-main .hero-image {
-  padding: 100px 20px;
+main .hero-image-container {
   grid-column: 7/13;
-  background-color: blue;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, transparent 100%);
+}
+main .hero-image-container .hero-image {
+  background-image: linear-gradient(to bottom, transparent, rgba(96, 101, 131, 0.6705882353)), url("../assets/images/hero-image-1.webp");
+  background-size: cover;
+  height: 100%;
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
-  main .hero-image {
-    grid-column: 8/13;
-    padding: 100px 0;
-  }
-}
-@media only screen and (max-width: 768px) {
-  main .hero-image {
+  main .hero-image-container {
     display: none;
     visibility: hidden;
   }
@@ -1210,6 +1477,9 @@ main .overlay .hero-image-1 {
   background-color: pink;
   height: 300px;
   width: 600px;
+  opacity: 0.5;
+  background-image: linear-gradient(to bottom, transparent, rgba(96, 101, 131, 0.6705882353)), url("../assets/images/hero-image-2.webp");
+  background-size: cover;
   -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s;
@@ -1236,7 +1506,16 @@ main .about {
   grid-template-columns: repeat(12, 1fr);
   margin-top: 100px;
 }
+@media only screen and (max-width: 768px) {
+  main .about {
+    grid-column: 1/-1;
+    color: white;
+  }
+}
 main .about .about-image {
+  background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
+  background-size: cover;
+  margin-right: 4rem;
   background-color: blue;
   grid-column: 1/8;
   grid-row: 1/6;
@@ -1249,13 +1528,15 @@ main .about .about-image {
 }
 @media only screen and (max-width: 1024px) {
   main .about .about-image {
+    margin-right: 0;
     padding: 0rem;
   }
 }
 @media only screen and (max-width: 768px) {
   main .about .about-image {
+    filter: grayscale(100%) opacity(90%);
     grid-column: 1/13;
-    grid-row: 2/3;
+    padding-left: 1rem;
   }
 }
 main .about .about-sub-title {
@@ -1273,6 +1554,9 @@ main .about .about-sub-title {
 @media only screen and (max-width: 768px) {
   main .about .about-sub-title {
     grid-column: 1/13;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    text-shadow: 1px 1px 1px #000000;
   }
 }
 main .about .about-sub-title .red {
@@ -1293,7 +1577,7 @@ main .about .about-sub-title::before {
 main .about .about-title {
   grid-column: 8/11;
   grid-row: 2/span 1;
-  color: blue;
+  z-index: 1;
   font-size: 40px;
   line-height: 1.1;
   margin-top: 40px;
@@ -1306,9 +1590,12 @@ main .about .about-title {
 @media only screen and (max-width: 768px) {
   main .about .about-title {
     grid-column: 1/13;
+    padding-left: 1rem;
+    text-shadow: 1px 1px 1px #000000;
   }
 }
 main .about .about-description {
+  font-weight: 500;
   position: relative;
   margin-top: 40px;
   padding-bottom: 60px;
@@ -1323,6 +1610,8 @@ main .about .about-description {
 @media only screen and (max-width: 768px) {
   main .about .about-description {
     grid-column: 1/13;
+    padding-left: 1rem;
+    text-shadow: 1px 1px 5px #000000;
   }
 }
 main .about .about-description .about-button {
@@ -1334,17 +1623,20 @@ main .about .about-description .about-button {
   text-decoration: none;
   color: white;
   border-radius: 8px;
+  text-shadow: 1px 1px 1px #000000;
 }
 main .about .about-description .about-button:active {
   color: inherit;
 }
 main .about .about-description .about-image-2 {
+  background-image: url("../assets/images/mechanic-rockville-md-nearby.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
   grid-column: 11/13;
   position: absolute;
   bottom: -120px;
   right: -100px;
-  background-color: blue;
-  height: 200px;
+  height: 150px;
   width: 200px;
 }
 @media only screen and (max-width: 1440px) {
@@ -1361,9 +1653,8 @@ main .about .about-description .about-image-2 {
 }
 @media only screen and (max-width: 768px) {
   main .about .about-description .about-image-2 {
-    height: 120px;
-    width: 120px;
-    right: -30px;
+    display: none;
+    visibility: hidden;
   }
 }
 main .about .sidebar-service {
@@ -1447,9 +1738,17 @@ main .service .service-items .single-service {
   height: 250px;
   overflow: hidden;
   padding: 38px 22px;
-  background-color: blue;
   position: relative;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(228, 243, 255, 0.6509803922);
+}
+main .service .service-items .single-service:hover {
+  box-shadow: 0px 11px 18px 0px rgba(0, 0, 0, 0.29);
+  background-color: #e4f3ff;
+}
+main .service .service-items .single-service:hover svg {
+  fill: #ee0f39;
 }
 @media only screen and (max-width: 1440px) {
   main .service .service-items .single-service {
@@ -1487,13 +1786,26 @@ main .service .service-items .single-service .title::before {
   bottom: 0;
   left: 0;
 }
+main .service .service-items .single-service a {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  position: relative;
+  top: 15px;
+  padding: 10px 20px;
+}
+main .service .service-items .single-service a:hover {
+  text-decoration: underline;
+}
 main .service .service-items .single-service .service-image {
   justify-self: end;
   position: absolute;
-  right: 15px;
-  height: 100px;
-  width: 100px;
-  background: pink;
+  right: 0px;
+  height: 200px;
+  width: 200px;
+}
+main .service .service-items .single-service .service-image svg {
+  transition: all 0.5s ease-in-out;
 }
 main .call-to-action {
   margin-top: 250px;
@@ -1824,7 +2136,7 @@ main .process .process-items .single-process .service-image .number {
 .services .services-image {
   grid-column: 1/-1;
   background-color: blue;
-  height: 400px;
+  height: 450px;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -1852,6 +2164,231 @@ main .process .process-items .single-process .service-image .number {
 }
 .services .services-hero .services-heading .breadcrumbs a:hover {
   text-decoration: underline;
+}
+.services .services-services {
+  grid-column: 2/-2;
+  margin-top: 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services {
+    grid-column: 1/-1;
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .services .services-services {
+    padding: 0 1rem;
+  }
+}
+.services .services-services .services-content {
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services .services-content {
+    grid-column: 1/-1;
+  }
+}
+.services .services-services .services-content img {
+  height: 350px;
+  border-radius: 16px;
+}
+.services .services-services .services-content .services-tiles .services-content-heading {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.services .services-services .services-content .services-tiles .services-items {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services .services-content .services-tiles .services-items {
+    grid-template-columns: 1fr;
+  }
+}
+.services .services-services .services-content .services-tiles .services-items .services-item {
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item .services-item-heading {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  z-index: 2;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item a {
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 3;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item a:hover {
+  text-decoration: underline;
+}
+.services .services-services .services-content .services-tiles .services-items .services-item .services-item-content {
+  border-radius: 0px;
+  height: 200px;
+  width: 70%;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: -45px;
+  right: 0;
+  fill: rgba(0, 0, 0, 0.0745098039);
+}
+.services .services-services .services-content .services-tiles .services-items .services-item:hover .services-item-content {
+  fill: rgba(0, 0, 0, 0.1490196078);
+}
+.services .services-services .services-interwebs {
+  grid-column: 2/3;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .services .services-services .services-interwebs {
+    display: none;
+    visibility: hidden;
+  }
+}
+.services .services-services .services-interwebs ul li {
+  padding: 1rem 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  text-align: center;
+}
+.services .services-services .services-interwebs ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.services .services-services .services-interwebs ul li:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.231372549);
+}
+.services .services-services .services-interwebs ul li a {
+  padding: 1rem 2rem;
+  font-weight: 600;
+}
+.services .services-services .services-interwebs img {
+  margin-top: 1.5rem;
+  height: 350px;
+  border-radius: 16px;
+  background-color: red;
+}
+
+.details {
+  position: relative;
+}
+.details .details-image {
+  grid-column: 1/-1;
+  background-color: blue;
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.details .details-hero {
+  grid-column: 2/-2;
+  z-index: 1;
+  color: white;
+  margin-top: 6rem;
+}
+.details .details-hero .details-heading {
+  margin-top: 1.5rem;
+  grid-column: 2/-1;
+}
+.details .details-hero .details-heading .breadcrumbs {
+  grid-column: 1/-1;
+  display: flex;
+  gap: 0.55rem;
+}
+.details .details-hero .details-heading .breadcrumbs a {
+  color: white;
+  text-decoration: none;
+}
+.details .details-hero .details-heading .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.details .details-details {
+  grid-column: 2/-2;
+  margin-top: 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+  .details .details-details {
+    grid-column: 1/-1;
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .details .details-details {
+    padding: 0 1rem;
+  }
+}
+.details .details-details .details-content {
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 768px) {
+  .details .details-details .details-content {
+    grid-column: 1/-1;
+  }
+}
+.details .details-details .details-content img {
+  background-color: red;
+  height: 350px;
+  border-radius: 16px;
+}
+.details .details-details .details-content h2 {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.details .details-details .details-content p {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.details .details-details .details-interwebs {
+  grid-column: 2/3;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .details .details-details .details-interwebs {
+    display: none;
+    visibility: hidden;
+  }
+}
+.details .details-details .details-interwebs ul li {
+  padding: 1rem 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  text-align: center;
+}
+.details .details-details .details-interwebs ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.details .details-details .details-interwebs ul li:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.231372549);
+}
+.details .details-details .details-interwebs ul li a {
+  padding: 1rem 2rem;
+  font-weight: 600;
+}
+.details .details-details .details-interwebs img {
+  margin-top: 1.5rem;
+  height: 350px;
+  border-radius: 16px;
+  background-color: red;
 }
 
 /*# sourceMappingURL=base.css.map */

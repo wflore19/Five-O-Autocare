@@ -1,4 +1,10 @@
 ---
+import Battery from "../components/assets/Battery.astro";
+import Brakes from "../components/assets/Brakes.astro";
+import CarWash from "../components/assets/CarWash.astro";
+import Engine from "../components/assets/Engine.astro";
+import Oil from "../components/assets/Oil.astro";
+import Tire from "../components/assets/Tire.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -12,6 +18,74 @@ import Layout from "../layouts/Layout.astro";
 				<div class="breadcrumbs">
 					<a href="/">Home</a><p>// Services</p>
 				</div>
+			</div>
+		</section>
+		<section class="services-services">
+			<div class="services-content">
+				<img src="" alt="" />
+				<section class="services-tiles">
+					<h2 class="services-content-heading">Our Services</h2>
+					<div class="services-items">
+						<div class="services-item">
+							<h4 class="services-item-heading">Brake Servicing</h4>
+							<a href="/">Learn more</a>
+							<Brakes />
+						</div>
+						<div class="services-item">
+							<h4 class="services-item-heading">Entire Engine Servicing</h4>
+							<a href="/">Learn more</a>
+							<Engine />
+						</div>
+						<div class="services-item">
+							<h4 class="services-item-heading">Regular Maintenance</h4>
+							<a href="/">Learn more</a>
+							<CarWash />
+						</div>
+						<div class="services-item">
+							<h4 class="services-item-heading">Battery Replacement</h4>
+							<a href="/">Learn more</a>
+							<Battery />
+						</div>
+						<div class="services-item">
+							<h4 class="services-item-heading">Change Oil and Filter</h4>
+							<a href="/">Learn more</a>
+							<Oil />
+						</div>
+						<div class="services-item">
+							<h4 class="services-item-heading">Tire Change and Repair</h4>
+							<a href="/">Learn more</a>
+							<Tire />
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="services-interwebs">
+				<ul>
+					<li><a href="/services/services-details">Services Details</a></li>
+					<li><a>World</a></li>
+					<li><a>Tourist</a></li>
+					<li><a>America</a></li>
+					<li><a>Golden</a></li>
+				</ul>
+				<img src="" alt="" />
+			</div>
+		</section>
+		<section class="call-to-action grid">
+			<div class="card">
+				<div class="left">
+					<h4>Five-O Autocare</h4>
+					<h2>(000) 000 0000</h2>
+					<p>
+						Five-O Autocare is your auto repair, and tire, wheel alignment, oil
+						change, transmission, air conditioning service and engine repair
+						center in Rockville, Maryland. We offer AC/cooling services for both
+						cars and trucks.
+					</p>
+					<div class="">
+						<a href="/" class="button">Contact us</a>
+					</div>
+				</div>
+				<div class="right"></div>
 			</div>
 		</section>
 	</main>

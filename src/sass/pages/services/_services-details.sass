@@ -1,7 +1,7 @@
 
-.services
+.details
   position: relative
-  .services-image
+  .details-image
     grid-column: 1 / -1
     background-color: blue
     height: 450px
@@ -11,12 +11,12 @@
     top: 0
     left: 0
 
-  .services-hero
+  .details-hero
     grid-column: 2 / -2
     z-index: 1
     color: white
     margin-top: 6rem
-    .services-heading
+    .details-heading
       margin-top: 1.5rem
       grid-column: 2 / -1
 
@@ -30,7 +30,7 @@
           &:hover
             text-decoration: underline
 
-  .services-services
+  .details-details
     grid-column: 2 / -2
     margin-top: 20rem
     display: grid
@@ -40,57 +40,24 @@
       padding: 0 3rem
     @media #{$mobile}
       padding: 0 1rem
-    .services-content
+    .details-content
       grid-column: 1 / 2
       @media #{$ipadmini}
         grid-column: 1 / -1
       img
-        // background-color: red
+        background-color: red
         height: 350px
         border-radius: 16px
-      .services-tiles
-        .services-content-heading
-          margin-top: 1.5rem
-          font-size: 2.5rem
-          font-weight: 600
-        .services-items
-          margin-top: 1.5rem
-          display: grid
-          grid-template-columns: 1fr 1fr
-          gap: 1rem
-          @media #{$ipadmini}
-            grid-template-columns: 1fr
-          .services-item
-            background-color: lightblue
-            border-radius: 10px
-            padding: 1rem 1rem
-            position: relative
-            overflow: hidden
-            .services-item-heading
-              position: relative
-              font-size: 1.8rem
-              font-weight: 800
-              margin-bottom: .5rem
-              z-index: 2
-            a
-              text-decoration: none
-              cursor: pointer
-              z-index: 3
-              &:hover
-                text-decoration: underline
-            .services-item-content
-              border-radius: 0px
-              height: 200px
-              width: 70%
-              transition: all .5s ease-in-out
-              position: absolute
-              top: -45px
-              right: 0
-              fill: #00000013
-            &:hover
-              .services-item-content
-                fill: #00000026
-    .services-interwebs
+      h2
+        margin-top: 1.5rem
+        font-size: 2.5rem
+        font-weight: 700
+      p
+        margin-top: 1.5rem
+        font-size: 1.25rem
+        font-weight: 400
+        line-height: 1.5
+    .details-interwebs
       grid-column: 2 / 3
       padding-left: 2rem
       @media #{$ipadmini}

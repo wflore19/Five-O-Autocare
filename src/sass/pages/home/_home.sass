@@ -18,15 +18,15 @@ main
           grid-column: 1 / 7
           padding: 0 20px
 
-  .hero-image
-    padding: 100px 20px
+  .hero-image-container
     grid-column: 7 / 13
-    background-color: blue
-    position: relative
+    mask-image: linear-gradient(to left, #00000000 50%, transparent 100%)
+    .hero-image
+      background-image: linear-gradient(to bottom, transparent, #606583ab), url("../assets/images/hero-image-1.webp")
+      background-size: cover
+      height: 100%
+      position: relative
     @media #{$tablet}
-      grid-column: 8 / 13
-      padding: 100px 0
-    @media #{$ipadmini}
       display: none
       visibility: hidden
 
@@ -86,6 +86,9 @@ main
       background-color: pink
       height: 300px
       width: 600px
+      opacity: 0.5
+      background-image: linear-gradient(to bottom, transparent, #606583ab), url("../assets/images/hero-image-2.webp")
+      background-size: cover
       -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
       -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
       transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s
@@ -109,7 +112,14 @@ main
     display: grid
     grid-template-columns: repeat(12, 1fr)
     margin-top: 100px
+    @media #{$ipadmini}
+      grid-column: 1 / -1
+      color: white
+
     .about-image
+      background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp")
+      background-size: cover
+      margin-right: 4rem
       background-color: blue
       grid-column: 1 / 8
       grid-row: 1 / 6
@@ -117,10 +127,12 @@ main
         padding: 4rem
         grid-column: 1 / 7
       @media #{$tablet}
+        margin-right: 0
         padding: 0rem
       @media #{$ipadmini}
+        filter: grayscale(100%) opacity(90%)
         grid-column: 1 / 13
-        grid-row: 2 / 3
+        padding-left: 1rem
 
     .about-sub-title
       grid-column: 8 / 11
@@ -132,6 +144,9 @@ main
         grid-column: 7 / 13
       @media #{$ipadmini}
         grid-column: 1 / 13
+        padding-left: 1rem
+        padding-top: 1rem
+        text-shadow: 1px 1px 1px #000000
 
       .red
         color: red
@@ -149,7 +164,7 @@ main
     .about-title
       grid-column: 8 / 11
       grid-row: 2 / span 1
-      color: blue
+      z-index: 1
       font-size: 40px
       line-height: 1.1
       margin-top: 40px
@@ -157,7 +172,11 @@ main
         grid-column: 7 / 13
       @media #{$ipadmini}
         grid-column: 1 / 13
+        padding-left: 1rem
+        text-shadow: 1px 1px 1px #000000
+
     .about-description
+      font-weight: 500
       position: relative
       margin-top: 40px
       padding-bottom: 60px
@@ -167,6 +186,9 @@ main
         grid-column: 7 / 13
       @media #{$ipadmini}
         grid-column: 1 / 13
+        padding-left: 1rem
+        text-shadow: 1px 1px 5px #000000
+
       .about-button
         position: relative
         top: 40px
@@ -176,15 +198,18 @@ main
         text-decoration: none
         color: white
         border-radius: 8px
+        text-shadow: 1px 1px 1px #000000
         &:active
           color: inherit
       .about-image-2
+        background-image: url("../assets/images/mechanic-rockville-md-nearby.webp")
+        background-size: contain
+        background-repeat: no-repeat
         grid-column: 11 /13
         position: absolute
         bottom: -120px
         right: -100px
-        background-color: blue
-        height: 200px
+        height: 150px
         width: 200px
         @media #{$laptop}
           right: 0
@@ -193,9 +218,8 @@ main
           width: 150px
           right: -30px
         @media #{$ipadmini}
-          height: 120px
-          width: 120px
-          right: -30px
+          display: none
+          visibility: hidden
 
     .sidebar-service
       grid-column: 9 / 13
@@ -259,9 +283,15 @@ main
         height: 250px
         overflow: hidden
         padding: 38px 22px
-        background-color: blue
         position: relative
         border-radius: 10px
+        transition: all 0.5s ease-in-out
+        background-color: #e4f3ffa6
+        &:hover
+          box-shadow: 0px 11px 18px 0px rgb(0 0 0 / 29%)
+          background-color: #e4f3ff
+          svg
+            fill: #ee0f39
         @media #{$laptop}
           padding: 34px 8px
         &:nth-child(2)
@@ -285,13 +315,23 @@ main
             background-color: #ee0f39
             bottom: 0
             left: 0
+        a
+          text-decoration: none
+          background-color: blue
+          color: white
+          position: relative
+          top: 15px
+          padding: 10px 20px
+          &:hover
+            text-decoration: underline
         .service-image
           justify-self: end
           position: absolute
-          right: 15px
-          height: 100px
-          width: 100px
-          background: pink
+          right: 0px
+          height: 200px
+          width: 200px
+          svg
+            transition: all 0.5s ease-in-out
 
   .call-to-action
     margin-top: 250px

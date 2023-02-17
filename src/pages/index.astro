@@ -1,4 +1,10 @@
 ---
+import Battery from "../components/assets/Battery.astro";
+import Oil from "../components/assets/Oil.astro";
+import Tire from "../components/assets/Tire.astro";
+import Brakes from "../components/assets/Brakes.astro";
+import CarWash from "../components/assets/CarWash.astro";
+import Engine from "../components/assets/Engine.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -19,7 +25,9 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 		</section>
-		<div class="hero-image"></div>
+		<div class="hero-image-container">
+			<div class="hero-image"></div>
+		</div>
 		<section class="about">
 			<div class="about-image"></div>
 			<h4 class="about-sub-title">
@@ -83,32 +91,44 @@ import Layout from "../layouts/Layout.astro";
 				<div class="single-service">
 					<h4 class="title">Brake Servicing</h4>
 					<a href="/">Learn more</a>
-					<span class="service-image"></span>
+					<span class="service-image">
+						<Brakes />
+					</span>
 				</div>
 				<div class="single-service">
 					<h4 class="title">Entire Engine Servicing</h4>
 					<a href="/">Learn more</a>
-					<span class="service-image"></span>
+					<span class="service-image">
+						<Engine />
+					</span>
 				</div>
 				<div class="single-service">
 					<h4 class="title">Regular Maintenance</h4>
 					<a href="/">Learn more</a>
-					<span class="service-image"></span>
+					<span class="service-image">
+						<CarWash />
+					</span>
 				</div>
 				<div class="single-service">
 					<h4 class="title">Battery Replacement</h4>
 					<a href="/">Learn more</a>
-					<span class="service-image"></span>
+					<span class="service-image">
+						<Battery />
+					</span>
 				</div>
 				<div class="single-service">
 					<h4 class="title">Change Oil and Filter</h4>
 					<a href="/">Learn more</a>
-					<span class="service-image"></span>
+					<span class="service-image">
+						<Oil />
+					</span>
 				</div>
 				<div class="single-service">
 					<h4 class="title">Tire Change and Repair</h4>
 					<a href="/">Learn more</a>
-					<span class="service-image"></span>
+					<span class="service-image">
+						<Tire />
+					</span>
 				</div>
 			</div>
 		</section>

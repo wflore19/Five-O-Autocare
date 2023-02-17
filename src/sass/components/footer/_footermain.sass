@@ -5,10 +5,15 @@
   background-color: CornflowerBlue
   color: white
   .footer-items
+    list-style: none
+    padding: 8rem 0
+    padding-left: 0
     grid-column: 2 / -2
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
     @media #{$laptop}
+      grid-column: 1 / -1
+      padding: 8rem 2rem
       grid-template-columns: 1fr 1fr 1fr 1fr
     @media #{$tablet}
       grid-template-columns: 1fr 1fr 1fr
@@ -17,7 +22,8 @@
     @media #{$mobile}
       grid-template-columns: 1fr
     .single-footer
-      padding: 8rem 0
+      @media #{$ipadmini}
+        padding: 1rem 0
       &:nth-child(3)
         width: 10rem
       h4
@@ -62,9 +68,6 @@
         li
           p
             padding-right: 6rem
-    @media #{$laptop}
-      grid-column: 1 / -1
-      padding: 0 3.344rem
 
   .footer-main
     grid-column: 1 / -1
