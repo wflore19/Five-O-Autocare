@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="FAQ">
+	<main class="faq grid">
+		<div class="faq-image">
+			<img
+				src="/assets/images/rockville-md-town-center.webp"
+				alt="rockville md town center"
+			/>
+		</div>
+		<section class="faq-hero">
+			<div class="faq-heading">
+				<h4 class="hero-sub-title">FAQ</h4>
+				<h1 class="hero-heading">Frequently Asked Questions</h1>
+				<div class="breadcrumbs">
+					<a href="/">Home</a><p>// FAQ</p>
+				</div>
+			</div>
+		</section>
+		<section class="faq-content">
+			<h4 class="faq-subtitle">QUESTION AND ANSWER</h4>
+			<h2 class="faq-title">Get answers to your questions</h2>
+			<p class="faq-description">
+				Trusted and reliable service is our main goal
+			</p>
+
+			<input type="radio" id="animal" name="wiki" value="Animal" />
+			<input type="radio" id="plant" name="wiki" value="Plant" checked />
+			<input type="radio" id="space" name="wiki" value="Space" />
+			<input type="radio" id="river" name="wiki" value="River" />
+			<input type="radio" id="air" name="wiki" value="Air" />
+
+			<ul class="accordion">
+				<li data-radio="animal">
+					<label for="animal" class="accordion-title">
+						<span class="accordion-heading"
+							>What services does your business offer?</span
+						>
+						<span class="accordion-icon">
+							<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
+						</span>
+					</label>
+					<div class="accordion-content">
+						Animals are multicellular eukaryotic organisms that form the
+						biological kingdom Animalia. With few exceptions, animals consume
+						organic material, breathe oxygen, are able to move, can reproduce
+						sexually, and grow from a hollow sphere of cells, the blastula,
+						during embryonic development. Over 1.5 million living animal species
+						have been described—of which around 1 million are insects—but it has
+						been estimated there are over 7 million animal species in total.
+						Animals range in length from 8.5 millionths of a metre to 33.6
+						metres (110 ft). They have complex interactions with each other and
+						their environments, forming intricate food webs. The kingdom
+						Animalia includes humans, but in colloquial use the term animal
+						often refers only to non-human animals. The study of non-human
+						animals is known as zoology.
+					</div>
+				</li>
+				<li data-radio="plant">
+					<label for="plant" class="accordion-title">
+						<span class="accordion-heading"
+							>How do you ensure your customers' safety?</span
+						>
+						<span class="accordion-icon">
+							<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
+						</span>
+					</label>
+					<div class="accordion-content">
+						MPlants are mainly multicellular, predominantly photosynthetic
+						eukaryotes of the kingdom Plantae. Historically, plants were treated
+						as one of two kingdoms including all living things that were not
+						animals, and all algae and fungi were treated as plants. However,
+						all current definitions of Plantae exclude the fungi and some algae,
+						as well as the prokaryotes (the archaea and bacteria). By one
+						definition, plants form the clade Viridiplantae (Latin name for
+						"green plants"), a group that includes the flowering plants,
+						conifers and other gymnosperms, ferns and their allies, hornworts,
+						liverworts, mosses and the green algae, but excludes the red and
+						brown algae.
+					</div>
+				</li>
+				<li data-radio="space">
+					<label for="space" class="accordion-title">
+						<span class="accordion-heading"
+							>How do you ensure your customers' satisfaction?</span
+						>
+						<span class="accordion-icon">
+							<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
+						</span>
+					</label>
+					<div class="accordion-content">
+						<p>
+							Space is the boundless three-dimensional extent in which objects
+							and events have relative position and direction. Physical space is
+							often conceived in three linear dimensions, although modern
+							physicists usually consider it, with time, to be part of a
+							boundless four-dimensional continuum known as spacetime. The
+							concept of space is considered to be of fundamental importance to
+							an understanding of the physical universe. However, disagreement
+							continues between philosophers over whether it is itself an
+							entity, a relationship between entities, or part of a conceptual
+							framework.
+						</p>
+					</div>
+				</li>
+				<li data-radio="river">
+					<label for="river" class="accordion-title">
+						<span class="accordion-heading">What are your prices?</span>
+						<span class="accordion-icon">
+							<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
+						</span>
+					</label>
+					<div class="accordion-content">
+						A river is a natural flowing watercourse, usually freshwater,
+						flowing towards an ocean, sea, lake or another river. In some cases
+						a river flows into the ground and becomes dry at the end of its
+						course without reaching another body of water. Small rivers can be
+						referred to using names such as stream, creek, brook, rivulet, and
+						rill. There are no official definitions for the generic term river
+						as applied to geographic features, although in some countries or
+						communities a stream is defined by its size. Many names for small
+						rivers are specific to geographic location; examples are "run" in
+						some parts of the United States, "burn" in Scotland and northeast
+						England, and "beck" in northern England. Sometimes a river is
+						defined as being larger than a creek, but not always: the language
+						is vague.
+					</div>
+				</li>
+				<li data-radio="air">
+					<label for="air" class="accordion-title">
+						<span class="accordion-heading">What is your turnaround time?</span>
+						<span class="accordion-icon">
+							<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
+						</span>
+					</label>
+					<div class="accordion-content">
+						A river is a natural flowing watercourse, usually freshwater,
+						flowing towards an ocean, sea, lake or another river. In some cases
+						a river flows into the ground and becomes dry at the end of its
+						course without reaching another body of water. Small rivers can be
+						referred to using names such as stream, creek, brook, rivulet, and
+						rill. There are no official definitions for the generic term river
+						as applied to geographic features, although in some countries or
+						communities a stream is defined by its size. Many names for small
+						rivers are specific to geographic location; examples are "run" in
+						some parts of the United States, "burn" in Scotland and northeast
+						England, and "beck" in northern England. Sometimes a river is
+						defined as being larger than a creek, but not always: the language
+						is vague.
+					</div>
+				</li>
+			</ul>
+		</section>
+	</main>
+</Layout>

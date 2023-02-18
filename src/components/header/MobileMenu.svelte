@@ -3,7 +3,6 @@
 	import { fly, fade } from "svelte/transition";
 
 	$: sidebar_show;
-	$: console.log(sidebar_show);
 </script>
 
 <div class="mobile-menu">

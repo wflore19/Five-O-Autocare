@@ -1,0 +1,206 @@
+
+.faq
+  position: relative
+  .faq-image
+    grid-column: 1 / -1
+    height: 450px
+    width: 100%
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    background-color: black
+    img
+      object-fit: cover
+      opacity: .5
+      height: 100%
+      width: 100%
+      border-radius: 16px
+  .faq-hero
+    grid-column: 2 / -2
+    z-index: 1
+    color: white
+    margin-top: 6rem
+    .faq-heading
+      margin-top: 1.5rem
+      grid-column: 2 / -1
+      .hero-sub-title
+        position: relative
+        padding-left: 10px
+        &::before
+          position: absolute
+          content: ""
+          width: 2px
+          height: 15px
+          background-color: #ee0f39
+          top: 50%
+          -webkit-transform: translateY(-50%)
+          -ms-transform: translateY(-50%)
+          transform: translateY(-50%)
+          left: 0
+      .hero-heading
+        font-size: clamp(2.5rem, 4vw, 80px)
+      .breadcrumbs
+        margin-top: 1rem
+        grid-column: 1 / -1
+        display: flex
+        gap: .55rem
+        a
+          color: white
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+
+  .faq-content
+    grid-column: 2 / -2
+    margin-top: 20rem
+    display: grid
+    grid-template-columns: 2fr 1fr
+    @media #{$ipadmini}
+      grid-column: 1 / -1
+      padding: 0 3rem
+    @media #{$mobile}
+      padding: 0 1rem
+    .faq-subtitle
+      grid-column: 1 / -1
+      grid-row: 1 / span 1
+      position: relative
+      font-size: 20px
+      padding-left: 10px
+      text-transform: uppercase
+      justify-self: center
+      &::before
+        position: absolute
+        content: ''
+        width: 2px
+        height: 15px
+        background-color: #ee0f39
+        top: 45%
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        transform: translateY(-50%)
+        left: 0
+    .faq-title
+      grid-column: 1 / -1
+      text-align: center
+      font-size: 40px
+      color: blue
+      margin-top: 20px
+    .faq-description
+      grid-column: 1 / -1
+      grid-row: 3 / span 1
+      text-align: center
+      font-size: 16px
+      margin-top: 20px
+    .accordion
+      grid-column: 1 / -1
+      display: flex
+      flex-direction: column
+      position: relative
+      top: 0
+      width: calc(100% - 20px)
+      max-width: 800px
+      min-height: 380px
+      margin: 0 auto
+      // background-color: $accordion-color
+      color: $white
+      list-style: none
+      margin: 50px auto
+      li
+        display: flex
+        flex-direction: column
+        &:not(:last-child)
+          margin-bottom: 20px
+        .accordion-title
+          cursor: pointer
+          text-align: center
+          flex-direction: column
+          justify-content: space-between
+          align-items: center
+          width: 70px
+          font-size: clamp(1.2rem, 1.5vw, 1.5rem)
+          font-weight: bold
+          line-height: normal
+          padding: 20px 10px
+          border: 1px solid #c9d9fc
+          transition: all 0.2s ease
+          transition: border 0.1s
+
+          &:hover
+            color: $active-color
+          .accordion-heading
+            display: block
+            text-align: left
+            width: fit-content
+          .accordion-icon
+            display: inline-block
+            padding-left: 10px
+            transform: rotate(90deg)
+            transform-origin: center center
+            transition: transform 0.2s ease
+            @media #{$ipadmini}
+              width: 24px
+              height: 24px
+              padding-left: 0
+            img
+              width: 24px
+              height: 24px
+
+        .accordion-content
+          display: none
+          align-items: center
+          justify-content: center
+          padding: 20px
+          overflow: hidden
+          background-color: $accordion-color
+
+        .accordion-title
+          display: flex
+          flex-direction: row
+          width: auto
+          padding: 24px 36px
+
+    input[type="radio"]
+      position: absolute
+      left: -9999px
+      bottom: 150px
+      &::before
+        content: 'Source: Wikipedia'
+        position: absolute
+        right: 0
+        bottom: -50px
+        font-size: 0.8rem
+        color: $black
+      @media #{$tablet}
+        bottom: 500px
+        &::before
+          bottom: 100px
+
+[value="Animal"]:checked ~ .accordion [for="animal"] .accordion-icon,
+[value="Plant"]:checked ~ .accordion [for="plant"] .accordion-icon,
+[value="Space"]:checked ~ .accordion [for="space"] .accordion-icon,
+[value="River"]:checked ~ .accordion [for="river"] .accordion-icon,
+[value="Air"]:checked ~ .accordion [for="air"] .accordion-icon
+  transform: rotate(270deg) !important
+
+[value="Animal"]:checked ~ .accordion [for="animal"] + .accordion-content,
+[value="Plant"]:checked ~ .accordion [for="plant"] + .accordion-content,
+[value="Space"]:checked ~ .accordion [for="space"] + .accordion-content,
+[value="River"]:checked ~ .accordion [for="river"] + .accordion-content,
+[value="Air"]:checked ~ .accordion [for="air"] + .accordion-content
+  display: block
+  bottom: 0
+
+[value="Animal"]:checked ~ .accordion [for="animal"],
+[value="Plant"]:checked ~ .accordion [for="plant"],
+[value="Space"]:checked ~ .accordion [for="space"],
+[value="River"]:checked ~ .accordion [for="river"],
+[value="Air"]:checked ~ .accordion [for="air"]
+  color: $active-color
+
+[value="Animal"]:focus ~ .accordion [for="animal"],
+[value="Plant"]:focus ~ .accordion [for="plant"],
+[value="Space"]:focus ~ .accordion [for="space"],
+[value="River"]:focus ~ .accordion [for="river"],
+[value="Air"]:checked ~ .accordion [for="air"]
+  background-color: $dirtywhite
