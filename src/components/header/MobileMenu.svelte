@@ -38,10 +38,21 @@
 					Call now: <a href="tel:0000000000">(000) 000 0000</a>
 				</h4>
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/services">Services</a></li>
-					<li><a href="/">Computers</a></li>
-					<li><a href="/">Technology</a></li>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li class="menu-item-has-children">
+						<a href="/services">Services</a>
+					</li>
+					<li>
+						<a href="/articles">Articles</a>
+					</li>
+					<li>
+						<a href="/about-us">About Us</a>
+					</li>
+					<li>
+						<a href="/faq">FAQ</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -53,9 +64,8 @@
 		position: fixed;
 		top: 0;
 		right: 0;
-		z-index: 10;
+		z-index: 110;
 		height: 100%;
-
 		border-left: 1px solid #aaa;
 		background: #fff;
 		overflow-y: auto;
@@ -77,7 +87,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 10;
+		z-index: 100;
 		width: 100vw;
 		height: 100vh;
 		background-color: #0000006c;

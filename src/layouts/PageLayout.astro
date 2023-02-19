@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	breadcrumb: string;
+}
+
+const {
+	title = "page Layout",
+	subtitle = "Nice Layout",
+	breadcrumb = "page Layout",
+} = Astro.props;
+---
+
+<main class="page-layout grid">
+	<div class="page-layout-image">
+		<img
+			src="/assets/images/rockville-md-town-center.webp"
+			alt="rockville md town center"
+		/>
+	</div>
+	<section class="page-layout-hero">
+		<div class="page-layout-heading">
+			<h4 class="hero-sub-title">{subtitle}</h4>
+			<h1 class="hero-heading">{title}</h1>
+			<div class="breadcrumbs">
+				<a href="/">Home</a><p>// {breadcrumb}</p>
+			</div>
+		</div>
+	</section>
+	<slot />
+</main>

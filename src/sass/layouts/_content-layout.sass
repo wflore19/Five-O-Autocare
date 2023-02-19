@@ -1,0 +1,64 @@
+.content-layout-content-layout
+  grid-column: 2 / -2
+  margin-top: 20rem
+  display: grid
+  grid-template-columns: 2fr 1fr
+  @media #{$ipadmini}
+    grid-column: 1 / -1
+    padding: 0 3rem
+  @media #{$mobile}
+    padding: 0 1rem
+  .content-layout-content
+    grid-column: 1 / 2
+    object-fit: cover
+    @media #{$tablet}
+      grid-column: 1 / -1
+    > img
+      object-fit: cover
+      width: 100%
+      height: 350px
+      border-radius: 16px
+    > h2
+      font-size: clamp(2rem, 3vw, 60px)
+      font-weight: 700
+      &:not(:first-child)
+        margin-top: 1.5
+    > h3
+      margin-top: 1.5rem
+      font-size: clamp(1.5rem, 2vw, 40px)
+      font-weight: 700
+    > p
+      margin-top: 1.5rem
+      font-size: 1.25rem
+      font-weight: 400
+      line-height: 1.5
+  .content-layout-interwebs
+    grid-column: 2 / 3
+    padding-left: 2rem
+    @media #{$tablet}
+      display: none
+      visibility: hidden
+    .interwebs-container
+      position: sticky
+      top: 100px
+      ul
+        li
+          padding: 1rem 0
+          background-color: lightblue
+          border-radius: 10px
+          text-align: center
+          &:not(:last-child)
+            margin-bottom: .75rem
+            &:hover
+              background-color: blue
+              color: white
+              box-shadow: 0 0 10px 2px #0000003b
+            a
+              padding: 1rem 2rem
+              font-weight: 600
+      img
+        object-fit: cover
+        margin-top: 1.5rem
+        height: 350px
+        border-radius: 16px
+        background-color: red

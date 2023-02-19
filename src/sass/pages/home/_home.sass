@@ -39,11 +39,8 @@ main
 
       .hero-sub-title
         grid-column: 1 / 7
-        position: relative
         padding-left: 10px
         &::before
-          position: absolute
-          content: ''
           width: 2px
           height: 15px
           background-color: #ee0f39
@@ -54,6 +51,7 @@ main
           left: 0
         @media #{$ipadmini}
           grid-column: 1 / 7
+          margin-left: 1rem
           padding-left: 20px
 
       .hero-subheading
@@ -72,7 +70,7 @@ main
       transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s
       animation: fade 1.5s ease 1.3s
     .contact-button
-      z-index: 1
+      // z-index: 1
       background-color: #ee0f39
       width: fit-content
       padding: 12px 20px

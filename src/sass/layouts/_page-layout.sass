@@ -1,0 +1,58 @@
+
+.page-layout
+  position: relative
+  .page-layout-image
+    grid-column: 1 / -1
+    height: 450px
+    width: 100%
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    background-color: black
+    img
+      object-fit: cover
+      opacity: .5
+      height: 100%
+      width: 100%
+      border-radius: 16px
+
+  .page-layout-hero
+    grid-column: 2 / -2
+    z-index: 1
+    color: white
+    margin-top: 6rem
+    .page-layout-heading
+      margin-top: 1.5rem
+      grid-column: 2 / -1
+      .hero-sub-title
+        position: relative
+        padding-left: 10px
+        font-size: clamp(12px, 4vw, 16px)
+        &::before
+          position: absolute
+          content: ''
+          width: 2px
+          height: 50%
+          background-color: #ee0f39
+          top: 50%
+          -webkit-transform: translateY(-50%)
+          -ms-transform: translateY(-50%)
+          transform: translateY(-50%)
+          left: 0
+        @media #{$ipadmini}
+          grid-column: 1 / 7
+      .hero-heading
+        font-size: clamp(60px, 20vw, 95px)
+        line-height: .9
+        padding: 1rem 0
+      .breadcrumbs
+        margin-top: 1rem
+        grid-column: 1 / -1
+        display: flex
+        gap: .55rem
+        a
+          color: white
+          text-decoration: none
+          &:hover
+            text-decoration: underline
