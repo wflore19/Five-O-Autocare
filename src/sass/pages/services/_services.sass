@@ -1,146 +1,79 @@
 
-.services
-  position: relative
-  .services-image
+.services-content
+  grid-column: 1 / 2
+  @media #{$ipadmini}
     grid-column: 1 / -1
-    height: 450px
+  img
+    object-fit: cover
     width: 100%
-    position: absolute
-    z-index: 0
-    top: 0
-    left: 0
-    background-color: black
-    img
-      object-fit: cover
-      opacity: .5
-      height: 100%
-      width: 100%
-      border-radius: 16px
-
-  .services-hero
-    grid-column: 2 / -2
-    z-index: 1
-    color: white
-    margin-top: 6rem
-    .services-heading
+    height: 350px
+    border-radius: 16px
+  .services-tiles
+    .services-content-heading
       margin-top: 1.5rem
-      grid-column: 2 / -1
-      .hero-sub-title
-        grid-column: 2 / span 3
+      font-size: 2.5rem
+      font-weight: 600
+    .services-items
+      margin-top: 1.5rem
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 1rem
+      @media #{$ipadmini}
+        grid-template-columns: 1fr
+      .services-item
+        background-color: lightblue
+        border-radius: 10px
+        padding: 1rem 1rem
         position: relative
-        padding-left: 10px
-        &::before
-          position: absolute
-          content: ''
-          width: 2px
-          height: 15px
-          background-color: #ee0f39
-          top: 50%
-          -webkit-transform: translateY(-50%)
-          -ms-transform: translateY(-50%)
-          transform: translateY(-50%)
-          left: 0
-        @media #{$ipadmini}
-          grid-column: 1 / 7
-          padding-left: 20px
-      .hero-heading
-        font-size: clamp(2.5rem, 4vw, 80px)
-      .breadcrumbs
-        margin-top: 1rem
-        grid-column: 1 / -1
-        display: flex
-        gap: .55rem
+        overflow: hidden
+        .services-item-heading
+          position: relative
+          font-size: 1.8rem
+          font-weight: 800
+          margin-bottom: .5rem
+          z-index: 2
         a
-          color: white
           text-decoration: none
+          cursor: pointer
+          z-index: 3
           &:hover
             text-decoration: underline
-
-  .services-services
-    grid-column: 2 / -2
-    margin-top: 20rem
-    display: grid
-    grid-template-columns: 2fr 1fr
-    @media #{$ipadmini}
-      grid-column: 1 / -1
-      padding: 0 3rem
-    @media #{$mobile}
-      padding: 0 1rem
-    .services-content
-      grid-column: 1 / 2
-      @media #{$ipadmini}
-        grid-column: 1 / -1
-      img
-        object-fit: cover
-        width: 100%
-        height: 350px
-        border-radius: 16px
-      .services-tiles
-        .services-content-heading
-          margin-top: 1.5rem
-          font-size: 2.5rem
-          font-weight: 600
-        .services-items
-          margin-top: 1.5rem
-          display: grid
-          grid-template-columns: 1fr 1fr
-          gap: 1rem
-          @media #{$ipadmini}
-            grid-template-columns: 1fr
-          .services-item
-            background-color: lightblue
-            border-radius: 10px
-            padding: 1rem 1rem
-            position: relative
-            overflow: hidden
-            .services-item-heading
-              position: relative
-              font-size: 1.8rem
-              font-weight: 800
-              margin-bottom: .5rem
-              z-index: 2
-            a
-              text-decoration: none
-              cursor: pointer
-              z-index: 3
-              &:hover
-                text-decoration: underline
-            .services-item-content
-              border-radius: 0px
-              height: 200px
-              width: 70%
-              transition: all .5s ease-in-out
-              position: absolute
-              top: -45px
-              right: 0
-              fill: #00000013
-            &:hover
-              .services-item-content
-                fill: #00000026
-    .services-interwebs
-      grid-column: 2 / 3
-      padding-left: 2rem
-      @media #{$ipadmini}
-        display: none
-        visibility: hidden
-      ul
-        li
-          padding: 1rem 0
-          background-color: lightblue
-          border-radius: 10px
-          text-align: center
-          &:not(:last-child)
-            margin-bottom: .75rem
-          &:hover
-            background-color: blue
-            color: white
-            box-shadow: 0 0 10px 2px #0000003b
-          a
-            padding: 1rem 2rem
-            font-weight: 600
-      img
-        object-fit: cover
-        margin-top: 1.5rem
-        height: 350px
-        border-radius: 16px
-        background-color: red
+        .services-item-content
+          border-radius: 0px
+          height: 200px
+          width: 70%
+          transition: all .5s ease-in-out
+          position: absolute
+          top: -45px
+          right: 0
+          fill: #00000013
+        &:hover
+          .services-item-content
+            fill: #00000026
+.services-interwebs
+  grid-column: 2 / 3
+  padding-left: 2rem
+  @media #{$ipadmini}
+    display: none
+    visibility: hidden
+  ul
+    li
+      padding: 1rem 0
+      background-color: lightblue
+      border-radius: 10px
+      text-align: center
+      &:not(:last-child)
+        margin-bottom: .75rem
+      &:hover
+        background-color: blue
+        color: white
+        box-shadow: 0 0 10px 2px #0000003b
+      a
+        padding: 1rem 2rem
+        font-weight: 600
+  img
+    object-fit: cover
+    margin-top: 1.5rem
+    height: 350px
+    border-radius: 16px
+    background-color: red

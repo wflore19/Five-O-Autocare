@@ -1,24 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <Layout title="FAQ">
-	<main class="faq grid">
-		<div class="faq-image">
-			<img
-				src="/assets/images/rockville-md-town-center.webp"
-				alt="rockville md town center"
-			/>
-		</div>
-		<section class="faq-hero">
-			<div class="faq-heading">
-				<h4 class="hero-sub-title">FAQ</h4>
-				<h1 class="hero-heading">Frequently Asked Questions</h1>
-				<div class="breadcrumbs">
-					<a href="/">Home</a><p>// FAQ</p>
-				</div>
-			</div>
-		</section>
+	<PageLayout title="FAQ" subtitle="FAQ" breadcrumb="FAQ">
 		<section class="faq-content">
 			<h4 class="faq-subtitle">QUESTION AND ANSWER</h4>
 			<h2 class="faq-title">Get answers to your questions</h2>
@@ -153,5 +139,5 @@ import Layout from "../layouts/Layout.astro";
 				</li>
 			</ul>
 		</section>
-	</main>
+	</PageLayout>
 </Layout>

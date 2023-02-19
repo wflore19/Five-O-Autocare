@@ -8,16 +8,13 @@ header
   background-color: blue
   color: white
   padding: 1.5rem 0
+  @media #{$tablet}
+    gap: 0 !important
   .logo
     grid-column: 2 / 4
     align-self: center
     @media #{$tablet}
-      grid-column: 1 / 4
-      padding-left: 1rem
-    @media #{$ipadmini}
-      grid-column: 1 / 7
-    @media #{$mobile}
-      font-size: .7rem
+      grid-column: 2 / 9
 
   .desktop-menu
     grid-column: 4 / 10
@@ -80,13 +77,10 @@ header
     visibility: hidden
     color: black
     @media #{$tablet}
-      display: block
+      display: flex
       visibility: visible
-      grid-column: 12 / 13
+      grid-column: 11 / 12
       justify-self: end
-      padding-right: 1rem
-    @media #{$ipadmini}
-      grid-column: 11 / 13
     img
       width: 30px
       height: 30px

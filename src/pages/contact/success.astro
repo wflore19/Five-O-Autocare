@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+---
+
+<Layout title="Success! Thank you">
+	<PageLayout title="Success" subtitle="Thank you" breadcrumb="Thank you">
+		<button><a href="/">Back to home</a></button>
+	</PageLayout>
+</Layout>
+
+<style lang="sass">
+	button
+		margin-top: 40px
+		grid-column: 2 / span 3
+</style>

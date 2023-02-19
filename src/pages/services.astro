@@ -5,27 +5,14 @@ import CarWash from "../components/assets/CarWash.astro";
 import Engine from "../components/assets/Engine.astro";
 import Oil from "../components/assets/Oil.astro";
 import Tire from "../components/assets/Tire.astro";
+import ContentLayout from "../layouts/ContentLayout.astro";
 import Layout from "../layouts/Layout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <Layout title="Services">
-	<main class="services grid">
-		<div class="services-image">
-			<img
-				src="/assets/images/rockville-md-town-center.webp"
-				alt="rockville md town center"
-			/>
-		</div>
-		<section class="services-hero">
-			<div class="services-heading">
-				<h4 class="hero-sub-title">SERVICES WE PROVIDE</h4>
-				<h1 class="hero-heading">Services</h1>
-				<div class="breadcrumbs">
-					<a href="/">Home</a><p>// Services</p>
-				</div>
-			</div>
-		</section>
-		<section class="services-services">
+	<PageLayout title="Services" subtitle="Services" breadcrumb="Services">
+		<ContentLayout>
 			<div class="services-content">
 				<img
 					src="/assets/images/automotive-maintenance-mechanic-explain-repair-con-2022-01-06-16-30-07-utc-min.webp"
@@ -67,20 +54,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</section>
 			</div>
-			<div class="services-interwebs">
-				<ul>
-					<li><a href="/services/services-details">Services Details</a></li>
-					<li><a>World</a></li>
-					<li><a>Tourist</a></li>
-					<li><a>America</a></li>
-					<li><a>Golden</a></li>
-				</ul>
-				<img
-					src="/assets/images/happy-couple-signing-paperwork-at-auto-mechanic-s-2022-09-27-22-54-22-utc-min.webp"
-					alt="happy couple signing paperwork at auto mechanic shop rockville md"
-				/>
-			</div>
-		</section>
+		</ContentLayout>
 		<section class="call-to-action grid">
 			<div class="card">
 				<div class="left">
@@ -104,5 +78,5 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 		</section>
-	</main>
+	</PageLayout>
 </Layout>

@@ -1,0 +1,34 @@
+{
+	"paths": [
+		{
+			"name": "Home",
+			"slug": "/",
+			"menuHadChildren": false
+		},
+		{
+			"name": "Services",
+			"slug": "/services",
+			"menuHadChildren": true
+		},
+		{
+			"name": "Articles",
+			"slug": "/articles",
+			"menuHadChildren": false
+		},
+		{
+			"name": "About Us",
+			"slug": "/about-us",
+			"menuHadChildren": false
+		},
+		{
+			"name": "Contact",
+			"slug": "/contact",
+			"menuHadChildren": false
+		},
+		{
+			"name": "FAQ",
+			"slug": "/faq",
+			"menuHadChildren": false
+		}
+	]
+}

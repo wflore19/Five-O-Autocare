@@ -1,8 +1,11 @@
 <script>
-	let sidebar_show = false;
 	import { fly, fade } from "svelte/transition";
+	import data from "../../data/paths.json";
 
-	$: sidebar_show;
+	const { paths } = data;
+	let sidebar_show = false;
+
+	$: console.log(sidebar_show);
 </script>
 
 <div class="mobile-menu">
@@ -38,7 +41,12 @@
 					Call now: <a href="tel:0000000000">(000) 000 0000</a>
 				</h4>
 				<ul>
-					<li>
+					{#each paths as item}
+						<li class={item.menuHadChildren ? "menu-item-has-children" : ""}>
+							<a href={item.slug}>{item.name}</a>
+						</li>
+					{/each}
+					<!-- <li>
 						<a href="/">Home</a>
 					</li>
 					<li class="menu-item-has-children">
@@ -52,7 +60,7 @@
 					</li>
 					<li>
 						<a href="/faq">FAQ</a>
-					</li>
+					</li> -->
 				</ul>
 			</nav>
 		</div>

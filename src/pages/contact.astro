@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<Layout title="Contact">
+	<PageLayout title="Contact" subtitle="Get in touch" breadcrumb="Contact">
+		<section class="contact">
+			<div class="image-container">
+				<img src="/assets/images/mechanic-rockville-md-nearby.webp" alt="" />
+			</div>
+			<div class="content">
+				<h2>Contact information</h2>
+				<div class="content">
+					<p>You can connect with us</p>
+					<div class="content-items">
+						<div class="single-content">
+							<h3>Find us here</h3>
+							<div class="content">
+								<p>422 N Stonestreet Ave, Rockville, MD</p>
+								<p>422 N Stonestreet Ave, Rockville, MD</p>
+							</div>
+						</div>
+						<div class="single-content">
+							<h3>Call us</h3>
+							<div class="content">
+								<a href="tel:301-424-0000">301-424-0000</a>
+								<a href="tel:301-424-0000">301-424-0000</a>
+							</div>
+						</div>
+						<div class="single-content">
+							<h3>Web</h3>
+							<div class="content">
+								<a href="mailto:willflores1221@gmail.com">www.carserv.com</a>
+								<a href="mailto:willflores1221@gmail.com">www.carserv.com</a>
+							</div>
+						</div>
+						<div class="single-content">
+							<h3>Also Follow us</h3>
+							<div class="content">
+								<ul>
+									<li>Twitter</li>
+									<li>Instagram</li>
+									<li>Youtube</li>
+									<li>Tiktok</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="form">
+			<h2>Get in touch</h2>
+			<form
+				class="feed-form"
+				method="post"
+				action="https://api.staticforms.xyz/submit"
+			>
+				<!-- Required -->
+				<input
+					type="hidden"
+					name="accessKey"
+					value="9a856e03-180f-4218-b3c7-5d6fa76e44e8"
+				/>
+
+				<input
+					name="subject"
+					type="hidden"
+					value="Contact Form from Customer"
+				/>
+				<!-- Form -->
+				<input name="name" type="text" placeholder="Name" required />
+				<input name="phone" type="text" placeholder="Phone number" required />
+				<input name="email" type="text" placeholder="E-mail" required />
+				<textarea name="message" placeholder="Write a message"></textarea>
+
+				<!-- If you want form to redirect to a specific url after submission -->
+				<div class="button_container">
+					<input
+						type="hidden"
+						name="redirectTo"
+						value="http://127.0.0.1:3000/contact/success"
+					/>
+					<!-- Button -->
+					<input class="button_submit" type="submit" value="Send message" />
+				</div>
+
+				<!-- Spam protection - If we receive data in this field submission will be ignored -->
+				<input type="text" name="honeypot" style="display: none;" />
+			</form>
+		</section>
+	</PageLayout>
+</Layout>
