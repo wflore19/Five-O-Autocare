@@ -1,4 +1,7 @@
 ---
+import data from "../data/paths.json";
+
+const { paths } = data;
 ---
 
 <footer class="footer grid">
@@ -11,11 +14,18 @@
 		</li>
 		<li class="single-footer">
 			<h4>Quick Links</h4>
-			<ul class="quick-links">
-				<li><a>Hello</a></li>
+			<ul class="hour-items">
+				{
+					paths.map((item) => (
+						<li>
+							<a href={item.slug}>{item.name}</a>
+						</li>
+					))
+				}
+				<!-- <li><a>Hello</a></li>
 				<li><a>World</a></li>
 				<li><a>Computer</a></li>
-				<li><a>Technology</a></li>
+				<li><a>Technology</a></li> -->
 			</ul>
 		</li>
 		<li class="single-footer">

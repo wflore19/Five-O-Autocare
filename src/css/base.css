@@ -257,11 +257,10 @@ header {
   grid-column: 2/-2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0 2rem;
 }
 @media only screen and (max-width: 1440px) {
   .footer .footer-items {
-    grid-column: 1/-1;
-    padding: 8rem 2rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -296,7 +295,8 @@ header {
   margin-top: 2rem;
   padding: 0;
 }
-.footer .footer-items .single-footer ul li {
+.footer .footer-items .single-footer .hour-items {
+  max-width: 15rem;
   margin-top: 16px;
   font-weight: 300;
 }
@@ -305,17 +305,6 @@ header {
   justify-content: space-between;
   margin-top: 16px;
   font-weight: 300;
-  padding-right: 3rem;
-}
-@media only screen and (max-width: 1440px) {
-  .footer .footer-items .single-footer .hour-items .single-hour {
-    padding-right: 1rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .footer .footer-items .single-footer .hour-items .single-hour {
-    padding-right: 0;
-  }
 }
 .footer .footer-items .single-footer .hour-items .single-hour .day {
   font-weight: 500;
@@ -332,9 +321,6 @@ header {
   color: white;
   text-decoration: underline;
   cursor: pointer;
-}
-.footer .footer-items .single-footer .profile li p {
-  padding-right: 6rem;
 }
 .footer .footer-main {
   grid-column: 1/-1;

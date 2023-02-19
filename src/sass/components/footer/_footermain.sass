@@ -11,9 +11,8 @@
     grid-column: 2 / -2
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    gap: 0 2rem
     @media #{$laptop}
-      grid-column: 1 / -1
-      padding: 8rem 2rem
       grid-template-columns: 1fr 1fr 1fr 1fr
     @media #{$tablet}
       grid-template-columns: 1fr 1fr 1fr
@@ -33,19 +32,15 @@
         margin-top: 2rem
         padding: 0
         li
-          margin-top: 16px
-          font-weight: 300
       .hour-items
+        max-width: 15rem
+        margin-top: 16px
+        font-weight: 300
         .single-hour
           display: flex
           justify-content: space-between
           margin-top: 16px
           font-weight: 300
-          padding-right: 3rem
-          @media #{$laptop}
-            padding-right: 1rem
-          @media #{$ipadmini}
-            padding-right: 0
           .day
             font-weight: 500
           .hour
@@ -67,7 +62,6 @@
       .profile
         li
           p
-            padding-right: 6rem
 
   .footer-main
     grid-column: 1 / -1
