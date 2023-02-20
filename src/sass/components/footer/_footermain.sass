@@ -11,7 +11,7 @@
     grid-column: 2 / -2
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-    gap: 0 2rem
+    gap: 1rem 2rem
     @media #{$laptop}
       grid-template-columns: 1fr 1fr 1fr 1fr
     @media #{$tablet}
@@ -29,9 +29,11 @@
         font-size: 1.1rem
       ul
         list-style: none
-        margin-top: 2rem
+        margin-top: 1rem
         padding: 0
+      .hour-items
         li
+          margin-top: 1rem
       .hour-items
         max-width: 15rem
         margin-top: 16px
@@ -54,6 +56,7 @@
               cursor: pointer
       .information
         li
+          margin-top: 1rem
           a
             &:hover
               color: white
@@ -61,7 +64,11 @@
               cursor: pointer
       .profile
         li
+          margin-top: 1rem
           p
+      .contact-info
+        li
+          margin-top: 1rem
 
   .footer-main
     grid-column: 1 / -1

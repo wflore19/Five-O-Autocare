@@ -257,7 +257,7 @@ header {
   grid-column: 2/-2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0 2rem;
+  gap: 1rem 2rem;
 }
 @media only screen and (max-width: 1440px) {
   .footer .footer-items {
@@ -292,8 +292,11 @@ header {
 }
 .footer .footer-items .single-footer ul {
   list-style: none;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0;
+}
+.footer .footer-items .single-footer .hour-items li {
+  margin-top: 1rem;
 }
 .footer .footer-items .single-footer .hour-items {
   max-width: 15rem;
@@ -317,10 +320,19 @@ header {
   text-decoration: underline;
   cursor: pointer;
 }
+.footer .footer-items .single-footer .information li {
+  margin-top: 1rem;
+}
 .footer .footer-items .single-footer .information li a:hover {
   color: white;
   text-decoration: underline;
   cursor: pointer;
+}
+.footer .footer-items .single-footer .profile li {
+  margin-top: 1rem;
+}
+.footer .footer-items .single-footer .contact-info li {
+  margin-top: 1rem;
 }
 .footer .footer-main {
   grid-column: 1/-1;
@@ -421,6 +433,9 @@ a .content {
   position: sticky;
   top: 100px;
 }
+.content-layout-content-layout .content-layout-interwebs .interwebs-container ul {
+  list-style: none;
+}
 .content-layout-content-layout .content-layout-interwebs .interwebs-container ul li {
   padding: 1rem 0;
   background-color: lightblue;
@@ -520,6 +535,24 @@ a .content {
 }
 .page-layout .page-layout-image .page-layout-hero .page-layout-heading .breadcrumbs a:hover {
   text-decoration: underline;
+}
+
+main .article-layout {
+  grid-column: 2/-3;
+  margin-top: 5rem;
+}
+main .article-layout ol {
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+main .article-layout li {
+  margin-top: 1rem;
+}
+main .article-layout p {
+  margin-top: 1rem;
+}
+main .article-layout h3, main .article-layout h2 {
+  margin-top: 1rem;
 }
 
 main {
