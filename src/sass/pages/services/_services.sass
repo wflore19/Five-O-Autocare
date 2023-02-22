@@ -21,7 +21,7 @@
       @media #{$ipadmini}
         grid-template-columns: 1fr
       .services-item
-        background-color: lightblue
+        background-color: $primaryShade
         border-radius: 10px
         padding: 1rem 1rem
         position: relative
@@ -29,15 +29,19 @@
         .services-item-heading
           position: relative
           font-size: 1.8rem
-          font-weight: 800
+          font-weight: 600
+          text-transform: uppercase
           margin-bottom: .5rem
           z-index: 2
         a
           text-decoration: none
           cursor: pointer
           z-index: 3
+          padding: .5rem 1rem
+          background-color: $secondary
+          transition: background-color 0.5s ease-in-out
           &:hover
-            text-decoration: underline
+            background-color: $secondaryShade
         .services-item-content
           border-radius: 0px
           height: 200px
@@ -48,32 +52,6 @@
           right: 0
           fill: #00000013
         &:hover
-          .services-item-content
-            fill: #00000026
-.services-interwebs
-  grid-column: 2 / 3
-  padding-left: 2rem
-  @media #{$ipadmini}
-    display: none
-    visibility: hidden
-  ul
-    li
-      padding: 1rem 0
-      background-color: lightblue
-      border-radius: 10px
-      text-align: center
-      &:not(:last-child)
-        margin-bottom: .75rem
-      &:hover
-        background-color: blue
-        color: white
-        box-shadow: 0 0 10px 2px #0000003b
-      a
-        padding: 1rem 2rem
-        font-weight: 600
-  img
-    object-fit: cover
-    margin-top: 1.5rem
-    height: 350px
-    border-radius: 16px
-    background-color: red
+          // background-color: $primary
+          // .services-item-content
+          //   fill: #00000026

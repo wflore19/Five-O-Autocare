@@ -3,15 +3,16 @@ import Layout from "../../layouts/Layout.astro";
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 
 export async function getStaticPaths() {
-	const posts = await Astro.glob("./articles/*.md");
+	const posts = await Astro.glob("./posts/*.md");
 	return posts.map((post) => {
 		return {
-			params: { slug: post.frontmatter.path },
+			params: { slug: post.frontmatter.slug },
 			props: { ...post },
 		};
 	});
 }
 const { frontmatter, Content } = Astro.props;
+// console.log(frontmatter.url);
 ---
 
 <Layout title={frontmatter.title}>

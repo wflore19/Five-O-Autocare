@@ -1,13 +1,17 @@
 ---
-import Battery from "../components/assets/Battery.astro";
-import Brakes from "../components/assets/Brakes.astro";
-import CarWash from "../components/assets/CarWash.astro";
-import Engine from "../components/assets/Engine.astro";
-import Oil from "../components/assets/Oil.astro";
-import Tire from "../components/assets/Tire.astro";
 import ContentLayout from "../layouts/ContentLayout.astro";
 import Layout from "../layouts/Layout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
+import { pages } from "../data/pages";
+
+const submenu = pages.filter((item) => item.submenu);
+const sub = submenu.map((item) => item);
+const sub1 = sub.map((item) => item.submenu);
+
+// console.log(sub1[0]);
+// sub1.forEach((item) => {
+// 	console.log(item);
+// });
 ---
 
 <Layout title="Services">
@@ -20,38 +24,18 @@ import PageLayout from "../layouts/PageLayout.astro";
 				/>
 				<section class="services-tiles">
 					<h2 class="services-content-heading">Our Services</h2>
-					<div class="services-items">
-						<div class="services-item">
-							<h4 class="services-item-heading">Brake Servicing</h4>
-							<a href="/">Learn more</a>
-							<Brakes />
-						</div>
-						<div class="services-item">
-							<h4 class="services-item-heading">Entire Engine Servicing</h4>
-							<a href="/">Learn more</a>
-							<Engine />
-						</div>
-						<div class="services-item">
-							<h4 class="services-item-heading">Regular Maintenance</h4>
-							<a href="/">Learn more</a>
-							<CarWash />
-						</div>
-						<div class="services-item">
-							<h4 class="services-item-heading">Battery Replacement</h4>
-							<a href="/">Learn more</a>
-							<Battery />
-						</div>
-						<div class="services-item">
-							<h4 class="services-item-heading">Change Oil and Filter</h4>
-							<a href="/">Learn more</a>
-							<Oil />
-						</div>
-						<div class="services-item">
-							<h4 class="services-item-heading">Tire Change and Repair</h4>
-							<a href="/">Learn more</a>
-							<Tire />
-						</div>
-					</div>
+					<ul class="services-items">
+						{
+							sub1[0]!.map((item) => {
+								return (
+									<li class="services-item">
+										<p class="services-item-heading">{item.name}</p>
+										<a href={"/services" + item.slug}>Learn more</a>
+									</li>
+								);
+							})
+						}
+					</ul>
 				</section>
 			</div>
 		</ContentLayout>

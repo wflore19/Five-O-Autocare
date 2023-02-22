@@ -2,12 +2,9 @@
   grid-column: 2 / -2
   margin-top: 10rem
   display: grid
-  grid-template-columns: 2fr 1fr
+  grid-template-columns: 6fr 2fr
   @media #{$ipadmini}
-    grid-column: 1 / -1
-    padding: 0 3rem
-  @media #{$mobile}
-    padding: 0 1rem
+    grid-column: 2 / -2
   .content-layout-content
     grid-column: 1 / 2
     object-fit: cover
@@ -45,18 +42,18 @@
         list-style: none
         li
           padding: 1rem 0
-          background-color: lightblue
+          background-color: $primaryShade
           border-radius: 10px
           text-align: center
           &:not(:last-child)
             margin-bottom: .75rem
-            &:hover
-              background-color: blue
-              color: white
-              box-shadow: 0 0 10px 2px #0000003b
-            a
-              padding: 1rem 2rem
-              font-weight: 600
+          &:hover
+            background-color: $primary
+            color: white
+            box-shadow: 0 0 10px 2px #0000003b
+          a
+            padding: 1rem 2rem
+            font-weight: 600
       img
         object-fit: cover
         margin-top: 1.5rem

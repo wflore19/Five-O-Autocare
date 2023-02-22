@@ -3,7 +3,7 @@
   position: relative
   .page-layout-image
     grid-column: 1 / -1
-    height: 450px
+    height: clamp(28.125rem, 26.3193rem + 7.7042vw, 31.25rem)
     width: 100%
     position: relative
     z-index: 0
@@ -15,7 +15,7 @@
     img
       position: absolute
       object-fit: cover
-      opacity: .5
+      opacity: .35
       height: 100%
       width: 100%
       border-radius: 16px
@@ -24,21 +24,20 @@
       grid-column: 2 / -2
       width: 100%
       z-index: 1
-      color: white
+      color: $bodyTextColorWhite
       margin-top: 6rem
       .page-layout-heading
         margin-top: 1.5rem
-        grid-column: 2 / -1
         .hero-sub-title
           position: relative
           padding-left: 10px
-          font-size: clamp(12px, 4vw, 16px)
+          font-size: $fontSize-lg
           &::before
             position: absolute
             content: ''
             width: 2px
             height: 50%
-            background-color: #ee0f39
+            background-color: $primary
             top: 50%
             -webkit-transform: translateY(-50%)
             -ms-transform: translateY(-50%)
@@ -47,16 +46,28 @@
           @media #{$ipadmini}
             grid-column: 1 / 7
         .hero-heading
-          font-size: clamp(60px, 20vw, 95px)
+          filter: drop-shadow(5px 2px 5px rgba(0, 0, 0, 0.5))
+          font-size: $fontSize-xxxl
           line-height: .9
           padding: 1rem 0
         .breadcrumbs
+          font-size: $fontSize-lg
+          filter: drop-shadow(5px 2px 5px rgba(0, 0, 0, 0.5))
           margin-top: 1rem
           grid-column: 1 / -1
           display: flex
-          gap: .55rem
+          gap: .75rem
           a
             color: white
             text-decoration: none
             &:hover
               text-decoration: underline
+          p
+            color: $secondary
+        .contact-button
+          margin-top: 3rem
+          a
+            background-color: $bodyTextColorWhite
+            color: $bodyTextColor
+            border-radius: 3px
+            padding: 20px 27px

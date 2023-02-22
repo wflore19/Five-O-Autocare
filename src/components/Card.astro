@@ -3,7 +3,7 @@ interface Props {
 	url?: string;
 	image?: string;
 	title?: string;
-	subtitle?: string;
+	summary?: string;
 	breadcrumb?: string;
 }
 
@@ -16,18 +16,23 @@ const {
 } = Astro.props;
 ---
 
-<a href={url}>
-	<div class="single-card">
-		<div class="image-container">
+<li class="single-card">
+	<div class="image-container">
+		<a href={url}>
 			<img
-				src=`../assets/images/${image}`
+				src={`../assets/images/${image}`}
 				alt="mechanic rockville md near me"
 			/>
-		</div>
-		<div class="content">
-			<h4>{tags}</h4>
-			<h3>{title}</h3>
-			<p>{summary}</p>
+		</a>
+	</div>
+	<div class="content">
+		<h4 class="tags">{tags}</h4>
+		<a href={url}>
+			<h3 class="title">{title}</h3>
+			<p class="summary">{summary}</p>
+		</a>
+		<div class="article-link">
+			<a href={url}>Learn more..</a>
 		</div>
 	</div>
-</a>
+</li>

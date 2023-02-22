@@ -3,6 +3,10 @@ import Card from "../../components/Card.astro";
 import ContentLayout from "../../layouts/ContentLayout.astro";
 import Layout from "../../layouts/Layout.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
+
+// returns an array of articles that live at ./articles/*.md
+const articles = await Astro.glob("./posts/*.md");
+// console.log(articles[0].frontmatter);
 ---
 
 <Layout title="Articles">
@@ -12,12 +16,21 @@ import PageLayout from "../../layouts/PageLayout.astro";
 		breadcrumb="Articles"
 	>
 		<ContentLayout>
-			<h2>Articles Tags</h2>
-			<div class="article-items">
+			<ul class="article-items">
+				{
+					articles.map((post) => (
+						<Card
+							title={post.frontmatter.title}
+							summary={post.frontmatter.description}
+							url={`articles/${post.frontmatter.slug}`}
+						/>
+					))
+				}
 				<Card />
 				<Card image="customer-1.png" />
 				<Card />
 				<Card />
+				<!-- <Card />
 				<Card />
 				<Card />
 				<Card />
@@ -32,9 +45,8 @@ import PageLayout from "../../layouts/PageLayout.astro";
 				<Card />
 				<Card />
 				<Card />
-				<Card />
-				<Card />
-			</div>
+				<Card /> -->
+			</ul>
 		</ContentLayout>
 		<section class="call-to-action grid">
 			<div class="card">

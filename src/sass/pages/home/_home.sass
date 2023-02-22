@@ -36,12 +36,15 @@ main
         line-height: .9
 
       .hero-sub-title
+        position: relative
         grid-column: 1 / 7
         padding-left: 10px
         &::before
+          position: absolute
+          content: ''
           width: 2px
-          height: 15px
-          background-color: #ee0f39
+          height: 50%
+          background-color: $primary
           top: 50%
           -webkit-transform: translateY(-50%)
           -ms-transform: translateY(-50%)
@@ -68,7 +71,7 @@ main
       animation: fade 1.5s ease 1.3s
     .contact-button
       // z-index: 1
-      background-color: #ee0f39
+      background-color: $primary
       width: fit-content
       padding: 12px 20px
       margin-top: 24px
@@ -108,7 +111,7 @@ main
         background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp")
         background-size: cover
         margin-right: 4rem
-        background-color: blue
+        background-color: $primary
         grid-column: 1 / 8
         grid-row: 1 / 6
         @media #{$laptop}
@@ -137,13 +140,13 @@ main
           margin-top: 4rem
           text-shadow: 1px 1px 1px #000000
         .red
-          color: red
+          color: $primary
         &::before
           position: absolute
           content: ''
           width: 2px
           height: 50%
-          background-color: red
+          background-color: $primary
           top: 50%
           -webkit-transform: translateY(-50%)
           -ms-transform: translateY(-50%)
@@ -182,7 +185,7 @@ main
         .about-button
           position: relative
           top: 40px
-          background-color: #ee0f39
+          background-color: $primary
           width: fit-content
           padding: 12px 20px
           text-decoration: none
@@ -236,7 +239,7 @@ main
         content: ''
         width: 2px
         height: 15px
-        background-color: #ee0f39
+        background-color: $primary
         top: 45%
         -webkit-transform: translateY(-50%)
         -ms-transform: translateY(-50%)
@@ -246,7 +249,7 @@ main
       grid-column: 1 / 13
       text-align: center
       font-size: 40px
-      color: blue
+      color: $primary
       margin-top: 20px
 
     .service-items
@@ -281,7 +284,7 @@ main
           box-shadow: 0px 11px 18px 0px rgb(0 0 0 / 29%)
           background-color: #e4f3ff
           svg
-            fill: #ee0f39
+            fill: $primary
         @media #{$laptop}
           padding: 34px 8px
         &:nth-child(2)
@@ -302,13 +305,13 @@ main
             content: ''
             width: 30px
             height: 2px
-            background-color: #ee0f39
+            background-color: $primary
             bottom: 0
             left: 0
         a
           z-index: 1
           text-decoration: none
-          background-color: blue
+          background-color: $primary
           color: white
           position: relative
           top: 15px
@@ -340,7 +343,7 @@ main
       .left
         padding: 40px 74px 100px
         grid-column: 1
-        background-color: blue
+        background-color: $primary
         border-radius: 24px 0 0 24px
         @media #{$laptop}
           padding: 40px 50px 100px
@@ -380,17 +383,18 @@ main
         .button
           position: relative
           top: 50px
-          background-color: white
-          color: blue
           padding: 12px 20px
           text-decoration: none
           border-radius: 8px
           font-size: 20px
+          color: $bodyTextColorWhite
+          outline: 1px solid white
+          transition: all 0.5s ease-in-out
           @media #{$tablet}
             top: 20px
           &:hover
-            background-color: #ee0f39
-            color: white
+            background-color: $secondaryShade
+            outline: 1px solid $secondaryShade
           &:active
             color: inherit
       .right
@@ -423,7 +427,7 @@ main
         content: ''
         width: 2px
         height: 15px
-        background-color: #ee0f39
+        background-color: $primary
         top: 45%
         -webkit-transform: translateY(-50%)
         -ms-transform: translateY(-50%)
@@ -433,7 +437,7 @@ main
       grid-column: 1 / 13
       text-align: center
       font-size: 40px
-      color: blue
+      color: $primary
       margin-top: 20px
     .process-description
       grid-column: 1 / 13
@@ -470,7 +474,7 @@ main
           content: ''
           width: 100%
           height: 8px
-          background-color: #ee0f39
+          background-color: $primary
           bottom: 0
           left: 0
           -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)

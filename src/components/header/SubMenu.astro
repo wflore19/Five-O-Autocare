@@ -1,17 +1,33 @@
+---
+import { pages } from "../../data/pages";
+
+const submenu = pages.filter((item) => item.submenu);
+const sub = submenu.map((item) => item);
+const sub1 = sub.map((item) => item.submenu);
+---
+
 <ul class="sub-menu">
-	<li>
+	{
+		sub1[0]!.map((subitem: any) => (
+			<li class={subitem.menuHadChildren ? "menu-item-has-children" : ""}>
+				<a href={"services" + subitem.slug}>{subitem.name}</a>
+			</li>
+		))
+	}
+
+	<!-- <li>
 		<a href="/services/services-details">Service Details</a>
 	</li>
 	<li>
-		<a href="/">Blog Left Sidebar</a>
+		<a href="/air-conditioning-repair">Air Conditioning Repair</a>
 	</li>
 	<li>
-		<a href="/">Blog Right Sidebar</a>
+		<a href="/brake-repair">Brake Repair</a>
 	</li>
 	<li>
 		<a href="/">Blog Details Left Sidebar</a>
 	</li>
 	<li>
 		<a href="/">Blog Details Right Sidebar</a>
-	</li>
+	</li> -->
 </ul>

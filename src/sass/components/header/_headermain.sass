@@ -3,74 +3,56 @@ header
   top: 0
   z-index: 10
 .header-main
-  display: grid
   grid-column: 1 / 13
-  background-color: blue
+  background-color: $primary
   color: white
   padding: 1.5rem 0
   @media #{$tablet}
     gap: 0 !important
-  .logo
-    grid-column: 2 / 4
-    align-self: center
-    @media #{$tablet}
-      grid-column: 2 / 9
-
-  .desktop-menu
-    grid-column: 4 / 10
-    justify-self: center
-    @media #{$tablet}
-      display: none
-      visibility: hidden
-    ul
-      list-style: none
-      padding: 0
-      margin: 0
-      display: flex
-      gap: 0 15px
-      @media #{$laptop}
-        gap: 0 5px
+  .header-container
+    grid-column: 2 / -2
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .logo
+    .desktop-menu
       @media #{$tablet}
-        gap: 0
-
-      li
-        position: relative
-        &:hover .sub-menu
-          opacity: 1
-          visibility: visible
-          top: 168%
-      li
-        &:hover
-          a
-            &::before
-              width: 90%
-
-        a
-          text-decoration: none
-          padding: 0 6px
-          color: inherit
+        display: none
+        visibility: hidden
+      > ul
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        gap: 0 15px
+        @media #{$laptop}
+          gap: 0 5px
+        @media #{$tablet}
+          gap: 0
+        li
           position: relative
-          &::before
-            position: absolute
-            content: ''
-            width: 0
-            height: 1px
-            background-color: #ffffff
-            left: 4px
-            bottom: -4px
-            -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
-            -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
-            transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
-
-  .tel
-    grid-column: 10 / 12
-    justify-self: end
-    align-self: center
-    color: inherit
-    text-decoration: none
-    @media #{$tablet}
-      display: none
-      visibility: hidden
+          &:hover
+            a
+              &::before
+                width: 90%
+          &:hover .sub-menu
+            opacity: 1
+            visibility: visible
+            top: 168%
+          .desktop-menu-items
+            text-decoration: none
+            padding: 0 6px
+            position: relative
+            &::before
+              content: ''
+              position: absolute
+              bottom: -1px
+              width: 0
+              height: 4px
+              background-color: $secondaryShade
+              -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+              -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+              transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
 
   .mobile-menu
     display: none
@@ -79,9 +61,3 @@ header
     @media #{$tablet}
       display: flex
       visibility: visible
-      grid-column: 11 / 12
-      justify-self: end
-    img
-      width: 30px
-      height: 30px
-      cursor: pointer

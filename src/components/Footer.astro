@@ -1,7 +1,5 @@
 ---
-import data from "../data/paths.json";
-
-const { paths } = data;
+import { pages } from "../data/pages";
 ---
 
 <footer class="footer grid">
@@ -14,9 +12,9 @@ const { paths } = data;
 		</li>
 		<li class="single-footer">
 			<h4>Quick Links</h4>
-			<ul class="hour-items">
+			<ul class="quick-links">
 				{
-					paths.map((item) => (
+					pages.map((item) => (
 						<li>
 							<a href={item.slug}>{item.name}</a>
 						</li>
@@ -81,6 +79,12 @@ const { paths } = data;
 		</li>
 	</ul>
 	<div class="footer-main">
-		<p>© No copyright I guess? Do whatever you want with the site</p>
+		<p>
+			Powered By: <a
+				href="https://www.mocowebdesigns.com/"
+				target="_blank"
+				rel="noopener">MoCo Web Designs</a
+			> © 2023-Present All Rights Reserved. Terms of Use - Privacy Policy
+		</p>
 	</div>
 </footer>

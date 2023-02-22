@@ -1,7 +1,6 @@
 @import 'variables'
 
 *
-	margin: 0
 	box-sizing: border-box
 
 *::before,
@@ -11,13 +10,14 @@
 html,
 body
 	line-height: 1.5
-	font-family: $primary-font
+	font-family: $bodyFont
 	width: 100%
 	height: 100%
 	padding: 0px
+	margin: 0
 	overflow-x: hidden
 	-webkit-font-smoothing: antialiased
-	background-color: $background-color
+	background-color: $bodyBackgroundColor
 
 img,
 picture,
@@ -26,6 +26,7 @@ canvas,
 svg
 	display: block
 	max-width: 100%
+	margin: 0
 
 p,
 h1,
@@ -35,10 +36,11 @@ h4,
 h5,
 h6
 	overflow-wrap: break-word
+	margin: 0
 
 h1
 	font-size: 2.5rem
-	font-family: $secondary-font
+	font-family: $headerFont
 
 h2
 	font-size: 2rem
@@ -50,4 +52,8 @@ h4
 	font-size: 1rem
 
 p
-	font-family: $primary-font
+	font-family: $bodyFont
+
+a
+	color: inherit
+	text-decoration: none

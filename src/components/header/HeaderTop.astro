@@ -1,9 +1,13 @@
+---
+import { client } from "../../data/client";
+---
+
 <div class="header-top-container">
 	<div class="header-top">
-		<p>422 N Stonestreet Ave, Rockville</p>
+		<p>{client.address.lineOne}, {client.address.city}</p>
 		<p>
 			Call now:
-			<a href="tel:0000000000">(000) 000 0000</a>
+			<a href={`tel:${client.phone}`}>{client.phoneFormatted}</a>
 		</p>
 	</div>
 </div>

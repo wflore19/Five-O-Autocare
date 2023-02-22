@@ -1,44 +1,26 @@
 ---
 import MobileMenu from "./MobileMenu.svelte";
 import SubMenu from "./SubMenu.astro";
-import data from "../../data/paths.json";
-
-const { paths } = data;
+import { pages } from "../../data/pages";
 ---
 
 <div class="header-main grid">
-	<div class="logo">Mechanic Rockville</div>
-	<nav class="desktop-menu">
-		<ul>
-			{
-				paths.map((item) => (
-					<li class={item.menuHadChildren ? "menu-item-has-children" : ""}>
-						<a href={item.slug}>{item.name}</a>
-						{item.menuHadChildren && <SubMenu />}
-					</li>
-				))
-			}
-			<!-- <li>
-				<a href="/">Home</a>
-			</li>
-			<li class="menu-item-has-children">
-				<a href="/services">Services</a>
-				<SubMenu />
-			</li>
-			<li>
-				<a href="/articles">Articles</a>
-			</li>
-			<li>
-				<a href="/about-us">About Us</a>
-			</li>
-			<li>
-				<a href="/faq">FAQ</a>
-			</li>
-			<li>
-				<a href="/faq">{data.paths}</a>
-			</li> -->
-		</ul>
-	</nav>
-	<a href="tel:0000000000" class="tel">000-000-0000</a>
-	<MobileMenu client:load />
+	<div class="header-container">
+		<div class="logo">Mechanic Rockville</div>
+		<nav class="desktop-menu">
+			<ul>
+				{
+					pages.map((item) => (
+						<li class={item.menuHadChildren ? "menu-item-has-children" : ""}>
+							<a href={item.slug} class="desktop-menu-items">
+								{item.name}
+							</a>
+							{item.menuHadChildren && <SubMenu />}
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+		<MobileMenu client:load />
+	</div>
 </div>

@@ -2,8 +2,8 @@
 .footer
   grid-column: 1 / -1
   margin-top: 10rem
-  background-color: CornflowerBlue
-  color: white
+  background-color: $primary
+  color: $bodyTextColorWhite
   .footer-items
     list-style: none
     padding: 8rem 0
@@ -51,15 +51,16 @@
         li
           a
             &:hover
-              color: white
               text-decoration: underline
               cursor: pointer
+          &:not(:first-child)
+            margin-top: 1rem
+
       .information
         li
           margin-top: 1rem
           a
             &:hover
-              color: white
               text-decoration: underline
               cursor: pointer
       .profile
@@ -78,3 +79,9 @@
       padding: 2rem 0
       color: white
       font-size: 0.8rem
+      a
+        font-weight: 600
+        color: $bodyTextColorWhite
+        &:hover
+          text-decoration: underline
+          cursor: pointer

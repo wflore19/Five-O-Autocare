@@ -1,7 +1,7 @@
 ---
-path: "choosing-the-right-car-mechanic-how-to-find-a-trusted-expert-for-your-vehicle"
+slug: "choosing-the-right-car-mechanic"
 draft: false
-title: "Choosing the Right Car Mechanic: How to Find a Trusted Expert for Your Vehicle"
+title: "Choosing the Right Car Mechanic"
 description: "Your car is a significant investment, and you want to ensure that it is in good hands."
 ---
 
