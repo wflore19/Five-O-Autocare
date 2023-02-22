@@ -1,93 +1,55 @@
 main
-  gap: 0 !important
-  grid-column: 3 / span 9
-
   .hero
     grid-column: 2 / -2
-    padding: 100px 0
-    min-height: 100%
+    margin-top: 5rem
     display: flex
-    align-items: flex-start
-    @media #{$tablet}
-      grid-column: 2 / -2
+    gap: 3rem
     .hero-image-container
-      min-width: 50%
-      min-height: 100%
+      min-width: 49%
       img
+        border-radius: $radius-lg
+        height: 100%
         object-fit: cover
-        min-height: 50rem
-        position: relative
       @media #{$tablet}
         display: none
         visibility: hidden
 
     .heading
-      display: grid
-      grid-template-columns: repeat(6, 1fr)
       > h1,
       p,
       a
-        grid-column: 1 / 7
-        @media #{$tablet}
-          grid-column: 1 / 7
       .hero-heading
-        font-size: clamp(2.5rem, 4vw, 80px)
-        margin-top: 1rem
-        line-height: .9
+        font-size: $font-size-heading
+        margin-top: 12px
+        line-height: $line-height-reset
 
       .hero-sub-title
         position: relative
-        grid-column: 1 / 7
-        padding-left: 10px
+        padding-left: clamp(0.75rem, 0.6055rem + 0.6163vw, 1rem)
+        font-size: $font-size-sm
         &::before
           position: absolute
           content: ''
           width: 2px
-          height: 50%
-          background-color: $primary
+          height: 60%
+          background-color: $color-primary
           top: 50%
           -webkit-transform: translateY(-50%)
           -ms-transform: translateY(-50%)
           transform: translateY(-50%)
           left: 0
-        @media #{$ipadmini}
-          grid-column: 1 / 7
-          padding-left: 1rem
 
       .hero-subheading
-        margin-top: 24px
+        margin-top: 12px
 
-    .hero-image-1
-      grid-column: 1 / 7
-      margin-top: 40px
-      background-color: pink
-      height: 300px
-      max-width: 100%
-      background-image: url("../assets/images/hero-image-2.webp")
-      background-size: cover
-      -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
-      -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
-      transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s
-      animation: fade 1.5s ease 1.3s
     .contact-button
-      // z-index: 1
-      background-color: $primary
-      width: fit-content
-      padding: 12px 20px
-      margin-top: 24px
-      text-decoration: none
-      color: white
-      border-radius: 8px
-      &:active
-        color: inherit
-
-  .sidebar-service
-    background-color: rgb(212, 212, 212)
-    padding: 20px
-
-    grid-column: 9 / 12
-    justify-self: end
-    height: fit-content
+      margin-top: 32px
+      a
+        background-color: $color-primary
+        padding: $padding-button
+        color: $color-text-white
+        border-radius: $radius-sm
+        font-size: $font-size-md
 
   ul
     list-style: none
@@ -111,7 +73,7 @@ main
         background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp")
         background-size: cover
         margin-right: 4rem
-        background-color: $primary
+        background-color: $color-primary
         grid-column: 1 / 8
         grid-row: 1 / 6
         @media #{$laptop}
@@ -138,15 +100,15 @@ main
           grid-column: 1 / 13
           padding-left: 1rem
           margin-top: 4rem
-          text-shadow: 1px 1px 1px #000000
+          text-shadow: $shadow-sm
         .red
-          color: $primary
+          color: $color-primary
         &::before
           position: absolute
           content: ''
           width: 2px
           height: 50%
-          background-color: $primary
+          background-color: $color-primary
           top: 50%
           -webkit-transform: translateY(-50%)
           -ms-transform: translateY(-50%)
@@ -165,7 +127,7 @@ main
         @media #{$ipadmini}
           grid-column: 1 / 13
           padding-left: 1rem
-          text-shadow: 1px 1px 1px #000000
+          text-shadow: $shadow-sm
 
       .about-description
         font-weight: 500
@@ -180,20 +142,19 @@ main
           grid-column: 1 / 13
           padding-left: 1rem
           margin-bottom: 4rem
-          text-shadow: 1px 1px 5px #000000
+          text-shadow: $shadow-md
 
         .about-button
-          position: relative
-          top: 40px
-          background-color: $primary
+          margin-top: 40px
           width: fit-content
-          padding: 12px 20px
           text-decoration: none
-          color: white
-          border-radius: 8px
-          text-shadow: 1px 1px 1px #000000
-          &:active
-            color: inherit
+          a
+            border-radius: $radius-sm
+            text-shadow: $shadow-sm
+            color: $color-text-white
+            background-color: $color-primary
+            padding: $padding-button
+
         .about-image-2
           background-image: url("../assets/images/mechanic-rockville-md-nearby.webp")
           background-size: contain
@@ -239,7 +200,7 @@ main
         content: ''
         width: 2px
         height: 15px
-        background-color: $primary
+        background-color: $color-primary
         top: 45%
         -webkit-transform: translateY(-50%)
         -ms-transform: translateY(-50%)
@@ -249,7 +210,7 @@ main
       grid-column: 1 / 13
       text-align: center
       font-size: 40px
-      color: $primary
+      color: $color-primary
       margin-top: 20px
 
     .service-items
@@ -277,14 +238,14 @@ main
         overflow: hidden
         padding: 38px 22px
         position: relative
-        border-radius: 10px
+        border-radius: $radius-md
         transition: all 0.5s ease-in-out
         background-color: #e4f3ffa6
         &:hover
-          box-shadow: 0px 11px 18px 0px rgb(0 0 0 / 29%)
+          box-shadow: $shadow-md
           background-color: #e4f3ff
           svg
-            fill: $primary
+            fill: $color-primary
         @media #{$laptop}
           padding: 34px 8px
         &:nth-child(2)
@@ -305,13 +266,14 @@ main
             content: ''
             width: 30px
             height: 2px
-            background-color: $primary
+            background-color: $color-primary
             bottom: 0
             left: 0
         a
+          border-radius: $radius-sm
           z-index: 1
           text-decoration: none
-          background-color: $primary
+          background-color: $color-primary
           color: white
           position: relative
           top: 15px
@@ -343,15 +305,15 @@ main
       .left
         padding: 40px 74px 100px
         grid-column: 1
-        background-color: $primary
-        border-radius: 24px 0 0 24px
+        background-color: $color-primary
+        border-radius: $radius-lg 0 0 $radius-lg
         @media #{$laptop}
           padding: 40px 50px 100px
         @media #{$tablet}
           padding: 20px 30px 60px
         @media #{$ipadmini}
           grid-column: 1 / 13
-          border-radius: 24px 24px 0 0
+          border-radius: $radius-lg $radius-lg 0 0
 
         h4
           font-size: 20px
@@ -385,29 +347,29 @@ main
           top: 50px
           padding: 12px 20px
           text-decoration: none
-          border-radius: 8px
+          border-radius: $radius-sm
           font-size: 20px
-          color: $bodyTextColorWhite
+          color: $color-text-white
           outline: 1px solid white
           transition: all 0.5s ease-in-out
           @media #{$tablet}
             top: 20px
           &:hover
-            background-color: $secondaryShade
-            outline: 1px solid $secondaryShade
+            background-color: $color-secondary-shade
+            outline: 1px solid $color-secondary-shade
           &:active
             color: inherit
       .right
         grid-column: 2
         @media #{$ipadmini}
           grid-column: 1 / 13
-          border-radius: 0 0 24px 24px
+          border-radius: 0 0 $radius-lg $radius-lg
         img
           object-fit: cover
           height: 100%
-          border-radius: 0 24px 24px 0
+          border-radius: 0 $radius-lg $radius-lg 0
           @media #{$ipadmini}
-            border-radius: 0 0 24px 24px
+            border-radius: 0 0 $radius-lg $radius-lg
 
   .process
     grid-column: 2 / 12
@@ -427,7 +389,7 @@ main
         content: ''
         width: 2px
         height: 15px
-        background-color: $primary
+        background-color: $color-primary
         top: 45%
         -webkit-transform: translateY(-50%)
         -ms-transform: translateY(-50%)
@@ -437,7 +399,7 @@ main
       grid-column: 1 / 13
       text-align: center
       font-size: 40px
-      color: $primary
+      color: $color-primary
       margin-top: 20px
     .process-description
       grid-column: 1 / 13
@@ -461,7 +423,7 @@ main
         overflow: hidden
         padding: 40px 36px
         position: relative
-        border-radius: 10px
+        border-radius: $radius-md
         -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
         -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
         transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
@@ -474,7 +436,7 @@ main
           content: ''
           width: 100%
           height: 8px
-          background-color: $primary
+          background-color: $color-primary
           bottom: 0
           left: 0
           -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
@@ -484,7 +446,7 @@ main
           -ms-transform: translateY(100%)
           transform: translateY(100%)
         &:hover
-          box-shadow: 0px 11px 18px 0px rgb(0 0 0 / 29%)
+          box-shadow: $shadow-md
           background-color: #e4f3ff
           &::before
             -webkit-transform: translateY(0)

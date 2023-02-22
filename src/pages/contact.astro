@@ -29,14 +29,13 @@ import PageLayout from "../layouts/PageLayout.astro";
 						<div class="single-content">
 							<h3>Call us</h3>
 							<div class="content">
-								<a href="tel:301-424-0000">301-424-0000</a>
-								<a href="tel:301-424-0000">301-424-0000</a>
+								<a href={`tel:${client.phone}`}>{client.phoneFormatted}</a>
 							</div>
 						</div>
 						<div class="single-content">
 							<h3>Web</h3>
 							<div class="content">
-								<a href="https://www.fiveoautocare.com">{client.domain}</a>
+								<a href="https://">{client.domain}</a>
 							</div>
 						</div>
 						<div class="single-content">

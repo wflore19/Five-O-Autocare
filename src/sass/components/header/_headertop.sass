@@ -5,21 +5,22 @@
   @media #{$tablet}
     gap: 0
 .header-top
-  grid-column: 2 / 12
+  grid-column: 2 / -2
   display: inline
   margin: 2rem 0 1rem 0
   @media #{$tablet}
     grid-column: 2 / -2
-    font-size: clamp(10px, 1.5vw, 14px)
+    font-size: $font-size-sm
     margin-top: 1rem
     border-bottom: 1px solid #eaeaea
   p
     display: inline-block
-    font-weight: 700
+    font-weight: 600
 
   p:last-child::before
-    content: '||'
+    content: ' || '
 
   p:last-child
     a
       text-decoration: none
+      color: $color-primary

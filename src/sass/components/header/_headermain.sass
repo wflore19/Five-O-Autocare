@@ -4,7 +4,7 @@ header
   z-index: 10
 .header-main
   grid-column: 1 / 13
-  background-color: $primary
+  background-color: $color-primary
   color: white
   padding: 1.5rem 0
   @media #{$tablet}
@@ -31,10 +31,11 @@ header
           gap: 0
         li
           position: relative
+          font-size: $font-size-sm
           &:hover
             a
               &::before
-                width: 90%
+                width: 85%
           &:hover .sub-menu
             opacity: 1
             visibility: visible
@@ -49,7 +50,7 @@ header
               bottom: -1px
               width: 0
               height: 4px
-              background-color: $secondaryShade
+              background-color: $color-secondary-shade
               -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
               -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
               transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)

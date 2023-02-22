@@ -18,26 +18,26 @@
       opacity: .35
       height: 100%
       width: 100%
-      border-radius: 16px
+      border-radius: $radius-lg
 
     .page-layout-hero
       grid-column: 2 / -2
       width: 100%
       z-index: 1
-      color: $bodyTextColorWhite
+      color: $color-text-white
       margin-top: 6rem
       .page-layout-heading
         margin-top: 1.5rem
         .hero-sub-title
           position: relative
           padding-left: 10px
-          font-size: $fontSize-lg
+          font-size: $font-size-lg
           &::before
             position: absolute
             content: ''
             width: 2px
             height: 50%
-            background-color: $primary
+            background-color: $color-primary
             top: 50%
             -webkit-transform: translateY(-50%)
             -ms-transform: translateY(-50%)
@@ -46,13 +46,13 @@
           @media #{$ipadmini}
             grid-column: 1 / 7
         .hero-heading
-          filter: drop-shadow(5px 2px 5px rgba(0, 0, 0, 0.5))
-          font-size: $fontSize-xxxl
+          filter: drop-shadow($shadow-lg)
+          font-size: $font-size-heading
           line-height: .9
           padding: 1rem 0
         .breadcrumbs
-          font-size: $fontSize-lg
-          filter: drop-shadow(5px 2px 5px rgba(0, 0, 0, 0.5))
+          font-size: $font-size-lg
+          filter: drop-shadow($shadow-lg)
           margin-top: 1rem
           grid-column: 1 / -1
           display: flex
@@ -63,11 +63,11 @@
             &:hover
               text-decoration: underline
           p
-            color: $secondary
+            color: $color-secondary
         .contact-button
           margin-top: 3rem
           a
-            background-color: $bodyTextColorWhite
-            color: $bodyTextColor
-            border-radius: 3px
+            background-color: $color-text-white
+            color: $color-text
+            border-radius: $radius-sm
             padding: 20px 27px

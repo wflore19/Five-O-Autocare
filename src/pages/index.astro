@@ -6,6 +6,7 @@ import Brakes from "../components/assets/Brakes.astro";
 import CarWash from "../components/assets/CarWash.astro";
 import Engine from "../components/assets/Engine.astro";
 import Layout from "../layouts/Layout.astro";
+import { client } from "../data/client";
 ---
 
 <Layout title="Five-O Autocare">
@@ -19,8 +20,9 @@ import Layout from "../layouts/Layout.astro";
 					Maryland. Maryland state inspection Tire and wheel alignment, oil
 					change, transmission and engine repair, etc...
 				</p>
-
-				<a href="tel:0000000000" class="contact-button">Contact us</a>
+				<div class="contact-button">
+					<a href={`tel:${client.phone}`} class="contact-button">Contact us</a>
+				</div>
 				<div class="hero-image-1"></div>
 			</div>
 			<div class="hero-image-container">
@@ -36,14 +38,14 @@ import Layout from "../layouts/Layout.astro";
 			<h2 class="service-title">Our Services<br />We Provide</h2>
 			<div class="service-items">
 				<div class="single-service">
-					<h4 class="title">Brake Servicing</h4>
+					<h4 class="title">Brake Repair</h4>
 					<a href="/">Learn more</a>
 					<span class="service-image">
 						<Brakes />
 					</span>
 				</div>
 				<div class="single-service">
-					<h4 class="title">Entire Engine Servicing</h4>
+					<h4 class="title">Engine Repair</h4>
 					<a href="/">Learn more</a>
 					<span class="service-image">
 						<Engine />
@@ -71,7 +73,7 @@ import Layout from "../layouts/Layout.astro";
 					</span>
 				</div>
 				<div class="single-service">
-					<h4 class="title">Tire Change and Repair</h4>
+					<h4 class="title">Tire Repair</h4>
 					<a href="/">Learn more</a>
 					<span class="service-image">
 						<Tire />
@@ -355,48 +357,10 @@ import Layout from "../layouts/Layout.astro";
 						Let Five-O Autocare replace and balance your tires, give you a
 						routine service, or offer an oil change today.
 					</p>
-					<a href="tel:0000000000" class="about-button">Contact us</a>
-					<!-- <p>
-						At our Mechanic Shop, we understand how frustrating it can be when
-						your car breaks down. Whether it's unexpected or simply due to wear
-						and tear, it can put a real damper on your day. But we're here to
-						help. Our team of technicians has years of experience fixing cars, and
-						they know exactly what it takes to get you back on the road. We
-						believe that car repair should be a stress-free experience, which is
-						why we work hard to make sure that you're always treated with respect
-						and that your car is fixed right the first time. We know that you have
-						places to go and things to do, and we don't want you to waste any more
-						time than you have to. So come on by, and let us take care of
-						everything for you. Our team will diagnose your car, provide a fair
-						and transparent estimate, and get to work fixing your car so you can
-						get back to your day. With our expert technicians and commitment to
-						quality workmanship, you can relax and trust that your car is in good
-						hands.
-					</p>
-					<br />
-					<p>
-						Welcome to our Mechanic Shop! We are a team of highly skilled and
-						experienced technicians dedicated to providing top-notch automotive
-						repair services to our customers. With years of experience under our
-						belts and a passion for keeping cars running smoothly, we've earned a
-						reputation for delivering quality workmanship and exceptional customer
-						service. Whether you need routine maintenance or extensive repairs,
-						our shop has the tools and expertise to get you back on the road in no
-						time. From oil changes to engine rebuilds, we do it all. So come on
-						by, and let us help you keep your vehicle running smoothly for years
-						to come.
-					</p> -->
-					<!-- <div class="about-image-2"></div> -->
+					<div class="about-button">
+						<a href="tel:0000000000">Contact us</a>
+					</div>
 				</div>
-				<!-- <div class="sidebar-service">
-					<h2>Services</h2>
-					<ul>
-						<li>Wheel Alignment</li>
-						<li>Oil Change</li>
-						<li>Engine Repair</li>
-						<li>Tune Ups</li>
-					</ul>
-				</div> -->
 			</div>
 		</section>
 	</main>

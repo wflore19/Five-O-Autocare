@@ -29,8 +29,19 @@ const sub1 = sub.map((item) => item.submenu);
 							sub1[0]!.map((item) => {
 								return (
 									<li class="services-item">
-										<p class="services-item-heading">{item.name}</p>
-										<a href={"/services" + item.slug}>Learn more</a>
+										{item.image ? (
+											<img
+												src={item.image}
+												alt={item.image_alt}
+												loading="lazy"
+											/>
+										) : (
+										<></>
+										)}
+										<div class="content">
+											<p class="services-item-heading">{item.name}</p>
+											<a href={"/services" + item.slug}>Learn more</a>
+										</div>
 									</li>
 								);
 							})
