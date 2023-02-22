@@ -86,7 +86,7 @@ header {
 
 .header-main {
   grid-column: 1/13;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: white;
   padding: 1.5rem 0;
 }
@@ -197,7 +197,7 @@ header {
 }
 .header-top p:last-child a {
   text-decoration: none;
-  color: #3a98b9;
+  color: #9B0000;
 }
 
 .sub-menu {
@@ -208,7 +208,7 @@ header {
   background-color: #ffffff;
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  border-top: 2px solid #3a98b9;
+  border-top: 2px solid #9B0000;
   padding: 10px 0;
   z-index: 9;
   opacity: 0;
@@ -225,7 +225,7 @@ header {
   padding: 10px 20px;
 }
 .sub-menu li:hover {
-  color: #3a98b9;
+  color: #9B0000;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -234,7 +234,7 @@ header {
 .footer {
   grid-column: 1/-1;
   margin-top: 10rem;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: #fafbfc;
 }
 .footer .footer-items {
@@ -476,7 +476,7 @@ header {
   margin-bottom: 0.75rem;
 }
 .content-layout-content-layout .content-layout-interwebs .interwebs-container ul li:hover {
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
@@ -535,7 +535,7 @@ header {
   content: "";
   width: 2px;
   height: 50%;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -634,7 +634,7 @@ main .hero .heading .hero-sub-title::before {
   content: "";
   width: 2px;
   height: 60%;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -648,7 +648,7 @@ main .hero .contact-button {
   margin-top: 32px;
 }
 main .hero .contact-button a {
-  background-color: #3a98b9;
+  background-color: #9B0000;
   padding: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.293rem + 0.6163vw, 1.6875rem);
   color: #fafbfc;
   border-radius: 3px;
@@ -681,7 +681,7 @@ main .about .about-container .about-image {
   background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
   background-size: cover;
   margin-right: 4rem;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   grid-column: 1/8;
   grid-row: 1/6;
 }
@@ -726,14 +726,14 @@ main .about .about-container .about-sub-title {
   }
 }
 main .about .about-container .about-sub-title .red {
-  color: #3a98b9;
+  color: #9B0000;
 }
 main .about .about-container .about-sub-title::before {
   position: absolute;
   content: "";
   width: 2px;
   height: 50%;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -790,7 +790,7 @@ main .about .about-container .about-description .about-button a {
   border-radius: 3px;
   text-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   color: #fafbfc;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   padding: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.293rem + 0.6163vw, 1.6875rem);
 }
 main .about .about-container .about-description .about-image-2 {
@@ -852,7 +852,7 @@ main .service .service-subtitle::before {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -863,7 +863,7 @@ main .service .service-title {
   grid-column: 1/13;
   text-align: center;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
   margin-top: 20px;
 }
 main .service .service-items {
@@ -913,7 +913,7 @@ main .service .service-items .single-service:hover {
   background-color: #e4f3ff;
 }
 main .service .service-items .single-service:hover svg {
-  fill: #3a98b9;
+  fill: #9B0000;
 }
 @media only screen and (max-width: 1440px) {
   main .service .service-items .single-service {
@@ -947,7 +947,7 @@ main .service .service-items .single-service .title::before {
   content: "";
   width: 30px;
   height: 2px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   bottom: 0;
   left: 0;
 }
@@ -955,7 +955,7 @@ main .service .service-items .single-service a {
   border-radius: 3px;
   z-index: 1;
   text-decoration: none;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: white;
   position: relative;
   top: 15px;
@@ -998,7 +998,7 @@ main .call-to-action .card {
 main .call-to-action .card .left {
   padding: 40px 74px 100px;
   grid-column: 1;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   border-radius: 11px 0 0 11px;
 }
 @media only screen and (max-width: 1440px) {
@@ -1116,7 +1116,7 @@ main .process .process-subtitle::before {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1127,7 +1127,7 @@ main .process .process-title {
   grid-column: 1/13;
   text-align: center;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
   margin-top: 20px;
 }
 main .process .process-description {
@@ -1180,7 +1180,7 @@ main .process .process-items .single-process::before {
   content: "";
   width: 100%;
   height: 8px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   bottom: 0;
   left: 0;
   -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1258,7 +1258,7 @@ main .process .process-items .single-process .service-image .number {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1270,7 +1270,7 @@ main .process .process-items .single-process .service-image .number {
   text-align: center;
   margin-top: 50px;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
 }
 .testimonials .testimonials-description {
   grid-column: 1/5;
@@ -1421,7 +1421,7 @@ main .process .process-items .single-process .service-image .number {
 }
 .details .details-image {
   grid-column: 1/-1;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   height: 450px;
   width: 100%;
   position: absolute;
@@ -1513,7 +1513,7 @@ main .process .process-items .single-process .service-image .number {
   margin-bottom: 0.75rem;
 }
 .details .details-details .details-interwebs ul li:hover {
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: white;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -1560,7 +1560,7 @@ main .process .process-items .single-process .service-image .number {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1571,7 +1571,7 @@ main .process .process-items .single-process .service-image .number {
   grid-column: 1/-1;
   text-align: center;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
   margin-top: 20px;
 }
 .faq-content .faq-description {
@@ -1785,7 +1785,7 @@ main .process .process-items .single-process .service-image .number {
   padding-top: 15px;
 }
 .contact .content .content-items .single-content .content a {
-  color: #3a98b9;
+  color: #9B0000;
 }
 .contact .content .content-items .single-content .content a:not(:first-child) {
   display: block;
@@ -1851,7 +1851,7 @@ main .process .process-items .single-process .service-image .number {
   min-width: 100%;
   height: 54px;
   color: #fafbfc;
-  background: #3a98b9;
+  background: #9B0000;
   border-radius: 3px;
   border: none;
   text-transform: uppercase;
@@ -1898,7 +1898,7 @@ main .hero .heading .hero-sub-title::before {
   content: "";
   width: 2px;
   height: 60%;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1912,7 +1912,7 @@ main .hero .contact-button {
   margin-top: 32px;
 }
 main .hero .contact-button a {
-  background-color: #3a98b9;
+  background-color: #9B0000;
   padding: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.293rem + 0.6163vw, 1.6875rem);
   color: #fafbfc;
   border-radius: 3px;
@@ -1945,7 +1945,7 @@ main .about .about-container .about-image {
   background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
   background-size: cover;
   margin-right: 4rem;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   grid-column: 1/8;
   grid-row: 1/6;
 }
@@ -1990,14 +1990,14 @@ main .about .about-container .about-sub-title {
   }
 }
 main .about .about-container .about-sub-title .red {
-  color: #3a98b9;
+  color: #9B0000;
 }
 main .about .about-container .about-sub-title::before {
   position: absolute;
   content: "";
   width: 2px;
   height: 50%;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2054,7 +2054,7 @@ main .about .about-container .about-description .about-button a {
   border-radius: 3px;
   text-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   color: #fafbfc;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   padding: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.293rem + 0.6163vw, 1.6875rem);
 }
 main .about .about-container .about-description .about-image-2 {
@@ -2116,7 +2116,7 @@ main .service .service-subtitle::before {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2127,7 +2127,7 @@ main .service .service-title {
   grid-column: 1/13;
   text-align: center;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
   margin-top: 20px;
 }
 main .service .service-items {
@@ -2177,7 +2177,7 @@ main .service .service-items .single-service:hover {
   background-color: #e4f3ff;
 }
 main .service .service-items .single-service:hover svg {
-  fill: #3a98b9;
+  fill: #9B0000;
 }
 @media only screen and (max-width: 1440px) {
   main .service .service-items .single-service {
@@ -2211,7 +2211,7 @@ main .service .service-items .single-service .title::before {
   content: "";
   width: 30px;
   height: 2px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   bottom: 0;
   left: 0;
 }
@@ -2219,7 +2219,7 @@ main .service .service-items .single-service a {
   border-radius: 3px;
   z-index: 1;
   text-decoration: none;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: white;
   position: relative;
   top: 15px;
@@ -2262,7 +2262,7 @@ main .call-to-action .card {
 main .call-to-action .card .left {
   padding: 40px 74px 100px;
   grid-column: 1;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   border-radius: 11px 0 0 11px;
 }
 @media only screen and (max-width: 1440px) {
@@ -2380,7 +2380,7 @@ main .process .process-subtitle::before {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2391,7 +2391,7 @@ main .process .process-title {
   grid-column: 1/13;
   text-align: center;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
   margin-top: 20px;
 }
 main .process .process-description {
@@ -2444,7 +2444,7 @@ main .process .process-items .single-process::before {
   content: "";
   width: 100%;
   height: 8px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   bottom: 0;
   left: 0;
   -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -2522,7 +2522,7 @@ main .process .process-items .single-process .service-image .number {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2534,7 +2534,7 @@ main .process .process-items .single-process .service-image .number {
   text-align: center;
   margin-top: 50px;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
 }
 .testimonials .testimonials-description {
   grid-column: 1/5;
@@ -2685,7 +2685,7 @@ main .process .process-items .single-process .service-image .number {
 }
 .details .details-image {
   grid-column: 1/-1;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   height: 450px;
   width: 100%;
   position: absolute;
@@ -2777,7 +2777,7 @@ main .process .process-items .single-process .service-image .number {
   margin-bottom: 0.75rem;
 }
 .details .details-details .details-interwebs ul li:hover {
-  background-color: #3a98b9;
+  background-color: #9B0000;
   color: white;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -2824,7 +2824,7 @@ main .process .process-items .single-process .service-image .number {
   content: "";
   width: 2px;
   height: 15px;
-  background-color: #3a98b9;
+  background-color: #9B0000;
   top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2835,7 +2835,7 @@ main .process .process-items .single-process .service-image .number {
   grid-column: 1/-1;
   text-align: center;
   font-size: 40px;
-  color: #3a98b9;
+  color: #9B0000;
   margin-top: 20px;
 }
 .faq-content .faq-description {
@@ -3038,7 +3038,7 @@ main .process .process-items .single-process .service-image .number {
   padding-top: 15px;
 }
 .contact .content .content-items .single-content .content a {
-  color: #3a98b9;
+  color: #9B0000;
 }
 .contact .content .content-items .single-content .content a:not(:first-child) {
   display: block;
@@ -3104,7 +3104,7 @@ main .process .process-items .single-process .service-image .number {
   min-width: 100%;
   height: 54px;
   color: #fafbfc;
-  background: #3a98b9;
+  background: #9B0000;
   border-radius: 3px;
   border: none;
   text-transform: uppercase;
