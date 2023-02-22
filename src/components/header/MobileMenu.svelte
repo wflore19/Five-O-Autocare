@@ -207,4 +207,9 @@
 	.has-children a {
 		border-bottom: none;
 	}
+
+	.submenu-icon {
+		width: 20px;
+		height: 20px;
+	}
 </style>
