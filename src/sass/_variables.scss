@@ -3,12 +3,12 @@ $color-primary: #9B0000;
 $color-primary-lite: #7dbed6;
 $color-primary-dark: #266278;
 $color-primary-opacity: rgba($color-primary, 0.35);
+$color-primary-complimentary: #996600; 
 $color-secondary: #FFF1DC;
 $color-secondary-shade: #FFAD32;
 $color-background: #EEEEEE;
 $color-text: #040b0d;
 $color-text-white: #fafbfc;
-
 /* ========== Font Sizes ========== */
 // 12px - 14px
 $font-size-sm: clamp(0.75rem, 0.6778rem + 0.3082vw, 0.875rem);
@@ -58,9 +58,9 @@ $mobile: 'only screen and (max-width: 550px)';
 
 /* ========== Font Families ========== */
 $font-family-headings: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-family-body: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-body: 'Hind Madurai', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $font-family-mystery: "Libre Baskerville", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-
+$poop: 'Hind Madurai', sans-serif;
 /* ========== Font Weights ========== */
 $line-height-reset: 1;
 $line-height-normal: 1.5;

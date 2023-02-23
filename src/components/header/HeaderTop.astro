@@ -4,10 +4,14 @@ import { client } from "../../data/client";
 
 <div class="header-top-container">
 	<div class="header-top">
-		<p>{client.address.lineOne}, {client.address.city}</p>
-		<p>
+		<p class="address">{client.address.lineOne}, {client.address.city}</p>
+		<p class="number">
 			Call now:
 			<a href={`tel:${client.phone}`}>{client.phoneFormatted}</a>
 		</p>
+		<div class="top-buttons">
+			<a href={client.address.mapLink} class="button">Get Directions</a>
+			<a href={`tel:${client.phone}`} class="button">Call Now</a>
+		</div>
 	</div>
 </div>

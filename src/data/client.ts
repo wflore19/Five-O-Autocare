@@ -14,6 +14,18 @@ type clientTypes = {
 		mapLink: string;
 	};
 	domain: string;
+	social: {
+		facebook: string;
+	};
+	hours?: {
+		monday: string;
+		tuesday: string;
+		wednesday: string;
+		thursday: string;
+		friday: string;
+		saturday: string;
+		sunday: string;
+	};
 };
 
 export const client: clientTypes = {
@@ -32,4 +44,17 @@ export const client: clientTypes = {
 		mapLink: "https://goo.gl/maps/HJh3wGsQjL3yYKLj9",
 	},
 	domain: "www.fiveoautocare.com",
+	social: {
+		facebook:
+			"https://www.facebook.com/people/Five-O-Autocare/100066380660418/",
+	},
+	hours: {
+		monday: "8:00 AM - 5:00 PM",
+		tuesday: "8:00 AM - 5:00 PM",
+		wednesday: "8:00 AM - 5:00 PM",
+		thursday: "8:00 AM - 5:00 PM",
+		friday: "8:00 AM - 5:00 PM",
+		saturday: "8:00 AM - 2:00 PM",
+		sunday: "Closed",
+	},
 };

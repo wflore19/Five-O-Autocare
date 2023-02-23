@@ -7,6 +7,7 @@ import CarWash from "../components/assets/CarWash.astro";
 import Engine from "../components/assets/Engine.astro";
 import Layout from "../layouts/Layout.astro";
 import { client } from "../data/client";
+import CallToAction from "../components/section/CallToAction.astro";
 ---
 
 <Layout title="Five-O Autocare">
@@ -81,29 +82,7 @@ import { client } from "../data/client";
 				</div>
 			</div>
 		</section>
-		<section class="call-to-action grid">
-			<div class="card">
-				<div class="left">
-					<h4>Five-O Autocare</h4>
-					<h2>(000) 000 0000</h2>
-					<p>
-						Five-O Autocare is your auto repair, and tire, wheel alignment, oil
-						change, transmission, air conditioning service and engine repair
-						center in Rockville, Maryland. We offer AC/cooling services for both
-						cars and trucks.
-					</p>
-					<div class="">
-						<a href="/" class="button">Contact us</a>
-					</div>
-				</div>
-				<div class="right">
-					<img
-						src="../assets/images/mechanic-rockville-md-nearby.webp"
-						alt="mechanic rockville md nearby"
-					/>
-				</div>
-			</div>
-		</section>
+		<CallToAction />
 		<section class="process">
 			<h4 class="process-subtitle">What we do</h4>
 			<h2 class="process-title">How we work</h2>

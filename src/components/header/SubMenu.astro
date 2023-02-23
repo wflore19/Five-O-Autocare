@@ -10,7 +10,7 @@ const sub1 = sub.map((item) => item.submenu);
 	{
 		sub1[0]!.map((subitem: any) => (
 			<li class={subitem.menuHadChildren ? "menu-item-has-children" : ""}>
-				<a href={"services" + subitem.slug}>{subitem.name}</a>
+				<a href={subitem.slug}>{subitem.name}</a>
 			</li>
 		))
 	}

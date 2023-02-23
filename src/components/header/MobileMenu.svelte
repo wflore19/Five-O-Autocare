@@ -4,12 +4,33 @@
 	import { client } from "../../data/client";
 
 	let tog = false;
-	let sidebar_show = false;
+	let sidebar_show = true;
 
 	// $: console.log(sidebar_show);
 	const submenu = pages.filter((item) => item.submenu);
 	const sub = submenu.map((item) => item);
 	const sub1 = sub.map((item) => item.submenu);
+
+	const now = new Date();
+	const currentDay = now.getDay();
+	const currentHour = now.getHours();
+
+	let status = "closed";
+	let color;
+	$: color = status === "open until 5pm" || "open until 2pm" ? "green" : "red";
+
+	if (
+		currentDay >= 1 &&
+		currentDay <= 5 &&
+		currentHour >= 8 &&
+		currentHour < 17
+	) {
+		status = "open until 5pm";
+	} else if (currentDay === 6 && currentHour >= 8 && currentHour < 14) {
+		status = "open until 2pm";
+	} else {
+		status = "closed";
+	}
 </script>
 
 <div class="mobile-menu">
@@ -42,10 +63,17 @@
 				</button>
 				<div class="menu-head">
 					<h2 class="menu-name">{client.name}</h2>
-					<h4 class="menu-address">422 N Stonestreet Ave, Rockville</h4>
-					<h4 class="menu-phone">
-						CALL NOW <a href={`tel:${client.phoneFormatted}`}>{client.phone}</a>
+					<h4 class="menu-address">
+						{client.address.lineOne}, {client.address.city}
 					</h4>
+					<h4 class="menu-phone">
+						CALL NOW <a href={`tel:${client.phoneFormatted}`}
+							>{client.phoneFormatted}</a
+						>
+					</h4>
+					<p style="color: {color};" class="status">
+						{status}
+					</p>
 				</div>
 				<ul class="submenu">
 					{#each pages as item}
@@ -130,7 +158,14 @@
 	.menu-head {
 		padding: 1rem;
 	}
-	.menu-name {
+	.menu-head .status {
+		margin-top: 1rem;
+		font-weight: 600;
+		text-transform: capitalize;
+		text-align: center;
+		font-size: clamp(1.075rem, 1.3028rem + 0.1082vw, 1.3rem);
+	}
+	.menu-head .menu-name {
 		margin-top: 1rem;
 		text-align: center;
 		font-size: clamp(1.375rem, 1.3028rem + 0.3082vw, 1.5rem);

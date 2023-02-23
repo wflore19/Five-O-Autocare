@@ -16,8 +16,6 @@
       visibility: hidden
   .content
     width: 100%
-    h2, h3
-      color: $color-primary-lite
     .content-items
       margin-top: 40px
       display: flex
@@ -63,23 +61,31 @@
       grid-template-columns: repeat(2, 1fr)
     @media #{$mobile}
       grid-template-columns: repeat(1, 1fr)
-    input
-      height: 54px
-      border-radius: $radius-sm
-      border: none
-      padding-left: 20px
+    .name, .phone, .email
+      display: flex
+      flex-direction: column
+      font-family: $font-family-body
+      label
+        padding-left: 2px
+        padding-bottom: 2px
+      input
+        height: 54px
+        border-radius: $radius-sm
+        border: none
+        padding-left: 20px
       + input[name="email"]
         @media #{$ipadmini}
           grid-column: 1 / -1
       + input[name="message"]
         grid-column: 1 / -1
-    textarea
-      width: 100%
+    .message
       grid-column: 1 / -1
-      border-radius: $radius-sm
-      border: none
-      padding: 20px
-      font-family: Arial, Helvetica, sans-serif
+      textarea
+        width: 100%
+        border-radius: $radius-sm
+        border: none
+        padding: 20px
+        font-family: Arial, Helvetica, sans-serif
     .button_container
       grid-column: 1 / -1
       display: flex

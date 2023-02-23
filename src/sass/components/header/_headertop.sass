@@ -17,10 +17,36 @@
     display: inline-block
     font-weight: 600
 
-  p:last-child::before
-    content: ' || '
-
-  p:last-child
+  .number
+    &::before
+      content: ' || '
     a
       text-decoration: none
       color: $color-primary
+  .top-buttons
+    display: none
+    visibility: hidden
+
+  @media #{$mobile}
+    margin: 0
+    grid-column: 1 / -1
+    .address
+      display: none
+      visibility: hidden
+    .number
+      display: none
+      visibility: hidden
+    .top-buttons
+      display: flex
+      visibility: visible
+      justify-content: space-between
+      a
+        background-color: $color-primary-complimentary
+        color: $color-text-white
+        padding: $padding-button
+        text-align: center
+        outline: 1px solid $color-text
+        width: 50%
+        height: 98%
+        font-weight: 600
+        font-size: $font-size-md

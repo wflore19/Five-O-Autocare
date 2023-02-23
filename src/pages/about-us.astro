@@ -1,7 +1,9 @@
 ---
+import { client } from "../data/client";
 import ContentLayout from "../layouts/ContentLayout.astro";
 import Layout from "../layouts/Layout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
+import CallToAction from "../components/section/CallToAction.astro";
 ---
 
 <Layout title="About Us">
@@ -20,108 +22,50 @@ import PageLayout from "../layouts/PageLayout.astro";
 			</p>
 			<h3>Repair Shop in Rockville, MD</h3>
 			<p>
-				Five-O Autocare is a full-service auto repair shop. They offer complete
-				auto repair services and guarantee quality work. Their prices are
-				reasonable, and they also offer free car inspections. They also have
-				diagnostic services like tire rotations and oil changes. You can trust
-				them to handle any type of cars: luxury, convertible, truck, or suv.
-				They are located near Rockville Town Center. They accept walk-ins,
-				however, they request that you call ahead to ensure your appointment.
-				You can call them at <a href="tel:3016085636">(301) 608-5636</a>. Their
-				hours of operation are:
+				Five-O Autocare is a full-service auto repair shop. We offer complete
+				auto repair services and guarantee quality work. We also have diagnostic
+				services like tire rotations and oil changes. We handle any type of
+				cars: luxury, convertible, truck, or suv. We are located near Rockville
+				Town Center. We accept walk-ins, however, please <a
+					href={`tel:${client.phone}`}
+					style="color:blue;">Call us</a
+				>
+				ahead to ensure your appointment. You can call us at <a
+					href={`tel:${client.phone}`}>{client.phoneFormatted}</a
+				>. Our hours of operation are:
 				<br />
 				<br />Hours:
-				<br />Mon: 9:00am-6:00pm
-				<br />Tues.-Thurs: 9:00am-6:00pm
-				<br /> Fri-Sat: 9:00am-5:00pm
-				<br /> Sun: closed.
+				<br />Mon - Fri: {client.hours!.monday}
+				<br />Sat: {client.hours!.saturday}
+				<br />Sun: {client.hours!.sunday}
 			</p>
 			<h3>Auto Brake Replacement</h3>
 			<p>
 				You may have found it difficult to find a good auto repair shop in
 				Rockville that offers quality brake repair services. Rest assured that
-				Brake Doctor is here for you. This auto repair shop near Rockville has
-				been in the business for more than 15 years and is committed to
-				providing their customers with excellent brake repair services. For
-				brake pad replacement, Brake Doctor charges $69. They also provide brake
-				repair in the form of brake &amp; rotor cleaning. If you have other
-				automotive needs, browse through their website to find out more about
-				their services. You can call them at (301) 608-6100.
+				we're here for you. {client.name} is committed to providing our customers
+				with excellent brake repair services.
 			</p>
 			<h3>Tune-up Services</h3><p>
-				When you need reliable auto repair services in the area, come to
-				Automotive Collision Repair. This shop is a full-service collision
-				repair shop that provides a wide range of services like paintless dent
-				repair, replacement windows, and full detail. They also do auto glass
-				repair, which includes replacing broken windshields and auto glass
-				repair. In addition to auto repair, they also do auto detailing. If
-				you’re in need of auto repair, come to them. They also offer free car
-				insurance and free estimates. You can call them at (301) 608-7777.
+				Is your vehicle running smoothly? If it's been a while since your last
+				tune up, it may be time to schedule a visit to {client.name}. Our
+				experienced mechanics will inspect your vehicle's vital systems,
+				including the ignition, fuel, and emissions, to ensure peak performance
+				and fuel efficiency. With regular tune ups, you can help prevent
+				breakdowns and extend the life of your vehicle. Contact us today to
+				schedule your appointment and keep your car running at its best.
 			</p>
-			<h3>Service And Parts Store</h3><p>
-				If you’re in the market for auto parts, come to Greenway Automotive
-				Parts. This store is a full-service auto parts store that sells
-				top-notch parts. They have a wide selection of parts from all
-				manufacturers and have competitive prices. They also provide auto repair
-				services so that you can take your car to them for maintenance. They
-				have a huge inventory of parts and can order parts for you, too. If
-				you’re looking for a parts store nearby, look no further. They offer
-				free delivery inside the Rockville city limits. You can call them at
-				(301) 608-2773.
-			</p>
-			<h3>Transmission Repair Shop</h3><p>
-				If you need reliable auto repair services in the area, come to
-				Transmission Repair Shop. This shop has been operating since 1986 and is
-				committed to providing their customers with fast and reliable auto
-				repair services. They are an ASE-certified shop, which means they are
-				certified to perform repair work on automatic transmissions. In addition
-				to auto repair, they also do car maintenance and electronic repairs. If
-				you’re in need of transmission repair, Transmission Repair Shop is the
-				place to come. They offer transmission repair services and guarantees
-				the highest quality of service. They also have a wide selection of cars
-				for you to choose from. You can call them at (301) 608-5188.
-			</p>
-			<h3>Automotive Collision Repair</h3><p>
-				If you need reliable auto repair services in the area, come to
-				Automotive Collision Repair. This is a full-service collision repair
-				shop that provides a wide range of services like paintless dent repair,
-				replacement windows, and full detail. They also do auto glass repair,
-				which includes replacing broken windshields and auto glass repair. In
-				addition to auto repair, they also do auto detailing. If you’re in need
-				of auto repair, come to them. They also offer free car insurance and
-				free estimates. You can call them at (301) 608-7777.
-			</p>
-			<h3>Final Words:</h3><p>
-				We hope you’ve found the information on local mechanics that are open
-				near you helpful. These auto repair shops in the area can help you with
-				all your auto repair needs. With the help of these mechanics, you can
-				get your car repaired quickly and with minimum hassle. So, don’t wait!
-				Schedule an appointment with these mechanics and get your car fixed
-				today!
+			<h3>Transmission Repair</h3><p>
+				Don't let transmission problems leave you stranded on the side of the
+				road. We offer comprehensive transmission services to keep your vehicle
+				running smoothly. From fluid changes to complete rebuilds, our expert
+				mechanics have the knowledge and experience to diagnose and repair any
+				transmission issue. We use only top-quality parts and offer competitive
+				pricing to keep your vehicle running and your wallet happy. Contact us
+				today to schedule your transmission service and get back on the road
+				with confidence.
 			</p>
 		</ContentLayout>
-		<section class="call-to-action grid">
-			<div class="card">
-				<div class="left">
-					<h4>Five-O Autocare</h4>
-					<h2>(000) 000 0000</h2>
-					<p>
-						Five-O Autocare is your auto repair, and tire, wheel alignment, oil
-						change, transmission, air conditioning service and engine repair
-						center in Rockville, Maryland. We offer AC/cooling content-layout
-						for both cars and trucks.
-					</p>
-					<div class="">
-						<a href="/" class="button">Contact us</a>
-					</div>
-				</div>
-				<div class="right">
-					<img
-						src="../assets/images/mechanic-rockville-md-nearby.webp"
-						alt="mechanic rockville md nearby"
-					/>
-				</div>
-			</div>
-		</section>
+		<CallToAction />
 	</PageLayout>
 </Layout>

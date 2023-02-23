@@ -2,6 +2,7 @@ type submenu = {
 	image?: string;
 	image_alt?: string;
 	name: string;
+	description?: string;
 	slug: string;
 	menuHadChildren: boolean;
 };
@@ -26,6 +27,7 @@ export const pages: pagesType[] = [
 		submenu: [
 			{
 				name: "Air Conditioning",
+				description: "Air Conditioning",
 				slug: "/services",
 				menuHadChildren: false,
 			},

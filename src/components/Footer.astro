@@ -1,4 +1,5 @@
 ---
+import { client } from "../data/client";
 import { pages } from "../data/pages";
 ---
 
@@ -7,7 +8,15 @@ import { pages } from "../data/pages";
 		<li class="single-footer">
 			<h4>Profile</h4>
 			<ul class="profile">
-				<li><p>Trusted and reliable service is our to main goal</p></li>
+				<li>
+					<p>
+						At {client.name}, we provide reliable and affordable auto repair
+						services to keep your vehicle running smoothly. Contact us today for
+						a free estimate and let us help you get back on the road safely.
+						Proudly serving {client.address.city}, {client.address.county} and surrounding
+						areas.
+					</p>
+				</li>
 			</ul>
 		</li>
 		<li class="single-footer">
@@ -20,10 +29,6 @@ import { pages } from "../data/pages";
 						</li>
 					))
 				}
-				<!-- <li><a>Hello</a></li>
-				<li><a>World</a></li>
-				<li><a>Computer</a></li>
-				<li><a>Technology</a></li> -->
 			</ul>
 		</li>
 		<li class="single-footer">
@@ -38,43 +43,47 @@ import { pages } from "../data/pages";
 		<li class="single-footer">
 			<h4>Hours</h4>
 			<ul class="hour-items">
-				<li class="single-hour">
+				<li class="single-hour" data-day="monday">
 					<div class="day">Mon</div>
-					<div class="hour">9:00am - 6:00pm</div>
+					<div class="hour">{client.hours!.monday}</div>
 				</li>
-				<li class="single-hour">
+				<li class="single-hour" data-day="tuesday">
 					<div class="day">Tues</div>
-					<div class="hour">9:00am - 6:00pm</div>
+					<div class="hour">{client.hours!.tuesday}</div>
 				</li>
-				<li class="single-hour">
+				<li class="single-hour" data-day="wedsnesday">
 					<div class="day">Wed</div>
-					<div class="hour">9:00am - 6:00pm</div>
+					<div class="hour">{client.hours!.wednesday}</div>
 				</li>
-				<li class="single-hour">
+				<li class="single-hour" data-day="thursday">
 					<div class="day">Thur</div>
-					<div class="hour">9:00am - 6:00pm</div>
+					<div class="hour">{client.hours!.thursday}</div>
 				</li>
-				<li class="single-hour">
+				<li class="single-hour" data-day="friday">
 					<div class="day">Fri</div>
-					<div class="hour">9:00am - 6:00pm</div>
+					<div class="hour">{client.hours!.friday}</div>
 				</li>
-				<li class="single-hour">
+				<li class="single-hour" data-day="saturday">
 					<div class="day">Sat</div>
-					<div class="hour">9:00am - 6:00pm</div>
+					<div class="hour">{client.hours!.saturday}</div>
 				</li>
-				<li class="single-hour">
+				<li class="single-hour" data-day="sunday">
 					<div class="day">Sun</div>
-					<div class="hour">Closed</div>
+					<div class="hour">{client.hours!.sunday}</div>
 				</li>
 			</ul>
 		</li>
 		<li class="single-footer">
 			<h4>Contact Info</h4>
 			<ul class="contact-info">
-				<li>Address: 422 N Stonestreet Ave, Rockville, MD 20850</li>
-				<li>Hours: Opens 8 AM</li>
-				<li>Phone: (240) 601-6983</li>
-				<li>Email: info@carserv.com</li>
+				<li>
+					Address: {client.address.lineOne}, {client.address.city}, {
+						client.address.state
+					}
+					{client.address.zipcode}
+				</li>
+				<li>Phone: {client.phoneFormatted}</li>
+				<li>Email: {client.email}</li>
 			</ul>
 		</li>
 	</ul>
@@ -84,7 +93,40 @@ import { pages } from "../data/pages";
 				href="https://www.mocowebdesigns.com/"
 				target="_blank"
 				rel="noopener">MoCo Web Designs</a
-			> © 2023-Present All Rights Reserved. Terms of Use - Privacy Policy
+			><br /> © 2023-Present All Rights Reserved. Terms of Use - Privacy Policy
 		</p>
 	</div>
 </footer>
+
+<script>
+	// get the current day
+	const today = new Date().getDay();
+	// select data attribute data-day and bold selected day
+	const dayData = document.querySelectorAll<HTMLElement>("[data-day]");
+
+	switch (today) {
+		case 0:
+			dayData[0].style.fontWeight = "900";
+			break;
+		case 1:
+			dayData[1].style.fontWeight = "900";
+			break;
+		case 2:
+			dayData[2].style.fontWeight = "900";
+			break;
+		case 3:
+			dayData[3].style.fontWeight = "900";
+			break;
+		case 4:
+			dayData[4].style.fontWeight = "900";
+			break;
+		case 5:
+			dayData[5].style.fontWeight = "900";
+			break;
+		case 6:
+			dayData[6].style.fontWeight = "900";
+			break;
+		default:
+			console.log("error");
+	}
+</script>
