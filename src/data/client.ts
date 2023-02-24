@@ -54,7 +54,7 @@ export const client: clientTypes = {
 		wednesday: "8:00 AM - 5:00 PM",
 		thursday: "8:00 AM - 5:00 PM",
 		friday: "8:00 AM - 5:00 PM",
-		saturday: "8:00 AM - 2:00 PM",
+		saturday: "9:00 AM - 2:00 PM",
 		sunday: "Closed",
 	},
 };

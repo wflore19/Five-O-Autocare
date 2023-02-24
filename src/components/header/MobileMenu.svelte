@@ -26,7 +26,7 @@
 		currentHour < 17
 	) {
 		status = "open until 5pm";
-	} else if (currentDay === 6 && currentHour >= 8 && currentHour < 14) {
+	} else if (currentDay === 6 && currentHour >= 9 && currentHour < 14) {
 		status = "open until 2pm";
 	} else {
 		status = "closed";
