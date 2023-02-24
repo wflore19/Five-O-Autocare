@@ -2,11 +2,12 @@
 import MobileMenu from "./MobileMenu.svelte";
 import SubMenu from "./SubMenu.astro";
 import { pages } from "../../data/pages";
+import { client } from "../../data/client";
 ---
 
 <div class="header-main grid">
 	<div class="header-container">
-		<div class="logo">Mechanic Rockville</div>
+		<div class="logo">{client.name}</div>
 		<nav class="desktop-menu">
 			<ul>
 				{

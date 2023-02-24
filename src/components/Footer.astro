@@ -43,6 +43,10 @@ import { pages } from "../data/pages";
 		<li class="single-footer">
 			<h4>Hours</h4>
 			<ul class="hour-items">
+				<li class="single-hour" data-day="sunday">
+					<div class="day">Sun</div>
+					<div class="hour">{client.hours!.sunday}</div>
+				</li>
 				<li class="single-hour" data-day="monday">
 					<div class="day">Mon</div>
 					<div class="hour">{client.hours!.monday}</div>
@@ -66,10 +70,6 @@ import { pages } from "../data/pages";
 				<li class="single-hour" data-day="saturday">
 					<div class="day">Sat</div>
 					<div class="hour">{client.hours!.saturday}</div>
-				</li>
-				<li class="single-hour" data-day="sunday">
-					<div class="day">Sun</div>
-					<div class="hour">{client.hours!.sunday}</div>
 				</li>
 			</ul>
 		</li>

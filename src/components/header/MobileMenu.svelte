@@ -4,7 +4,7 @@
 	import { client } from "../../data/client";
 
 	let tog = false;
-	let sidebar_show = true;
+	let sidebar_show = false;
 
 	// $: console.log(sidebar_show);
 	const submenu = pages.filter((item) => item.submenu);
@@ -71,8 +71,8 @@
 							>{client.phoneFormatted}</a
 						>
 					</h4>
-					<p style="color: {color};" class="status">
-						{status}
+					<p class="status">
+						status: <span style="color: {color};">{status}</span>
 					</p>
 				</div>
 				<ul class="submenu">

@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+export async function getStaticPaths() {
+	const posts = await Astro.glob("./posts/*.md");
+	return posts.map((post) => {
+		return {
+			params: { slug: post.frontmatter.slug },
+			props: { ...post },
+		};
+	});
+}
+const { frontmatter, Content } = Astro.props;
+// console.log(frontmatter.url);
+---
+
+<Layout title={frontmatter.title}>
+	<!-- <p class="breadcrumbs">
+		<a href="/services">Services</a> // {frontmatter.title}
+	</p> -->
+	<ArticleLayout>
+		<h1>{frontmatter.title}</h1>
+		<Content />
+	</ArticleLayout>
+</Layout>

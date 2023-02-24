@@ -9,10 +9,6 @@ const submenu = pages.filter((item) => item.submenu);
 const sub = submenu.map((item) => item);
 const sub1 = sub.map((item) => item.submenu);
 
-// console.log(sub1[0]);
-// sub1.forEach((item) => {
-// 	console.log(item);
-// });
 ---
 
 <Layout title="Services">
@@ -41,7 +37,10 @@ const sub1 = sub.map((item) => item.submenu);
 										)}
 										<div class="content">
 											<p class="services-item-heading">{item.name}</p>
-											<a href={"/services" + item.slug}>Learn more</a>
+											<p>{item.description}</p>
+											<div class="services-slug">
+												<a href={"/services" + item.slug}>Learn more</a>
+											</div>
 										</div>
 									</li>
 								);
@@ -54,3 +53,18 @@ const sub1 = sub.map((item) => item.submenu);
 		<CallToAction />
 	</PageLayout>
 </Layout>
+
+<script>
+	//function turn string into slug
+	function slugify(str: string) {
+		return str
+			.toString()
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "")
+			.toLowerCase()
+			.trim()
+			.replace(/&/g, "-and-")
+			.replace(/[\s\W-]+/g, "-");
+	}
+	console.log(slugify("what is transmission and why do I need to repair it"))
+</script>
