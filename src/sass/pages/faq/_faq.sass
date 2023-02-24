@@ -49,8 +49,6 @@
     max-width: 800px
     min-height: 380px
     margin: 0 auto
-    // background-color: $accordion-color
-    color: $white
     list-style: none
     margin: 50px auto
     li
@@ -59,6 +57,7 @@
       &:not(:last-child)
         margin-bottom: 20px
       .accordion-title
+        background-color: $color-gray
         cursor: pointer
         text-align: center
         flex-direction: column
@@ -69,16 +68,17 @@
         font-weight: bold
         line-height: normal
         padding: 20px 10px
-        border: 1px solid #c9d9fc
+        border: 1px solid $color-gray
         transition: all 0.2s ease
         transition: border 0.1s
 
         &:hover
-          color: $active-color
+          // color: $active-color
         .accordion-heading
           display: block
           text-align: left
           width: fit-content
+          font-family: $font-family-headings
         .accordion-icon
           display: inline-block
           padding-left: 10px
@@ -94,12 +94,12 @@
             height: 24px
 
       .accordion-content
+        font-family: $font-family-body
         display: none
         align-items: center
         justify-content: center
         padding: 20px
         overflow: hidden
-        background-color: $accordion-color
 
       .accordion-title
         display: flex
@@ -112,12 +112,11 @@
     left: -9999px
     bottom: 150px
     &::before
-      content: 'Source: Wikipedia'
       position: absolute
       right: 0
       bottom: -50px
       font-size: 0.8rem
-      color: $black
+      color: $color-text
     @media #{$tablet}
       bottom: 500px
       &::before

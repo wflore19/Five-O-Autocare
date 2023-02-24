@@ -1,3 +1,15 @@
+---
+import { pages } from "../data/pages";
+
+const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+// console.log(pages[1].submenu![randomNumber]);
+
+// slice the array to get the first 5 items
+const firstFive = pages[1].submenu!.slice(0, 5);
+console.log(firstFive);
+---
+
 <section class="content-layout-content-layout">
 	<div class="content-layout-content">
 		<slot />
@@ -5,11 +17,13 @@
 	<div class="content-layout-interwebs">
 		<div class="interwebs-container">
 			<ul>
-				<li><a href="/services/services-details">Services Details</a></li>
-				<li><a href="/services/services-details">Services Details</a></li>
-				<li><a href="/services/services-details">Services Details</a></li>
-				<li><a href="/services/services-details">Services Details</a></li>
-				<li><a href="/services/services-details">Services Details</a></li>
+				{
+					firstFive.map((item) => (
+						<li>
+							<a href={`/services${item.slug}`}>{item.name}</a>
+						</li>
+					))
+				}
 			</ul>
 			<img
 				src="/assets/images/happy-couple-signing-paperwork-at-auto-mechanic-s-2022-09-27-22-54-22-utc-min.webp"

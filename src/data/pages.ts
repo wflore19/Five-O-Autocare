@@ -137,11 +137,11 @@ export const pages: pagesType[] = [
 			},
 		],
 	},
-	{
-		name: "Articles",
-		slug: "/articles",
-		menuHadChildren: false,
-	},
+	// {
+	// 	name: "Articles",
+	// 	slug: "/articles",
+	// 	menuHadChildren: false,
+	// },
 	{
 		name: "About Us",
 		slug: "/about-us",
