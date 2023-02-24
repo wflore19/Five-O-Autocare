@@ -10,7 +10,11 @@ import { client } from "../data/client";
 import CallToAction from "../components/section/CallToAction.astro";
 ---
 
-<Layout title="Five-O Autocare">
+<Layout
+	title="Five-O Autocare"
+	seo_title="Mechanic Services Rockville"
+	seo_description={`${client.phoneFormatted} Mechanic services in Rockville, MD? Our experienced team offers repairs, maintenance, and diagnostics. Contact us today. Rockville, Maryland`}
+>
 	<main class="grid">
 		<section class="hero">
 			<div class="heading">
