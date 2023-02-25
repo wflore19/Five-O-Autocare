@@ -16,6 +16,7 @@ type clientTypes = {
 	domain: string;
 	social: {
 		facebook: string;
+		google: string;
 	};
 	hours?: {
 		monday: string;
@@ -47,6 +48,8 @@ export const client: clientTypes = {
 	social: {
 		facebook:
 			"https://www.facebook.com/people/Five-O-Autocare/100066380660418/",
+		google:
+			"https://www.google.com/search?hl=en-us&sxsrf=AJOqlzUUC27WIF6Q0EyXrstU9tWOv-77ew:1677350982795&q=Five+O+Autocare&ludocid=12707968340519368903&gsas=1&client=safari&lsig=AB86z5UzxWybAgs46GfPDX6w9CTs&kgs=0042f58008f4baab&shndl=-1&shem=lssle&source=sh/x/kp/local/3",
 	},
 	hours: {
 		monday: "8:00 AM - 5:00 PM",
