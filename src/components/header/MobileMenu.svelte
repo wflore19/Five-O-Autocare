@@ -122,7 +122,8 @@
 	{/if}
 </div>
 
-<style>
+<style lang="scss">
+	@import "../../sass/variables.scss";
 	nav {
 		position: fixed;
 		top: 0;
@@ -192,6 +193,7 @@
 		padding-bottom: 1rem;
 	} */
 	ul a {
+		font-size: $font-size-lg;
 		text-decoration: none;
 		border-bottom: 1px solid rgba(10, 77, 60, 0.15);
 		padding: 1rem;

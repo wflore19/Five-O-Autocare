@@ -103,6 +103,7 @@ header {
 }
 .header-main .header-container .logo {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: clamp(1.25rem, 1.1055rem + 0.6163vw, 1.5rem);
 }
 @media only screen and (max-width: 1024px) {
   .header-main .header-container .desktop-menu {
@@ -129,7 +130,7 @@ header {
 }
 .header-main .header-container .desktop-menu > ul li {
   position: relative;
-  font-size: clamp(0.75rem, 0.6778rem + 0.3082vw, 0.875rem);
+  font-size: clamp(1rem, 0.9278rem + 0.3082vw, 1.125rem);
 }
 .header-main .header-container .desktop-menu > ul li:hover a::before {
   width: 85%;
