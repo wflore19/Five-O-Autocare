@@ -8,6 +8,37 @@ import { pages } from "../data/pages";
 		<li class="single-footer">
 			<h4>Profile</h4>
 			<ul class="profile">
+				<div class="links">
+					<div class="small-business">
+						<img
+							src="/assets/icons/small-shop.svg"
+							alt="small business badge"
+							width="24"
+							height="24"
+						/>
+						<p>BBB</p>
+					</div>
+					<div class="google">
+						<a href={client.social.google}>
+							<img
+								src="/assets/icons/google.svg"
+								alt="link to google business profile"
+								height="24"
+								width="24"
+							/>
+						</a>
+					</div>
+					<div class="facebook">
+						<a href={client.social.facebook}>
+							<img
+								src="/assets/icons/facebook.svg"
+								alt="link to facebook business profile"
+								height="24"
+								width="24"
+							/>
+						</a>
+					</div>
+				</div>
 				<li>
 					<p>
 						At {client.name}, we provide reliable and affordable auto repair
