@@ -35,6 +35,10 @@ $padding-button: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.
 $duration-faster: 250ms;
 $duration-fast: 500ms;
 
+/* ========== Animation Easing Function ========== */
+$slide: cubic-bezier(0.22, 1, 0.36, 1);
+$fade: cubic-bezier(0.22, 1, 0.36, 1);
+
 /* ========== Border Radius ========== */
 $radius-sm: 3px;
 $radius-md: 6px;
