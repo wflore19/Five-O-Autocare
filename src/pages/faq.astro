@@ -1,7 +1,39 @@
 ---
+import AccordionItem from "../components/AccordionItem.astro";
 import Layout from "../layouts/Layout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 ---
+
+<script>
+	const accordionItem = document.querySelectorAll(".accordion-item");
+	const accordionContentNodes = document.querySelectorAll(".accordion-content");
+	console.log(accordionContentNodes);
+
+	accordionItem.forEach((item) => {
+		const accordionButton = item
+			.querySelector(".accordion-head")!
+			.querySelector(".image-wrapper")!;
+		const accordionContent = item.querySelector(".accordion-content")!;
+		// console.log(accordionButton);
+
+		accordionButton.addEventListener("click", () => {
+			// const target: Element = e.target! as Element;
+
+			if (accordionContent.classList.contains("active")) {
+				return accordionContent.classList.toggle("active");
+			}
+
+			// remove active class from all accordion content
+			accordionContentNodes.forEach((item) => {
+				if (item.classList.contains("active")) {
+					return item.classList.remove("active");
+				}
+			});
+
+			accordionContent.classList.add("active");
+		});
+	});
+</script>
 
 <Layout
 	title="FAQ"
@@ -16,256 +48,202 @@ import PageLayout from "../layouts/PageLayout.astro";
 				Trusted and reliable service is our main goal
 			</p>
 
-			<input type="radio" id="animal" name="wiki" value="Animal" />
-			<input type="radio" id="plant" name="wiki" value="Plant" checked />
-			<input type="radio" id="space" name="wiki" value="Space" />
-			<input type="radio" id="river" name="wiki" value="River" />
-			<input type="radio" id="air" name="wiki" value="Air" />
-
 			<ul class="accordion">
-				<li data-radio="animal">
-					<label for="animal" class="accordion-title">
-						<span class="accordion-heading"
-							>What are the signs of a failing transmission?</span
-						>
-						<span class="accordion-icon">
-							<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
-						</span>
-					</label>
-					<div class="accordion-content">
-						<p>
-							There are several signs that your transmission may be failing.
-							Here are some of the most common:
-						</p>
-						<br />
-						<p>
-							<strong>Difficulty shifting gears</strong>: If you have a manual
-							transmission, you may notice that it's hard to shift between
-							gears, or that it grinds or pops out of gear. If you have an
-							automatic transmission, you may notice delayed or erratic
-							shifting, or a hesitation when shifting into gear.
-						</p>
-						<p>
-							<strong>Slipping gears</strong>: This is when the transmission
-							seems to "slip" out of gear or shift back and forth between gears
-							while driving. This can cause the engine to rev higher than normal
-							and decrease power and acceleration.
-						</p>
-						<p>
-							<strong>Burning smell or unusual noises</strong>: A burning smell,
-							particularly one that smells like hot oil or transmission fluid,
-							can indicate that your transmission is overheating. Unusual noises
-							such as clunking, grinding, or whining can also be a sign that
-							your transmission is failing.
-						</p>
-						<p>
-							<strong>Leaking transmission fluid</strong>: If you notice a
-							reddish-brown fluid under your car, it could be transmission
-							fluid. Leaking fluid can cause the transmission to fail, so it's
-							important to have it checked and repaired as soon as possible.
-						</p>
-						<p>
-							<strong>Dashboard warning lights</strong>: Many modern cars have a
-							transmission warning light on the dashboard that will illuminate
-							if there's a problem with the transmission.
-						</p>
+				<AccordionItem
+					accordionTitle="What are the signs of a failing transmission?"
+				>
+					<p>
+						There are several signs that your transmission may be failing. Here
+						are some of the most common:
+					</p>
+					<br />
+					<p>
+						<strong>Difficulty shifting gears</strong>: If you have a manual
+						transmission, you may notice that it's hard to shift between gears,
+						or that it grinds or pops out of gear. If you have an automatic
+						transmission, you may notice delayed or erratic shifting, or a
+						hesitation when shifting into gear.
+					</p>
+					<p>
+						<strong>Slipping gears</strong>: This is when the transmission seems
+						to "slip" out of gear or shift back and forth between gears while
+						driving. This can cause the engine to rev higher than normal and
+						decrease power and acceleration.
+					</p>
+					<p>
+						<strong>Burning smell or unusual noises</strong>: A burning smell,
+						particularly one that smells like hot oil or transmission fluid, can
+						indicate that your transmission is overheating. Unusual noises such
+						as clunking, grinding, or whining can also be a sign that your
+						transmission is failing.
+					</p>
+					<p>
+						<strong>Leaking transmission fluid</strong>: If you notice a
+						reddish-brown fluid under your car, it could be transmission fluid.
+						Leaking fluid can cause the transmission to fail, so it's important
+						to have it checked and repaired as soon as possible.
+					</p>
+					<p>
+						<strong>Dashboard warning lights</strong>: Many modern cars have a
+						transmission warning light on the dashboard that will illuminate if
+						there's a problem with the transmission.
+					</p>
 
-						<p>
-							If you notice any of these signs, it's important to have your
-							transmission checked by a qualified mechanic as soon as possible.
-							Failing to address transmission problems can lead to further
-							damage and more costly repairs down the line.
-						</p>
-					</div>
-					<li data-radio="plant">
-						<label for="plant" class="accordion-title">
-							<span class="accordion-heading"
-								>How often should I get my oil changed?</span
-							>
-							<span class="accordion-icon">
-								<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
-							</span>
-						</label>
-						<div class="accordion-content">
-							<p>
-								The recommended interval for oil changes can vary depending on
-								the make and model of your vehicle, as well as your driving
-								habits and the type of oil you use. In general, it's a good idea
-								to follow the manufacturer's recommendations for oil changes,
-								which are typically included in the owner's manual.
-							</p>
-							<br />
-							<p>
-								For most vehicles, the recommended oil change interval is every
-								7,500 miles or six months, whichever comes first. However, if
-								you frequently drive in extreme conditions, such as very hot or
-								cold temperatures, dusty or dirty environments, or stop-and-go
-								traffic, you may need to change your oil more frequently.
-							</p>
-							<br />
-							<p>
-								If you're not sure when you should change your oil, you can have
-								a mechanic check the oil and provide a recommendation based on
-								the condition of the oil and the vehicle. It's important to keep
-								up with oil changes to maintain the health and longevity of your
-								engine.
-							</p>
-						</div>
-					</li>
-					<li data-radio="space">
-						<label for="space" class="accordion-title">
-							<span class="accordion-heading"
-								>What are some common reasons for a car to overheat?</span
-							>
-							<span class="accordion-icon">
-								<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
-							</span>
-						</label>
-						<div class="accordion-content">
-							<div>
-								<p>
-									There are several common reasons why a car may overheat. Here
-									are a few:
-								</p>
-								<br />
-								<p>
-									<strong>Low coolant level</strong>: The coolant in your car's
-									radiator helps regulate the engine temperature. If the coolant
-									level is low, it can cause the engine to overheat. This could
-									be due to a leak, or because the coolant hasn't been changed
-									or topped off in a while.
-								</p>
-								<p>
-									<strong>Broken radiator fan</strong>: The radiator fan helps
-									cool the engine by pulling air through the radiator. If the
-									fan is broken or not functioning properly, it can cause the
-									engine to overheat.
-								</p>
-								<p>
-									<strong>Faulty thermostat</strong>: The thermostat regulates
-									the flow of coolant through the engine. If it's stuck closed,
-									the coolant won't be able to flow, causing the engine to
-									overheat.
-								</p>
-								<p>
-									<strong>Blocked or clogged radiator</strong>: If the radiator
-									is blocked or clogged with debris, it can prevent the coolant
-									from flowing through it, which can cause the engine to
-									overheat.
-								</p>
+					<p>
+						If you notice any of these signs, it's important to have your
+						transmission checked by a qualified mechanic as soon as possible.
+						Failing to address transmission problems can lead to further damage
+						and more costly repairs down the line.
+					</p>
+				</AccordionItem>
 
-								<p>
-									<strong>Worn water pump</strong>: The water pump circulates
-									the coolant through the engine. If it's worn or not
-									functioning properly, it can cause the engine to overheat.
-								</p>
-								<p>
-									<strong>Faulty head gasket</strong>: The head gasket seals the
-									engine block and cylinder head. If it's faulty, it can cause
-									coolant to leak into the engine or the combustion chamber,
-									leading to overheating.
-								</p>
+				<AccordionItem accordionTitle="How often should I get my oil changed?">
+					<p>
+						The recommended interval for oil changes can vary depending on the
+						make and model of your vehicle, as well as your driving habits and
+						the type of oil you use. In general, it's a good idea to follow the
+						manufacturer's recommendations for oil changes, which are typically
+						included in the owner's manual.
+					</p>
+					<br />
+					<p>
+						For most vehicles, the recommended oil change interval is every
+						7,500 miles or six months, whichever comes first. However, if you
+						frequently drive in extreme conditions, such as very hot or cold
+						temperatures, dusty or dirty environments, or stop-and-go traffic,
+						you may need to change your oil more frequently.
+					</p>
+					<br />
+					<p>
+						If you're not sure when you should change your oil, you can have a
+						mechanic check the oil and provide a recommendation based on the
+						condition of the oil and the vehicle. It's important to keep up with
+						oil changes to maintain the health and longevity of your engine.
+					</p>
+				</AccordionItem>
 
-								<p>
-									<strong>Extreme weather conditions</strong>: High temperatures
-									and humidity can cause the engine to overheat, especially if
-									you're driving in stop-and-go traffic or towing a heavy load.
-								</p>
-							</div>
-						</div>
-					</li>
-					<li data-radio="river">
-						<label for="river" class="accordion-title">
-							<span class="accordion-heading"
-								>How can I tell if my brakes need to be replaced?</span
-							>
-							<span class="accordion-icon">
-								<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
-							</span>
-						</label>
-						<div class="accordion-content">
-							<p>
-								There are several signs that your brakes may need to be
-								replaced. Here are a few:
-							</p>
-							<br />
-							<p>
-								<strong>Squeaking or grinding noise</strong>: If you hear a
-								high-pitched squeaking or grinding noise when you apply the
-								brakes, it could be a sign that the brake pads are worn and need
-								to be replaced.
-							</p>
-							<p>
-								<strong>Vibration or pulsation</strong>: If you feel a vibration
-								or pulsation in the brake pedal when you apply the brakes, it
-								could be a sign that the brake rotors are warped or uneven. This
-								can also cause the car to shake or vibrate while braking.
-							</p>
-							<p>
-								<strong>Soft or spongy brake pedal</strong>: If the brake pedal
-								feels soft or spongy and requires more pressure to stop the car,
-								it could be a sign of air in the brake lines or a leak in the
-								brake system.
-							</p>
-							<p>
-								<strong>Longer stopping distance</strong>: If it takes longer to
-								stop the car than usual, it could be a sign that the brake pads
-								are worn or the brake system is not functioning properly.
-							</p>
-							<p>
-								<strong>Dashboard warning light</strong>: If the brake warning
-								light on the dashboard comes on, it could be a sign of a problem
-								with the brake system.
-							</p>
-						</div>
-					</li>
-					<li data-radio="air">
-						<label for="air" class="accordion-title">
-							<span class="accordion-heading"
-								>How can I improve my car's performance?</span
-							>
-							<span class="accordion-icon">
-								<img src="/assets/icons/arrow.svg" alt="accordian arrow" />
-							</span>
-						</label>
-						<div class="accordion-content">
-							<p>
-								If your car's check engine light comes on, it's important to
-								address the issue as soon as possible. Here's what you should
-								do:
-							</p>
-							<br />
-							<p>
-								<strong>Check for other warning lights</strong>: Check to see if
-								any other warning lights are on. If there are, this can give you
-								a clue as to what might be wrong.
-							</p>
-							<p>
-								<strong>Check your gas cap</strong>: A loose or faulty gas cap
-								can cause the check engine light to come on. Make sure your gas
-								cap is on securely and try tightening it.
-							</p>
-							<p>
-								<strong>Check your owner's manual</strong>: Your owner's manual
-								may have information on what to do if the check engine light
-								comes on. It may also have a list of common reasons why the
-								light comes on.
-							</p>
-							<p>
-								<strong>Get a diagnostic scan</strong>: Take your car to a
-								qualified mechanic or auto parts store to have a diagnostic scan
-								performed. This will help identify the issue that's causing the
-								check engine light to come on.
-							</p>
-							<p>
-								<strong>Address the issue</strong>: Once you know what's causing
-								the check engine light to come on, it's important to address the
-								issue as soon as possible. Ignoring the problem can lead to more
-								serious and costly repairs down the line.
-							</p>
-						</div>
-					</li>
-				</li>
+				<AccordionItem
+					accordionTitle="What are some common reasons for a car to overheat?"
+				>
+					<p>
+						There are several common reasons why a car may overheat. Here are a
+						few:
+					</p>
+					<br />
+					<p>
+						<strong>Low coolant level</strong>: The coolant in your car's
+						radiator helps regulate the engine temperature. If the coolant level
+						is low, it can cause the engine to overheat. This could be due to a
+						leak, or because the coolant hasn't been changed or topped off in a
+						while.
+					</p>
+					<p>
+						<strong>Broken radiator fan</strong>: The radiator fan helps cool
+						the engine by pulling air through the radiator. If the fan is broken
+						or not functioning properly, it can cause the engine to overheat.
+					</p>
+					<p>
+						<strong>Faulty thermostat</strong>: The thermostat regulates the
+						flow of coolant through the engine. If it's stuck closed, the
+						coolant won't be able to flow, causing the engine to overheat.
+					</p>
+					<p>
+						<strong>Blocked or clogged radiator</strong>: If the radiator is
+						blocked or clogged with debris, it can prevent the coolant from
+						flowing through it, which can cause the engine to overheat.
+					</p>
+
+					<p>
+						<strong>Worn water pump</strong>: The water pump circulates the
+						coolant through the engine. If it's worn or not functioning
+						properly, it can cause the engine to overheat.
+					</p>
+					<p>
+						<strong>Faulty head gasket</strong>: The head gasket seals the
+						engine block and cylinder head. If it's faulty, it can cause coolant
+						to leak into the engine or the combustion chamber, leading to
+						overheating.
+					</p>
+
+					<p>
+						<strong>Extreme weather conditions</strong>: High temperatures and
+						humidity can cause the engine to overheat, especially if you're
+						driving in stop-and-go traffic or towing a heavy load.
+					</p>
+				</AccordionItem>
+
+				<AccordionItem
+					accordionTitle="How can I tell if my brakes need to be replaced?"
+				>
+					<p>
+						There are several signs that your brakes may need to be replaced.
+						Here are a few:
+					</p>
+					<br />
+					<p>
+						<strong>Squeaking or grinding noise</strong>: If you hear a
+						high-pitched squeaking or grinding noise when you apply the brakes,
+						it could be a sign that the brake pads are worn and need to be
+						replaced.
+					</p>
+					<p>
+						<strong>Vibration or pulsation</strong>: If you feel a vibration or
+						pulsation in the brake pedal when you apply the brakes, it could be
+						a sign that the brake rotors are warped or uneven. This can also
+						cause the car to shake or vibrate while braking.
+					</p>
+					<p>
+						<strong>Soft or spongy brake pedal</strong>: If the brake pedal
+						feels soft or spongy and requires more pressure to stop the car, it
+						could be a sign of air in the brake lines or a leak in the brake
+						system.
+					</p>
+					<p>
+						<strong>Longer stopping distance</strong>: If it takes longer to
+						stop the car than usual, it could be a sign that the brake pads are
+						worn or the brake system is not functioning properly.
+					</p>
+					<p>
+						<strong>Dashboard warning light</strong>: If the brake warning light
+						on the dashboard comes on, it could be a sign of a problem with the
+						brake system.
+					</p>
+				</AccordionItem>
+
+				<AccordionItem accordionTitle="How can I improve my car's performance?">
+					<p>
+						If your car's check engine light comes on, it's important to address
+						the issue as soon as possible. Here's what you should do:
+					</p>
+					<br />
+					<p>
+						<strong>Check for other warning lights</strong>: Check to see if any
+						other warning lights are on. If there are, this can give you a clue
+						as to what might be wrong.
+					</p>
+					<p>
+						<strong>Check your gas cap</strong>: A loose or faulty gas cap can
+						cause the check engine light to come on. Make sure your gas cap is
+						on securely and try tightening it.
+					</p>
+					<p>
+						<strong>Check your owner's manual</strong>: Your owner's manual may
+						have information on what to do if the check engine light comes on.
+						It may also have a list of common reasons why the light comes on.
+					</p>
+					<p>
+						<strong>Get a diagnostic scan</strong>: Take your car to a qualified
+						mechanic or auto parts store to have a diagnostic scan performed.
+						This will help identify the issue that's causing the check engine
+						light to come on.
+					</p>
+					<p>
+						<strong>Address the issue</strong>: Once you know what's causing the
+						check engine light to come on, it's important to address the issue
+						as soon as possible. Ignoring the problem can lead to more serious
+						and costly repairs down the line.
+					</p>
+				</AccordionItem>
 			</ul>
 		</section>
 	</PageLayout>

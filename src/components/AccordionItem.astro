@@ -1,0 +1,19 @@
+---
+interface Props {
+	accordionTitle: string;
+}
+
+const { accordionTitle } = Astro.props;
+---
+
+<li class="accordion-item">
+	<div class="accordion-head">
+		<h3>{accordionTitle}</h3>
+		<div class="image-wrapper">
+			<img src="/assets/icons/arrow.svg" alt="accordion arrow" width="20" />
+		</div>
+	</div>
+	<div class="accordion-content">
+		<slot />
+	</div>
+</li>
