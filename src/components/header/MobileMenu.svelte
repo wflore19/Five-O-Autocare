@@ -17,7 +17,8 @@
 
 	let status = "closed";
 	let color;
-	$: color = status === "open until 5pm" || "open until 2pm" ? "green" : "red";
+	$: color =
+		status === ("open until 5pm" || "open until 2pm") ? "green" : "red";
 
 	if (
 		currentDay >= 1 &&
