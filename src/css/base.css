@@ -79,6 +79,10 @@ a {
   text-decoration: none;
 }
 
+span {
+  font-family: "Hind Madurai", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -1042,7 +1046,7 @@ main .service {
   grid-column: 2/12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin-top: 100px;
+  margin-top: 200px;
 }
 main .service .service-subtitle {
   grid-column: 1/13;
@@ -1112,11 +1116,11 @@ main .service .service-items .single-service {
   position: relative;
   border-radius: 6px;
   transition: all 0.5s ease-in-out;
-  background-color: rgba(228, 243, 255, 0.6509803922);
+  background-color: rgba(255, 238, 238, 0.6509803922);
 }
 main .service .service-items .single-service:hover {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #e4f3ff;
+  background-color: #ffe4e4;
 }
 main .service .service-items .single-service:hover svg {
   fill: #9B0000;
@@ -2136,7 +2140,7 @@ main .service {
   grid-column: 2/12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin-top: 100px;
+  margin-top: 200px;
 }
 main .service .service-subtitle {
   grid-column: 1/13;
@@ -2206,11 +2210,11 @@ main .service .service-items .single-service {
   position: relative;
   border-radius: 6px;
   transition: all 0.5s ease-in-out;
-  background-color: rgba(228, 243, 255, 0.6509803922);
+  background-color: rgba(255, 238, 238, 0.6509803922);
 }
 main .service .service-items .single-service:hover {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #e4f3ff;
+  background-color: #ffe4e4;
 }
 main .service .service-items .single-service:hover svg {
   fill: #9B0000;
