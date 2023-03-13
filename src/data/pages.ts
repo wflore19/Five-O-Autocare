@@ -56,7 +56,7 @@ export const pages: pagesType[] = [
 				menuHadChildren: false,
 			},
 			{
-				image: "mechanic-repairing-car.webp",
+				image: "/assets/images/mechanic-repairing-car.webp",
 				image_alt: "Mechanic Repairing Car",
 				name: "Transmission Repair",
 				description:
@@ -85,7 +85,7 @@ export const pages: pagesType[] = [
 				menuHadChildren: false,
 			},
 			{
-				image: "mechanic-fixing-engine.webp",
+				image: "/assets/images/mechanic-fixing-engine.webp",
 				image_alt: "Mechanic Fixing Engine",
 				name: "Cooling System Repair",
 				description:
@@ -104,7 +104,7 @@ export const pages: pagesType[] = [
 				menuHadChildren: false,
 			},
 			{
-				image: "auto-mechanic-changing-car-wheel.webp",
+				image: "/assets/images/auto-mechanic-changing-car-wheel.webp",
 				image_alt: "Auto Mechanic Changing Car Wheel",
 				name: "Power Steering Repair",
 				description:
@@ -113,7 +113,7 @@ export const pages: pagesType[] = [
 				menuHadChildren: false,
 			},
 			{
-				image: "mechanic-fixing-engine.webp",
+				image: "/assets/images/mechanic-fixing-engine.webp",
 				image_alt: "Mechanic Fixing Engine",
 				name: "Oil Change",
 				description:
@@ -122,7 +122,7 @@ export const pages: pagesType[] = [
 				menuHadChildren: false,
 			},
 			{
-				image: "mechanic-repairing-car.webp",
+				image: "/assets/images/mechanic-repairing-car.webp",
 				image_alt: "Mechanic Repairing Car",
 				name: "Radiator Repair",
 				description:
@@ -131,7 +131,7 @@ export const pages: pagesType[] = [
 				menuHadChildren: false,
 			},
 			{
-				image: "auto-mechanic-changing-car-wheel.webp",
+				image: "/assets/images/auto-mechanic-changing-car-wheel.webp",
 				image_alt: "Auto Mechanic Changing Car Wheel",
 				name: "Tire Repair",
 				description:
