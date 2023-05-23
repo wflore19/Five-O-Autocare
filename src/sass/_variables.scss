@@ -19,8 +19,8 @@ $font-size-md: clamp(1rem, 0.9278rem + 0.3082vw, 1.125rem);
 $font-size-lg: clamp(1.25rem, 1.1055rem + 0.6163vw, 1.5rem);
 // 28px = 32px
 $font-size-xl: clamp(2.25rem, 2.1055rem + 0.6163vw, 2.5rem);
-// 50px - 80px
-$font-size-heading: clamp(3.125rem, 2.0416rem + 4.6225vw, 5rem);
+// 36px - 40px
+$font-size-heading: clamp(2.5rem, 1.0416rem + 4.6225vw, 4rem);
 
 /* ========== Spacing ========== */
 $spacing-sm: 0.5rem clamp(8rem, 5.6888rem + 9.8613vw, 12rem);
