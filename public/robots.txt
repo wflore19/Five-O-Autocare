@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 Allow: /
 
-Sitemap: https://www.yourwebsite/sitemap.xml
+Sitemap: https://www.fiveoautocare.com/sitemap.xml
