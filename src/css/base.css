@@ -888,7 +888,7 @@ main .about .about-container {
   grid-template-columns: repeat(12, 1fr);
 }
 main .about .about-container .about-image {
-  background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
+  background-image: url("../../public/assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
   background-size: cover;
   margin-right: 4rem;
   background-color: #9B0000;
@@ -1004,7 +1004,7 @@ main .about .about-container .about-description .about-button a {
   padding: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.293rem + 0.6163vw, 1.6875rem);
 }
 main .about .about-container .about-description .about-image-2 {
-  background-image: url("../assets/images/mechanic-rockville-md-nearby.webp");
+  background-image: url("../../public/assets/images/mechanic-rockville-md-nearby.webp");
   background-size: contain;
   background-repeat: no-repeat;
   grid-column: 11/13;
@@ -1367,8 +1367,8 @@ main .process .process-items .single-process .service-image .number {
   margin-top: 20px;
 }
 .testimonials .testimonials-items {
-  grid-column: 1/13;
   display: grid;
+  grid-column: 1/13;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   padding: 0 0rem;
@@ -1982,7 +1982,7 @@ main .about .about-container {
   grid-template-columns: repeat(12, 1fr);
 }
 main .about .about-container .about-image {
-  background-image: url("../assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
+  background-image: url("../../public/assets/images/car-mechanic-with-client-in-repair-garage-rockville-md-2022.webp");
   background-size: cover;
   margin-right: 4rem;
   background-color: #9B0000;
@@ -2098,7 +2098,7 @@ main .about .about-container .about-description .about-button a {
   padding: clamp(0.875rem, 0.8028rem + 0.3082vw, 1rem) clamp(1.4375rem, 1.293rem + 0.6163vw, 1.6875rem);
 }
 main .about .about-container .about-description .about-image-2 {
-  background-image: url("../assets/images/mechanic-rockville-md-nearby.webp");
+  background-image: url("../../public/assets/images/mechanic-rockville-md-nearby.webp");
   background-size: contain;
   background-repeat: no-repeat;
   grid-column: 11/13;
@@ -2461,8 +2461,8 @@ main .process .process-items .single-process .service-image .number {
   margin-top: 20px;
 }
 .testimonials .testimonials-items {
-  grid-column: 1/13;
   display: grid;
+  grid-column: 1/13;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   padding: 0 0rem;

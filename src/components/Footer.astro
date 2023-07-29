@@ -151,7 +151,7 @@ import { pages } from "../data/pages";
 	const today = new Date().getDay();
 	// select data attribute data-day and bold selected day
 	const dayData = document.querySelectorAll<HTMLElement>("[data-day]");
-
+	console.log(dayData);
 	switch (today) {
 		case 0:
 			dayData[0].style.fontWeight = "900";

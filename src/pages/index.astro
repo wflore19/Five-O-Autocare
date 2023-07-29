@@ -8,6 +8,7 @@ import Engine from "../components/assets/Engine.astro";
 import Layout from "../layouts/Layout.astro";
 import { client } from "../data/client";
 import CallToAction from "../components/section/CallToAction.astro";
+// import
 ---
 
 <Layout
@@ -16,12 +17,12 @@ import CallToAction from "../components/section/CallToAction.astro";
 	seo_description={`${client.phoneFormatted} Mechanic services in Rockville, MD? Our experienced team offers repairs, maintenance, and diagnostics. Contact us today. Rockville, Maryland`}
 >
 	<main class="grid">
-		<div class="hero-image-container">
+		<section class="hero-image-container">
 			<img
 				src="/assets/images/rockville-md-town-center.webp"
 				alt="rockville md town center"
 			/>
-		</div>
+		</section>
 		<section class="hero">
 			<div class="heading">
 				<h4 class="hero-sub-title">TRUSTED MECHANIC SHOP FOR 28 YEARS</h4>
@@ -39,7 +40,6 @@ import CallToAction from "../components/section/CallToAction.astro";
 				<img src="/assets/images/Car_mechanic_icon.png" alt="" />
 			</div>
 		</section>
-
 		<section class="service">
 			<h4 class="service-subtitle">What we do</h4>
 			<h2 class="service-title">Our Services<br />We Provide</h2>

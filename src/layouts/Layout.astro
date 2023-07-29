@@ -91,9 +91,9 @@ const { title, seo_title, seo_description } = Astro.props;
 		}
 		<meta name="generator" content={Astro.generator} />
 	</head>
-	<Header />
-	<slot />
-	<Footer />
-
-
+	<body>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
 </html>
