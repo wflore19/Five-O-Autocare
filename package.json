@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start:all": "concurrently \"npm:dev\" \"npm:sass\"",
+    "sass": "sass --watch src/sass/style.sass src/css/base.css",
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -16,6 +17,7 @@
     "svelte": "^3.55.1"
   },
   "devDependencies": {
+    "concurrently": "^8.2.0",
     "sass": "^1.58.1",
     "stylelint": "^15.1.0",
     "stylelint-config-recommended-scss": "^9.0.1",
